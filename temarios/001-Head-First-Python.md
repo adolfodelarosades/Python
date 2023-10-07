@@ -117,75 +117,44 @@ De hecho, Python tiene mucho en común con otros lenguajes de programación. Hay
 
 ## Capitulo 2
 
-La mejor manera de aprender un nuevo idioma es escribir código.
+La mejor manera de aprender un nuevo lenguaje es escribir código.
 
 Y si vas a escribir código, necesitarás un problema real. Quiso la suerte que tengamos uno de esos. En este capítulo, comenzará su viaje de desarrollo de aplicaciones Python dando un chapuzón con nuestro amigable entrenador de natación local. Comenzará con cadenas de Python, aprenderá a manipularlas según sus deseos y, al mismo tiempo, trabajará para producir una solución basada en Python para el problema del entrenador. También verá más de la estructura de datos de lista incorporada de Python, aprenderá cómo funcionan las variables y descubrirá cómo leer los mensajes de error de Python sin salirse del extremo, todo mientras resuelve un problema real con código Python real. Vamos a sumergirnos (de cabeza primero)…
 
-“¿Cómo está trabajando el entrenador en este momento?”
+* “¿Cómo está trabajando el entrenador en este momento?”
 
-“El entrenador necesita un cronómetro más capaz”
+* “El entrenador necesita un cronómetro más capaz”
 
-“Conversación en el cubículo”
+* “Conversación en el cubículo”
 
-“El archivo y la hoja de cálculo están “relacionados””
+* “El archivo y la hoja de cálculo están “relacionados””
 
-"Nuestra primera tarea: extraer los datos del nombre del archivo"
+* "Nuestra primera tarea: extraer los datos del nombre del archivo"
 
-“Una cadena es un objeto con atributos”
+* “Un string es un objeto con atributos”
 
-“Extraer los datos del nadador del nombre del archivo”
+* “Extraer los datos del nadador del nombre del archivo”
 
-"No intentes adivinar qué hace un método..."
+* "No intentes adivinar qué hace un método..."
 
-“Partir (también conocido como romper) una cuerda”
+* “Splitting(Partir) (también conocido como romper) un string”
 
-“Aún queda trabajo por hacer”
+* “Aún queda trabajo por hacer”
 
-"Leer mensajes de error de abajo hacia arriba"
+* "Leer mensajes de error de abajo hacia arriba"
 
-"Tenga cuidado al combinar llamadas a métodos"
+* "Tenga cuidado al combinar llamadas a métodos"
 
-"Probemos con otro método de cadena"
+* "Probemos con otro string method"
 
-“Solo queda crear algunas variables”
+* “Solo queda crear algunas variables”
 
-“¡La tarea n.° 1 está terminada!”
+* “¡La tarea n.° 1 está terminada!”
 
-“Tarea #2: Procesar los datos en el archivo”
+* “Tarea #2: Procesar los datos en el archivo”
 
-“How is the Coach working right now?”
 
-“The Coach needs a more capable stopwatch”
-
-“Cubicle Conversation”
-
-“The file and the spreadsheet are “related””
-
-“Our first task: Extract the filename’s data”
-
-“A string is an object with attributes”
-
-“Extract the swimmer’s data from the filename”
-
-“Don’t try to guess what a method does…”
-
-“Splitting (aka, breaking apart) a string”
-
-“There’s still some work to do”
-
-“Read error messages from the bottom up”
-
-“Be careful when combining method calls”
-
-“Let’s try another string method”
-
-“All that remains is to create some variables”
-
-“Task #1 is done!”
-
-“Task #2: Process the data in the file”
-
-Chapter 3
+## Chapter 3
 
 The more code you write, the better you get. It’s that simple.
 
@@ -231,7 +200,7 @@ In this chapter, you continue to create Python code to help the Coach. You learn
 
 “Task #2 (finally) gets over the line!”
 
-Chapter 4
+## Chapter 4
 
 Your code can’t live in a notebook forever. It wants to be free.
 
