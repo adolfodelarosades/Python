@@ -42,7 +42,7 @@ Si ha leído un libro de Head First, sabe qué esperar: un formato visualmente r
 
 ## Table of Contents (the real thing)
 
-### 00 Cómo utilizar este libro: Introducción
+### [00 Cómo utilizar este libro: Introducción](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/00-Introduction.md)
 
 Tu cerebro en Python. Aquí estás tratando de aprender algo, mientras que aquí está tu cerebro, haciéndote un favor al asegurarse de que el aprendizaje no se mantenga. Tu cerebro piensa: "Es mejor dejar espacio para cosas más importantes, como qué animales salvajes evitar y si hacer snowboard desnudo es una mala idea". Entonces, ¿cómo engañas a tu cerebro haciéndole creer que tu vida depende de saber programar en Python?
 
