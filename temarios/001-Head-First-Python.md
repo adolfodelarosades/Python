@@ -72,7 +72,7 @@ Tu cerebro en Python. Aquí estás tratando de aprender algo, mientras que aquí
 
 * "Expresiones de gratitud"
 
-## Capítulo 1
+## [Capítulo 1](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/001-Why-Python.md)
 
 Python comienza a contar desde cero, lo que debería resultarle familiar.
 
