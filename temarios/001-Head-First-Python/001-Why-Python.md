@@ -214,7 +214,7 @@ No te sientas mal si te saltaste la introducción. No eres el primero en hacer e
 
 <img width="915" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/47fdc7d0-9663-4298-adbb-2773ae0c6177">
 
-Cada vez que trabaje con VS Code en este libro, abrirá su carpeta **Learning** según sea necesario. Haga esto ahora antes de continuar.
+Cada vez que trabaje con VS Code en este libro, abrirá su carpeta **Learning** según sea necesario. ***Haga esto ahora antes de continuar***.
 
 ## "Preparándose para su primera experiencia con Jupyter"
 
@@ -222,11 +222,104 @@ DE ACUERDO. Estás ejecutando VS Code y has abierto tu carpeta de **Learning**. 
 
 <img width="931" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f0bc2f95-5a95-44a7-b307-fbca42685899">
 
-AQUIIII
+VS Code crea y abre un nuevo *untitled* notebook llamado **`Untitled-1.ipynb`**, que aparece en la pantalla y se parece a esto:
+
+<img width="831" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5a6e0cec-524a-47c1-93c9-a3e21e3b06ba">
+
+Redoble de tambores por favor. Ahora está listo para escribir y ejecutar código Python.
 
 ## "Introduzcamos algo de código en el notebook editor"
 
+Su cursor está esperando en esa celda de código vacía. Antes de escribir algo, tomemos un momento para revisar las primeras cuatro líneas de código del ejemplo de este capítulo:
+
+<img width="999" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e9482251-8d80-41f3-a3ef-fac467cc00e5">
+
+Veamos qué sucede cuando escribe este código en su notebook.
+
+<hr>
+
+**TEST DRIVE**
+
+<img width="824" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/440b8504-863d-472b-af8d-6ae855c30cf4">
+
+Continúe y escriba esas cuatro líneas de código que se muestran arriba en su celda de espera. Esto es lo que vemos:
+
+<img width="861" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d45200a1-17c7-4ee2-af08-d9ead6f086a9">
+
+<hr>
+
 ## "Presione Shift+Enter para ejecutar su código"
+
+Cuando presiona **Shift+Enter**, se ejecuta el código en la celda actualmente seleccionada. Luego, el foco pasa a la siguiente celda de su notebook. Si no existe una “next cell”, Jupyter crea una nueva para usted:
+
+<hr>
+
+**NOTA**
+
+Cuando vea "Shift+Enter" en este libro, presione y mantenga presionada la tecla Shift, luego toque la tecla Enter (antes de soltar ambas).
+
+<hr>
+
+<img width="893" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9a17f5fb-8961-4584-af36-99945b229e1a">
+
+
+<img width="969" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/19776cad-c09d-41fe-ba9d-c2163afa68b6">
+
+<hr>
+
+**EXERCISE**
+
+<img width="863" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d526e4c0-047c-481b-a7ea-f46a3340a054">
+
+Su computadora portátil está esperando más código. Practiquemos un poco usando VS Code agregando el siguiente código a su notebook:
+
+1. Escriba **`suits`** en su waiting cell, luego presione **Shift+Enter**. Anota aquí lo que sucede:
+
+___________________________________________
+
+2. Escriba el código para la función **`draw`** en la siguiente cell, luego presione **Shift+Enter** para ejecutar esa cell también. Aquí hay una copia del código de la función **`draw`** anterior:
+
+<img width="840" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f5270c0a-0984-4969-8d28-de6e6de4847a">
+
+**P:** Estoy realmente sorprendido de que se hayan ejecutado esas tres primeras líneas de código. ¿Seguramente esas tres variables, **`suits`**, **`faces`** y **`numbered`**, deben declararse previamente con algún tipo de tipo?
+
+**R:** Puede que así sea como funcionan otros lenguajes de programación, pero no Python. Las variables surgen en el momento en que se les asigna un valor, y ese valor puede ser de cualquier tipo. No es necesario declarar previamente la información de tipo, ya que Python calcula los tipos dinámicamente en tiempo de ejecución.
+
+**P:** ¿Importa cómo ingreso mi sangría? ¿Puedo usar la tecla tabulador, la tecla espacio o puedo usar ambas?
+
+**R:** Nos encantaría decirte que no importa, pero sí importa. Cuando se trata de sangrar su código Python, puede usar espacios o tabulaciones, pero no ambos (por lo tanto, no se pueden mezclar y combinar). Por qué esto es así es bastante técnico, por lo que no vamos a entrar en detalles sobre esto ahora. ***Nuestro mejor consejo es configurar su editor para reemplazar automáticamente los toques de la tecla de tabulación con cuatro espacios***. Y sí, existe una convención en la comunidad de programación de Python para sangrar cuatro espacios, no dos ni ocho. Por supuesto, puede ignorar esta convención si así lo desea, pero tenga en cuenta que la mayoría de los demás programadores de Python están programados para esperar una sangría de cuatro espacios. Por supuesto, siempre están los rebeldes que insisten en hacer lo suyo.
+
+**P:** Entonces, ¿presionar Enter no ejecuta mi código? ¿Tengo que seguir usando la combinación **Shift+Enter**?
+
+**R:** Sí, ya que está operando dentro de una computadora Jupyter notebook. Recuerde: cada cell de un notebook es como un pequeño editor integrado. Al presionar la tecla Enter, se finaliza la línea de código actual y luego se abre una nueva línea (para que pueda ingresar más código). Como la tecla **Enter** ya está en uso, la gente de Jupyter tuvo que idear otra forma de ejecutar una cell de código, decidiéndose por **Shift+Enter**.
+
+Por cierto: en la última página de este capítulo, encontrará una práctica hoja de referencia recortada de los atajos de teclado de Jupyter más útiles. Por ahora, **Shift+Enter** es todo lo que necesitas saber.
+
+<img width="831" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cbb5e3ef-f858-4d93-bc15-b59d0cd1e054">
+
+Su computadora portátil estaba esperando más código y usted debía practicar un poco usando VS Code agregando el siguiente código a su computadora portátil:
+
+1. Debías escribir **`suits`** en tu celda de espera, luego presionar **Shift+Enter**, luego escribir aquí lo que sucede:
+
+<img width="829" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/aa04a163-e8fa-4c3a-99cf-fa479469a6e5">
+
+2. Luego debía escribir el código para la función **`draw`** en la siguiente celda y luego presionar **Shift+Enter** para ejecutar esa celda también. Esto es lo que vimos cuando completamos este ejercicio:
+
+<img width="972" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fd7b6d17-7166-435f-9c94-1629ef64f4e7">
+
+<img width="863" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e2f8cfe2-67e0-479c-b7ce-ab245e74f3e7">
+
+Saquemos algunas cards de tu mazo de cartas.
+
+En la siguiente cell de código vacía, escriba **`print(draw())`** y luego presione **Shift+Enter**.
+
+Hicimos esto en tres cells para confirmar que el código produce cards aleatorias y
+
+<img width="917" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3ee2feeb-8cb8-4be7-b8ea-40b174e90ba9">
+
+<hr>
+
+AQUIIIII
 
 ## “¿Qué pasa si quieres más de una carta?”
 
