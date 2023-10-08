@@ -438,7 +438,7 @@ Aprenderá más sobre listas y tuplas más adelante en este libro. Aunque tanto 
 Pista: hay una gran pista en el título de esta página.
 
 <hr>
-
+AQUIIIIIIII
 ## “Modela tu mazo de cartas con un set”
 
 Los conjuntos en Python son conjuntos similares a los de la clase de matemáticas: contienen una colección de valores únicos donde no se permiten duplicados.
