@@ -454,3 +454,93 @@ En el trabajo, mi agradecimiento nuevamente a mi jefe de departamento, Nigel Why
 En casa, mi esposa Deirdre tuvo que soportar otro proyecto de escritura de un libro que, como antes, parecía consumir cada momento de vigilia. Nuestros hijos estaban en la adolescencia (y eran más jóvenes) cuando se escribió la primera edición de este libro y, ahora, ya han terminado la universidad y se encaminan hacia cosas más grandes y mejores. No hace falta decir que estaría perdido sin el apoyo y el amor de mi esposa y mis hijos.
 
 Una nota rápida sobre los crucigramas al final del capítulo: fueron generados por el maravilloso programa **genxword de David Whitlock** (con algunos ajustes locales de Paul). **genxword** está escrito en Python y, por supuesto, está disponible para descargar desde **PyPI**.
+
+## Instalación de Python en el Mac
+
+
+### Descargando Python de la página oficial
+
+https://www.python.org/
+
+<img width="1497" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ea2a238f-a525-4cff-8db7-6d1a2b265f85">
+
+<img width="1239" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/078d9461-429c-4502-b63b-6e56354dcda1">
+
+
+### Instalación con Homebrew
+
+Pulse los siguientes comandos:
+
+```sh
+brew install pyenv
+
+pyenv install 3.12
+
+python3
+```
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ccadc1f6-5a19-4680-84c9-49c760462ede">
+
+
+### Instalar Jupyter
+
+Pulsamos el comando:
+
+```sh
+python3 -m pip install jupyter
+```
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c3dbff5f-ce5a-4a46-bd05-c024ca968354">
+
+### Instalar y Configurar VSC
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5c27d49f-4026-41ef-bd00-215b0b41845b">
+
+Ir al menú **File, Preferences, Settings**
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/666cc64a-ef6d-4a74-b24c-f1953b549449">
+
+Veremos
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2939df38-43d6-4235-93b6-e7ad32f4141c">
+
+Nos sugieren poner estas características:
+
+* The indentation guides are switched off.
+* The editor’s color theme is set to Light.
+* The editor minimap is disabled.
+* The editor’s occurrences highlight is switched off.
+* The editor’s render line highlight is set to none.
+* The terminal and text editor’s font size is set to 14.
+* The notebook’s show cell status bar is set to hidden.
+* The editor’s lightbulb is disabled.
+
+<hr>
+
+**NOTA**
+
+No es necesario utilizar estas configuraciones, pero si desea que en su pantalla coincida lo que ve en este libro, se recomiendan estos ajustes.
+
+<hr>
+
+### Añadir Extensiones a VSC
+
+Vamos a añadir las extenciones **Python** y **Jupyter**.
+
+Vamos a pulsar en el icono Extensions que se encuentra en la izquiera de VSC.
+
+<img width="83" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2ede33ef-abac-479d-a249-e117bd0d6405">
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c1d3777d-6ff8-4178-a407-89e60fec69e4">
+
+Buscamos cada extensión y la instalamos.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ee2e7084-c6d2-4279-a17f-900fe8cac6c4">
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eb5aca36-d442-4a15-829b-b8806ae260cf">
+
+Ya tenemos instaladas ambas extensiones.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/57f92f18-4faa-4b77-ad24-aab263b8be62">
+
+
