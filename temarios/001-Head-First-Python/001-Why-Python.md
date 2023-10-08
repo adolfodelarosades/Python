@@ -319,15 +319,140 @@ Hicimos esto en tres cells para confirmar que el código produce cards aleatoria
 
 <hr>
 
-AQUIIIII
+### Entonces… el código Python realmente es fácil de leer… y ejecutar
 
-## “¿Qué pasa si quieres más de una carta?”
+Además de Jupyter, existen otras formas de ejecutar código Python y aprenderá sobre algunas de ellas a medida que avance en este libro. Sin embargo, usar VS Code con Jupyter es, en nuestra opinión, la manera perfecta de leer, ejecutar, experimentar y jugar con el código Python cuando se aprende el lenguaje por primera vez. Así que prepárate para pasar mucho tiempo en Jupyter y VS Code.
+
+Antes de continuar, tómate un momento para seleccionar **File** y luego **Save** en el menú VS Code para guardar tu notebook con el nombre **`Cards.ipynb`**.
+
+<hr>
+
+**NOTA**
+
+¡Asegúrate de hacer esto ahora!
+
+<hr>
+
+<img width="866" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/807643d9-6bfc-41f6-831a-d7610326a9b8">
+
+No, pero es una gran herramienta para usar cuando se aprende el lenguaje por primera vez, ya que Jupyter se conecta al **REPL** integrado de Python para ejecutar cada una de las celdas de su código. Aprenderá cómo ejecutar su código fuera de un notebook más adelante en este libro pero, por ahora, lo único de lo que debe preocuparse es de usar notebook dentro de VS Code (a medida que avanza).
+
+<hr>
+
+**NOTA**
+
+Para obtener más información sobre qué es un **REPL**, consulte aquí: https://en.wikipedia.org/wiki/Read-eval-print_loop.
+
+<hr>
+
+<img width="888" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/25e1e1ba-eb57-4fc2-8417-7a7e749af0b6">
+
+Sí. Python es un **intérprete** que está diseñado para ejecutar cada línea de código cuando la ve. Para ser técnicamente correcto, Python compila su código, pero todo sucede detrás de escena (para aliviarle la carga de hacerlo usted mismo). Todo lo que tienes que hacer es escribir tu código y luego ejecutarlo: Python se encarga de los detalles y el mecanismo **Shift+Enter** de Jupyter te facilita controlar cuándo ocurre la ejecución.
+
+<img width="868" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c50d4136-f13f-4a2d-9b23-ea5d4e9f3c6f">
+
+Sí, cuando vea el código presentado dentro de un cuadro gris, puede asumir que es un código que se ingresará en una celda de código en su notebook actual, listo para su ejecución con **Shift+Enter**. Para seguir, escriba el código en cada cuadro gris en su notebook, luego ejecútelo (según sea necesario) con **Shift+Enter**.
+
+<img width="921" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc0faf78-bc23-44e4-b2ad-2c6b754d4380">
+
+¡Bien! Y el bucle **`for`** de Python es lo que usarías. Echemos un vistazo rápido a cómo usarías **`for`** para hacer esto.
+
+
+## “¿Qué pasa si quieres más de una card?”
+
+Su función **`draw`** es un gran comienzo, ya que roba una carta del mazo cada vez que se ejecuta la función. Pero, ¿qué pasa si quieres robar más de una carta?
+
+Aunque sería un poco ridículo sugerir invocar manualmente la función **`draw`** tantas veces como sea necesario, la mayoría de los programadores recurren a un bucle. Aprenderá más sobre los bucles de Python más adelante en este libro. Por ahora, así es como usarías el bucle **`for`** de Python para ejecutar la función **`draw`** cinco veces:
+
+<img width="1003" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4cbff551-2135-456b-963c-ad2bb1e4efec">
+
+<img width="919" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/768e8787-d3d9-4d22-9d98-3cb397cf7997">
+
+**Esa es la variable predeterminada(default) de Python.**
+
+Es típico que la mayoría de los bucles tengan una variable de bucle asociada (siendo “**`i`**” un nombre favorito entre muchos programadores). Sin embargo, si el código de su bucle no usa el valor de esa variable, Python le permite usar el ***carácter de subrayado `_`*** en su lugar.
+
+Cuando vea el guión bajo en el código, piense *“¡Ah, ja! Aquí se requiere sintácticamente una variable, pero su valor no se usa, por lo que la variable no tiene nombre”.*
+
+<img width="844" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3ce7c8bb-aa77-4f4f-a603-e9a99879e028">
+
+Probemos su primer bucle de Python y veamos qué sucede. Le mostramos el código en un cuadro gris, así que escriba este código en la siguiente celda de código de su notebook y luego presione **Shift+Enter**:
+
+<img width="909" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ba4bae49-1d40-4e58-973b-d3c444ad6d69">
+
+Y, como era de esperar, aparecen en pantalla los detalles de cinco cartas:
+
+<img width="849" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/556e69a2-8169-4071-8a36-04858e5001e4">
+
+<img width="855" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fffa6d73-3ab1-4d9a-9d6f-56a36af5b91e">
+
+**Sí, la misma carta se extrae dos veces.**
+
+El problema aquí es que la función de sorteo devuelve la ***Queen of Diamonds*** dos veces. ¡Vaya!
+
+Echemos un vistazo más de cerca a lo que está haciendo el sorteo para ver por qué sucede esto.
 
 ## "Eche un vistazo más de cerca al código de sorteo de la carta"
 
+La función **`draw`** tiene solo tres líneas de largo, pero aún así tiene un gran impacto. Echar un vistazo:
+
+<img width="867" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9067c3ff-d3f6-47fd-b72f-7f6d74460121">
+
+Lo sabemos: todos esos caracteres **`*`** que rodean la palabra "aleatoriamente" en esas anotaciones no fueron una pista suficiente, ¿verdad? Aunque el código **`draw`** logra seleccionar una carta al azar, no protege contra devolver la misma carta dos veces. Después de todo, en la mayoría de los juegos de cartas, una vez que se selecciona una carta del mazo, rara vez se vuelve a colocar directamente, ¿verdad? Si se tratara de un código de dibujo de tarjeta "real" (a diferencia de un ejemplo inventado diseñado para respaldar la descripción general de Python de este capítulo), probablemente usaríamos una estructura de datos diferente a las arrays que se usan actualmente, ¿verdad?
+
+<img width="848" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5b2d601c-1f31-426d-a9e1-9e5084ab7e9b">
+
+Si le pidieran que ideara una estructura de datos que modelara mejor una baraja de cartas, ¿qué estructura de datos elegiría?
+
+
 ## "Los 4 grandes: list, tuple, dictionary y set"
 
+El excelente soporte integrado de Python para estructuras de datos es legendario y a menudo se cita como la razón principal por la que a la mayoría de los programadores de Python les encanta Python.
+
+Como este es su capítulo inicial, no lo sobrecargaremos con ningún tipo de discusión en profundidad sobre estas estructuras de datos en este momento. Hay muchas páginas (de hecho, capítulos enteros) dedicadas a *The Big 4* más adelante en este libro.
+
+Aunque no hemos mencionado específicamente su uso, ya has encontrado listas y tuplas. Si bien anteriormente se refirió descaradamente a estos como arrays, cada una de estos "arrays" son, de hecho, una **list** de Python genuina y honesta:
+
+<img width="829" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/867c529d-baef-4746-896e-819f5811f174">
+
+También has visto una buena cantidad de tuplas. Cada vez que invocas la función **`draw`**, te devuelve una **tupla**:
+
+<hr>
+
+**NOTA**
+
+Aquí hay una pregunta rápida: ¿cómo pronunciarías “tupla”? ¿Rima con “pareja(couple)” o rima con “cuádruple”? En realidad, nadie lo sabe.
+
+<hr>
+
+<img width="920" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/921e3c07-9a45-4a61-8811-644ee130e192">
+
+Sería perdonable por pensar que las tuplas se ven un poco raras, y tendríamos que estar de acuerdo en que pensamos que también se ven un poco raras. No dejes que esto te preocupe.
+
+Aprenderá más sobre listas y tuplas más adelante en este libro. Aunque tanto las listas como las tuplas tienen sus usos, no son una buena opción cuando se trata de modelar una baraja de cartas. Aquí se necesita alguna otra estructura de datos. ¿Pero cual?
+
+<hr>
+
+**NOTA**
+
+Pista: hay una gran pista en el título de esta página.
+
+<hr>
+
 ## “Modela tu mazo de cartas con un set”
+
+Los conjuntos en Python son conjuntos similares a los de la clase de matemáticas: contienen una colección de valores únicos donde no se permiten duplicados.
+
+NOTA
+No te preocupes si adivinaste “diccionario” (después de todo, siempre sería uno u otro). Aprenderá todo sobre los diccionarios más adelante en este libro.
+
+Los conjuntos en Python también hacen que sea especialmente conveniente agregar y eliminar objetos. Y sí, otras estructuras de datos también pueden agregar o eliminar objetos, pero, normalmente, primero hay que encontrar el objeto y luego eliminarlo. O debe buscar el objeto para asegurarse de que no esté ya en la estructura de datos antes de agregarlo. En ambos casos, son dos operaciones para agregar y dos operaciones para eliminar (con las otras estructuras de datos).
+
+No ocurre lo mismo con los conjuntos.
+
+Una sola operación agrega al conjunto y otra operación lo elimina, lo que le libera de la necesidad de realizar toda esa búsqueda. En nuestra opinión, utilizar un juego para modelar una baraja de cartas es una opción casi perfecta.
+
+Continúe siguiendo su cuaderno Cards.ipynb mientras primero creamos un conjunto vacío, luego aprendemos un poco sobre los conjuntos, antes de agregar las 52 cartas y luego retirar las cartas del mazo según sea necesario.
 
 ## “El print dir combo mambo”
 
