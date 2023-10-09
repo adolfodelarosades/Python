@@ -438,25 +438,56 @@ Aprenderá más sobre listas y tuplas más adelante en este libro. Aunque tanto 
 Pista: hay una gran pista en el título de esta página.
 
 <hr>
-AQUIIIIIIII
+
 ## “Modela tu mazo de cartas con un set”
 
-Los conjuntos en Python son conjuntos similares a los de la clase de matemáticas: contienen una colección de valores únicos donde no se permiten duplicados.
+Los conjuntos en Python son conjuntos similares a los de la clase de matemáticas: ***contienen una colección de valores únicos donde no se permiten duplicados***.
 
-NOTA
+<hr>
+
+**NOTA**
+
 No te preocupes si adivinaste “diccionario” (después de todo, siempre sería uno u otro). Aprenderá todo sobre los diccionarios más adelante en este libro.
 
-Los conjuntos en Python también hacen que sea especialmente conveniente agregar y eliminar objetos. Y sí, otras estructuras de datos también pueden agregar o eliminar objetos, pero, normalmente, primero hay que encontrar el objeto y luego eliminarlo. O debe buscar el objeto para asegurarse de que no esté ya en la estructura de datos antes de agregarlo. En ambos casos, son dos operaciones para agregar y dos operaciones para eliminar (con las otras estructuras de datos).
+<hr>
 
-No ocurre lo mismo con los conjuntos.
+Los set en Python también hacen que sea especialmente conveniente agregar y eliminar objetos. Y sí, otras estructuras de datos también pueden agregar o eliminar objetos, pero, normalmente, primero hay que encontrar el objeto y luego eliminarlo. O debe buscar el objeto para asegurarse de que no esté ya en la estructura de datos antes de agregarlo. En ambos casos, *son dos operaciones para agregar y dos operaciones para eliminar (con las otras estructuras de datos)*.
 
-Una sola operación agrega al conjunto y otra operación lo elimina, lo que le libera de la necesidad de realizar toda esa búsqueda. En nuestra opinión, utilizar un juego para modelar una baraja de cartas es una opción casi perfecta.
+No ocurre lo mismo con los sets.
 
-Continúe siguiendo su cuaderno Cards.ipynb mientras primero creamos un conjunto vacío, luego aprendemos un poco sobre los conjuntos, antes de agregar las 52 cartas y luego retirar las cartas del mazo según sea necesario.
+***Una sola operación agrega al conjunto y otra operación lo elimina, lo que le libera de la necesidad de realizar toda esa búsqueda***. En nuestra opinión, utilizar un set para modelar una baraja de cartas es una opción casi perfecta.
+
+Continúe siguiendo su notebook **`Cards.ipynb`** mientras primero creamos un conjunto vacío, luego aprendemos un poco sobre los conjuntos, antes de agregar las 52 cartas y luego retirar las cartas del mazo según sea necesario.
+
+<img width="855" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/580d1c9e-bc64-46b9-ae23-af79c29d030f">
+
+Ahora que su conjunto existe y está asignado a una variable (con un nombre bastante imaginativo) llamada **`deck`**(mazo), aprendamos un poco sobre él. Dos de las funciones integradas (BIF) de Python ayudan aquí: **`type`** y **`len`**:
+
+<img width="865" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9af143c0-ed6a-4448-9e72-d646674d72e0">
+
+**"BIF" es la abreviatura de "built-in function(función incorporada)"**.
+
+**Ahora que tu conjunto existe, ¿cómo puedes determinar qué puedes hacer con él? Bueno… hay un BIF para eso.**
+
 
 ## “El print dir combo mambo”
 
+Cuando se proporciona el nombre de cualquier objeto Python, el **dir** BIF devuelve una lista de los atributos del objeto que, en el caso de la variable **`deck`**, son los atributos asociados con un objeto establecido.
+
+Como puede ver (a continuación), hay una gran cantidad de atributos asociados con un set de Python. Observe cómo la salida del **dir** se combina con una llamada al **print** BIF, lo que garantiza que la salida mostrada se dibuje en la pantalla en lugar de hacia abajo, lo que reduce la cantidad de desplazamiento requerido por sus pobres dedos. Puede que esto no sea algo para bailar pero, ¡oye!, todo ayuda.
+
+<img width="897" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ac290405-db8c-42b3-9cb0-498ba928ee79">
+
+<img width="916" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fa3f5798-2762-4287-a9a2-3b254e4c42d6">
+
+Aquí hay una regla simple a seguir al mirar el resultado del **print dir**: *por ahora, ignore los atributos que comienzan y terminan con un doble guión bajo*. Aprenderás por qué existen más adelante en este libro, pero, por ahora, ¡ignora, ignora, ignora!
+
+
 ## "Obtener ayuda con dir’s output"
+AQUIIIIIIII
+Puede que no creas esto al verlo, pero probablemente usarás el **dir** BIF más que cualquier otro BIF cuando trabajes con Python, especialmente cuando experimentes dentro de un cuaderno Jupyter. Esto se debe a la capacidad de dir para revelar la lista de atributos asociados con cualquier objeto. Normalmente, estos atributos incluyen una lista de métodos que se pueden aplicar al objeto.
+
+Aunque puede ser tentador (aunque un poco absurdo) ejecutar aleatoriamente cualquiera de los métodos asociados con la variable deck para ver qué hacen, un enfoque más sensato es leer la documentación asociada con cualquier método...
 
 ## “Rellena el set con cartas”
 
