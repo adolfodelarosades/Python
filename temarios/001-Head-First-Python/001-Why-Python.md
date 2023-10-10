@@ -842,7 +842,33 @@ Nos vemos en el próximo capítulo, el Capítulo 2, que en realidad es su segund
 
 Felicitaciones por llegar al final del capítulo inicial, numerado cero en honor al hecho de que Python, como muchos otros lenguajes de programación, comienza a contar desde cero. Antes de sumergirte en el próximo capítulo, tómate unos minutos para resolver este crucigrama. Todas las respuestas se encuentran en este capítulo y la solución está en la página siguiente.
 
+<img width="1006" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/38094933-ddca-43af-98fe-e4974617ce3a">
+
+<img width="764" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/40607287-be5b-420d-a211-0b8d494d936a">
+
+<img width="938" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/574c97d0-8ebb-48ba-b5e0-838a3ba238d9">
+
+<img width="866" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/85f2c786-4670-4876-b457-af0b0f64a416">
+
+<img width="802" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1337d33d-10aa-4921-a347-264844a9245f">
+
+<img width="897" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7abb5700-afb2-4a3f-a30a-2c0e87585b5b">
+
+<hr>
 
 
 ## “Justo cuando pensabas que habías terminado…”
+
+Tome sus tijeras, ya que aquí hay una práctica tabla recortada de los atajos de teclado de Jupyter Notebook que consideramos esenciales. Podrás utilizarlos todos si aprendes más sobre Jupyter. Por ahora, **Shift+Enter** sigue siendo la combinación más importante:
+
+<img width="751" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0b28b97f-8dc4-4bab-afd4-b0679fc09c87">
+
+<hr>
+
+**NOTA**
+
+¡Menos mal que te pedimos que llevaras tus tijeras a lo que hay al otro lado!
+
+<hr>
+
 
