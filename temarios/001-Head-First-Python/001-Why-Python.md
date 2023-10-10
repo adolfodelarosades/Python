@@ -706,13 +706,143 @@ El PSL es un excelente ejemplo de cómo Python trabaja arduamente para garantiza
 
 Y cuando se trata de reutilizar código, hay más que PSL para extraer.
 
+<img width="1017" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1396945f-3ad4-413f-90f3-57e8e52eeef8">
 
-El ecosistema de paquetes de Python es para morirse
-No contenta con lo que ya está incluido en PSL, la comunidad Python admite un repositorio centralizado en línea de módulos, clases y paquetes de terceros. Se llama Índice de paquetes de Python y se encuentra aquí: https://pypi.org.
+### El ecosistema de paquetes de Python es para morirse
 
-Conocido como PyPI (y pronunciado “pie-pea-eye”), el índice es una enorme colección de software. Una vez que encuentre lo que está buscando, la instalación es muy sencilla y obtendrá mucha práctica en la instalación desde PyPI a medida que avance este libro.
+No contenta con lo que ya está incluido en PSL, la comunidad Python admite un repositorio centralizado en línea de módulos, clases y paquetes de terceros. Se llama ***Python Package Index - Índice de Paquetes de Python*** y se encuentra aquí: https://pypi.org.
+
+Conocido como **PyPI** (y pronunciado “pie-pea-eye”), el índice es una enorme colección de software. Una vez que encuentre lo que está buscando, la instalación es muy sencilla y obtendrá mucha práctica en la instalación desde PyPI a medida que avance este libro.
 
 Por ahora, tómate diez minutos para visitar el sitio de PyPI (que se muestra a continuación) y echa un vistazo.
+
+<img width="1040" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/db2407b7-6ee5-436a-aba7-93e8c3567698">
+
+<img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6f2ef686-0b7f-4ad8-a604-367e4ef1c47c">
+
+**No. Sólo recuerda que está ahí.**
+
+Al igual que con PSL, las montañas de libraries y módulos disponibles en PyPI existen para hacerle la vida más fácil (y para evitarle que escriba código que ya existe).
+
+Por cierto: ese cuadro de búsqueda en la página de inicio de PyPI es tu amigo...
+
+  1️⃣ **El código Python es fácil de leer.** ✔️
+
+  2️⃣ **Python viene con una biblioteca estándar.** ✔️
+
+  3️⃣ **Python tiene funciones integradas (BIF) prácticas, potentes y genéricas.** ✔️
+
+  4️⃣ **Python viene con estructuras de datos integradas.** ✔️
+
+  5️⃣ **Python tiene el índice de paquetes de Python (PyPI).** ✔️
+
+  6️⃣ **Python no se toma a sí mismo demasiado en serio.**
+
+<hr>
+
+**NOTA**
+
+Casi estámos allí. Solo queda este último punto para discutir.
+
+<hr>
+
+<img width="1100" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8f8b3080-987f-4036-91b8-96fec3f898c0">
+
+**DE ACUERDO. Si te funciona, ¡sigue tu Zen!**
+
+Sin embargo, en serio, cuando un lenguaje de programación lleva el nombre de un grupo de comediantes, no debería sorprender que las cosas se pongan un poco tontas a veces. Esto no es algo malo.
+
+La documentación de Python está literalmente plagada (lo siento) de referencias a Monty Python. Mientras que otra documentación favorece a *foo* y *bar*, los documentos de Python favorecen a los *parrots*, *spam* y *eggs*. ¿O son *eggs* y *spam*? De todos modos, como dice la documentación: no es necesario que te gusten los *Monty Python* para usar Python, pero ayuda. 😉
+
+<img width="1076" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/48a6422e-f3d6-40c5-92c2-6368751725dc">
+
+Python viene con algunos huevos de Pascua que demuestran cómo los programadores de Python a veces no se toman a sí mismos demasiado en serio y tampoco les importa cuando otras personas se divierten un poco a su costa. Para ver lo que queremos decir, regrese a su notebook por última vez y, en dos nuevas celdas de código, ejecute cada una de las siguientes líneas de código. ¡Disfrutar!
+
+<img width="1146" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0926fce1-6a3e-4fc0-975d-2c9ce66647ba">
+
+  6️⃣ **Python no se toma a sí mismo demasiado en serio.** ✔️ 
+
+<hr>
+
+**NOTE**
+
+¡Y con eso, tu descripción general está lista!
+
+<hr>
+
+<img width="1006" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5656f2c8-5ace-4d65-902e-2b00e2555feb">
+
+**Y podemos ayudarte con eso.**
+
+En el siguiente capítulo presentamos (y comenzamos a trabajar inmediatamente en él) un problema del mundo real que resolverá con código Python. Trabajando juntos, construiremos una solución mientras aprendemos más Python, revisando el material de este capítulo con más detalle cuando sea necesario y a medida que avance este libro.
+
+Sin embargo, antes de llegar a todo eso, tómate un tiempo para revisar el resumen del capítulo en la página siguiente antes de probar tus habilidades de retención con el crucigrama de este capítulo.
+
+Nos vemos en el próximo capítulo, el Capítulo 2, que en realidad es su segundo capítulo cuando comenzamos a contar desde cero (al igual que Python).
+
+<hr>
+
+**BULLET POINTS**
+
+* Python está, desde el principio, diseñado para admitir la creación de código que sea fácil de **leer**.
+
+* El código Python también es fácil de ejecutar. Aunque existen varias formas de permitirle hacer esto, en este libro VS Code junto con Jupyter Notebook son sus herramientas de referencia al experimentar y ejecutar su código Python.
+
+* Para comenzar y ser productivo con Jupyter Notebook, necesita aprender una única combinación de teclado: **Shift+Enter**.
+
+* Para garantizar que solo escriba código nuevo cuando sea absolutamente necesario, Python viene repleto de tecnología incorporada.
+
+* Las funciones integradas (BIF) siempre están disponibles y proporcionan una gran cantidad de funciones genéricas.
+
+* El **len** BIF informa el tamaño de un objeto.
+
+* La palabra clave **def** se utiliza para definir una función.
+
+* El **range** BIF produce una lista específica de números (y es realmente útil con bucles cuando necesitas iterar un número específico de veces).
+
+* Hablando de bucles, Python proporciona el bucle **for**, que se repite un número específico de veces.
+
+* El **set** BIF crea un conjunto. Los conjuntos son una de las cuatro grandes estructuras de datos integradas de Python.
+
+* La **print** BIF muestra el valor de un objeto en la pantalla. Cuando se imprime una colección de objetos, el **print** BIF se muestra horizontalmente en la pantalla (lo que suele resultar útil).
+
+* El **dir** BIF devuelve una lista de los atributos de cualquier objeto.
+
+* Un modismo común es combinar el **dir** BIF con el **print** BIF creando (lo que nos gusta llamar) el **print dir combo mambo**.
+
+* Algunos de los atributos que muestra el combo mambo hacen referencia a **methods** que se pueden aplicar al objeto, por ejemplo **`deck.remove`**.
+
+* Los atributos con guiones bajos dobles iniciales y finales son especiales, tan especiales que puedes ignorarlos por ahora.
+
+* Una **list** se compone de una colección de objetos entre corchetes y es una de las cuatro grandes estructuras de datos integradas de Python.
+
+* Una **tuple** se compone de una colección de objetos entre paréntesis y es otro de los 4 grandes.
+
+* La estructura de datos incorporada final es el **dictionary**, que no se usó en este capítulo (solo se menciona). Esto no significa que los diccionarios no sean geniales. Ellos son.
+
+* El **type** BIF puede informar el tipo de cualquier objeto.
+
+* La palabra clave **in** se mostró en dos lugares de este capítulo. Una vez dentro de un bucle **for** donde identificó la colección sobre la que se va a iterar, y nuevamente por sí solo cuando se usó para determinar si un objeto está contenido dentro de otro (también conocido como *búsqueda*).
+
+* La palabra clave **in** se usa a menudo dentro de la parte condicional de la declaración **if** de Python.
+
+* Cuando necesite una variable pero no pueda pensar en un nombre decente para su variable o no necesite recordar un valor por nombre, use la variable predeterminada de Python: un solo carácter de subrayado (es decir, **`_`**). A menudo verás la variable predeterminada utilizada con el código de bucle.
+
+* La declaración **if** de Python puede tener una parte **else** opcional.
+
+* Python tiene dos valores booleanos integrados: **`True`** y **`False`**.
+
+* El **PSL** no tiene nada que ver con el café, sino con la **Standard Library** de **Python**. El PSL es una gran colección de módulos integrados (que vienen con Python) y se puede usar en todas partes para hacer muchas cosas útiles.
+
+* Si el PSL no es suficiente para usted, consulte **PyPI**, el **Python Package Index**, un repositorio en línea de módulos de Python que se pueden compartir. A menudo ocurre que parte del código que necesita ya se ha escrito y subido a PyPI como un módulo que se puede compartir. Siéntase libre de “apalancarse” según sea necesario.
+
+* Existen otros **keyboard shortcuts** útiles que puede utilizar cuando trabaja con Jupyter. Nuestros nueve atajos esenciales aparecen después de la solución del crucigrama de este capítulo (en tres páginas).
+
+<img width="783" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/27145a9d-f955-4d07-9b10-12d87d855d45">
+
+Felicitaciones por llegar al final del capítulo inicial, numerado cero en honor al hecho de que Python, como muchos otros lenguajes de programación, comienza a contar desde cero. Antes de sumergirte en el próximo capítulo, tómate unos minutos para resolver este crucigrama. Todas las respuestas se encuentran en este capítulo y la solución está en la página siguiente.
+
+
 
 ## “Justo cuando pensabas que habías terminado…”
 
