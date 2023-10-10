@@ -309,7 +309,7 @@ Su computadora portátil estaba esperando más código y usted debía practicar 
 
 <img width="863" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e2f8cfe2-67e0-479c-b7ce-ab245e74f3e7">
 
-Saquemos algunas cards de tu mazo de cartas.
+Saquemos algunas cards de tu baraja de cartas.
 
 En la siguiente cell de código vacía, escriba **`print(draw())`** y luego presione **Shift+Enter**.
 
@@ -360,7 +360,7 @@ Sí, cuando vea el código presentado dentro de un cuadro gris, puede asumir que
 
 ## “¿Qué pasa si quieres más de una card?”
 
-Su función **`draw`** es un gran comienzo, ya que roba una carta del mazo cada vez que se ejecuta la función. Pero, ¿qué pasa si quieres robar más de una carta?
+Su función **`draw`** es un gran comienzo, ya que roba una carta de la baraja cada vez que se ejecuta la función. Pero, ¿qué pasa si quieres robar más de una carta?
 
 Aunque sería un poco ridículo sugerir invocar manualmente la función **`draw`** tantas veces como sea necesario, la mayoría de los programadores recurren a un bucle. Aprenderá más sobre los bucles de Python más adelante en este libro. Por ahora, así es como usarías el bucle **`for`** de Python para ejecutar la función **`draw`** cinco veces:
 
@@ -398,7 +398,7 @@ La función **`draw`** tiene solo tres líneas de largo, pero aún así tiene un
 
 <img width="867" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9067c3ff-d3f6-47fd-b72f-7f6d74460121">
 
-Lo sabemos: todos esos caracteres **`*`** que rodean la palabra "aleatoriamente" en esas anotaciones no fueron una pista suficiente, ¿verdad? Aunque el código **`draw`** logra seleccionar una carta al azar, no protege contra devolver la misma carta dos veces. Después de todo, en la mayoría de los juegos de cartas, una vez que se selecciona una carta del mazo, rara vez se vuelve a colocar directamente, ¿verdad? Si se tratara de un código de dibujo de tarjeta "real" (a diferencia de un ejemplo inventado diseñado para respaldar la descripción general de Python de este capítulo), probablemente usaríamos una estructura de datos diferente a las arrays que se usan actualmente, ¿verdad?
+Lo sabemos: todos esos caracteres **`*`** que rodean la palabra "aleatoriamente" en esas anotaciones no fueron una pista suficiente, ¿verdad? Aunque el código **`draw`** logra seleccionar una carta al azar, no protege contra devolver la misma carta dos veces. Después de todo, en la mayoría de los juegos de cartas, una vez que se selecciona una carta de la baraja, rara vez se vuelve a colocar directamente, ¿verdad? Si se tratara de un código de dibujo de tarjeta "real" (a diferencia de un ejemplo inventado diseñado para respaldar la descripción general de Python de este capítulo), probablemente usaríamos una estructura de datos diferente a las arrays que se usan actualmente, ¿verdad?
 
 <img width="848" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5b2d601c-1f31-426d-a9e1-9e5084ab7e9b">
 
@@ -439,7 +439,7 @@ Pista: hay una gran pista en el título de esta página.
 
 <hr>
 
-## “Modela tu mazo de cartas con un set”
+## “Modela tu baraja de cartas con un set”
 
 Los conjuntos en Python son conjuntos similares a los de la clase de matemáticas: ***contienen una colección de valores únicos donde no se permiten duplicados***.
 
@@ -457,11 +457,11 @@ No ocurre lo mismo con los sets.
 
 ***Una sola operación agrega al conjunto y otra operación lo elimina, lo que le libera de la necesidad de realizar toda esa búsqueda***. En nuestra opinión, utilizar un set para modelar una baraja de cartas es una opción casi perfecta.
 
-Continúe siguiendo su notebook **`Cards.ipynb`** mientras primero creamos un conjunto vacío, luego aprendemos un poco sobre los conjuntos, antes de agregar las 52 cartas y luego retirar las cartas del mazo según sea necesario.
+Continúe siguiendo su notebook **`Cards.ipynb`** mientras primero creamos un conjunto vacío, luego aprendemos un poco sobre los conjuntos, antes de agregar las 52 cartas y luego retirar las cartas de la baraja según sea necesario.
 
 <img width="855" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/580d1c9e-bc64-46b9-ae23-af79c29d030f">
 
-Ahora que su conjunto existe y está asignado a una variable (con un nombre bastante imaginativo) llamada **`deck`**(mazo), aprendamos un poco sobre él. Dos de las funciones integradas (BIF) de Python ayudan aquí: **`type`** y **`len`**:
+Ahora que su conjunto existe y está asignado a una variable (con un nombre bastante imaginativo) llamada **`deck`**(baraja), aprendamos un poco sobre él. Dos de las funciones integradas (BIF) de Python ayudan aquí: **`type`** y **`len`**:
 
 <img width="865" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9af143c0-ed6a-4448-9e72-d646674d72e0">
 
@@ -484,24 +484,235 @@ Aquí hay una regla simple a seguir al mirar el resultado del **print dir**: *po
 
 
 ## "Obtener ayuda con dir’s output"
-AQUIIIIIIII
-Puede que no creas esto al verlo, pero probablemente usarás el **dir** BIF más que cualquier otro BIF cuando trabajes con Python, especialmente cuando experimentes dentro de un cuaderno Jupyter. Esto se debe a la capacidad de dir para revelar la lista de atributos asociados con cualquier objeto. Normalmente, estos atributos incluyen una lista de métodos que se pueden aplicar al objeto.
 
-Aunque puede ser tentador (aunque un poco absurdo) ejecutar aleatoriamente cualquiera de los métodos asociados con la variable deck para ver qué hacen, un enfoque más sensato es leer la documentación asociada con cualquier método...
+Puede que no creas esto al verlo, pero probablemente usarás el **dir** BIF más que cualquier otro BIF cuando trabajes con Python, especialmente cuando experimentes dentro de un Jupyter notebook. Esto se debe a la capacidad de **dir** para revelar la lista de atributos asociados con cualquier objeto. Normalmente, estos atributos incluyen una lista de métodos que se pueden aplicar al objeto.
+
+Aunque puede ser tentador (aunque un poco absurdo) ejecutar aleatoriamente cualquiera de los métodos asociados con la variable **`deck`** para ver qué hacen, un enfoque más sensato es leer la documentación asociada con cualquier método...
+
+<img width="932" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6ca2b3d5-2696-42ed-a0e6-da9f1c4ab55a">
+
+Ahora, no se preocupe: no vamos a enviarlo a leer miles de páginas de documentación de Python en línea. Esa es la labor de **help** del BIF:
+
+<img width="843" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d9b7a644-1313-4d9b-bdbb-3ecda5657359">
+
 
 ## “Rellena el set con cartas”
 
+En la parte inferior de la última página (y por suerte) utilizamos el **help** BIF para ver la documentación de Python para el método **`add`**, que está integrado en cada conjunto de Python. Sabiendo lo que hace **`add`**, veamos un código que utiliza los datos de cartas "sin procesar" de antes para construir una baraja de cartas:
+
+<img width="789" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/62366a5e-840f-423c-af4d-ed56347fed83">
+
+<img width="801" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4428d311-9193-4e1d-a7a0-90c34c37da37">
+
+**Si lo hicimos. Y eso está bien.**
+
+Las estructuras de datos de Python pueden crecer y reducirse según sea necesario, por lo que ***no es necesario declarar previamente su tamaño***.
+
+El intérprete de Python maneja todos los detalles subyacentes por usted. La memoria se asigna y desasigna dinámicamente según sea necesario, lo que le permite crear el código que necesita.
+
 ## “Esto ahora parece una baraja de cartas”
+
+Ahora que tu baraja de cartas es un conjunto, puedes modelar mejor su comportamiento.
+
+Lamentablemente, seleccionar aleatoriamente una carta de la baraja es complicado por el hecho de que la técnica de elección aleatoria mencionada anteriormente en este capítulo no funciona con conjuntos. Es una lástima, ya que hubiera sido bueno usar **`random.choice(deck)`** para elegir una carta de tu baraja pero, lamentablemente, esto no funcionará.
+
+<hr>
+
+**NOTA**
+
+Por ahora, no te preocupes por el motivo.
+
+<hr>
+
+No es para preocuparse. Un truco rápido le permite convertir primero una copia de su conjunto de tarjetas en una lista, que luego puede usarse con **`random.choice`**. No podría ser más sencillo:
+
+<img width="1054" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/271904a5-6ab1-4b5f-a4b0-d48b26db662a">
+
+Habiendo seleccionado una carta (es el *Ace of Spades(As de Picas)* para nosotros, pero probablemente sea una carta diferente si sigues la carta), realmente deberíamos eliminar la carta de la baraja para que las siguientes elecciones aleatorias ya no la seleccionen.
+
+<img width="1090" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6bf9fca9-b8e2-48bc-9570-6848adefb408">
+
 
 ## “¿Qué es exactamente “card”?”
 
+Si se pregunta cuál es la variable **`card`**, no se olvide del **type**, que informa el tipo de valor actualmente asignado a la **`card`**:
+
+<img width="1073" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9f904193-7c6a-4bf8-868b-e83f30c45ba7">
+
+<img width="1049" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ffbdbf18-6617-424a-b086-c1fae660b825">
+
+Ahora que has visto cómo seleccionar aleatoriamente una carta de tu conjunto, así como eliminar una carta, reescribamos la función **`draw`** para que funcione con el set **`deck`** (a diferencia de esas listas). En el espacio siguiente, proporcione las tres líneas de código que agregaría a su nueva función **`draw`**. La primera línea de código selecciona aleatoriamente una tarjeta del conjunto, la segunda elimina la tarjeta seleccionada del conjunto, luego la tercera (y última) línea de código devuelve la tarjeta seleccionada al llamador de la función:
+
+<img width="942" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fc47603d-a23e-433f-908c-b1caeb2e2274">
+
+Ahora que habías visto cómo seleccionar aleatoriamente una carta de tu conjunto, así como eliminar una carta, era hora de reescribir la función **`draw`** para que funcione con el set **`deck`** (a diferencia de esas listas). En el espacio siguiente, debías proporcionar las tres líneas de código que agregarías a tu nueva función **`draw`**. La primera línea de código selecciona aleatoriamente una tarjeta del conjunto, la segunda elimina la tarjeta seleccionada del conjunto, luego la tercera (y última) línea de código devuelve la tarjeta seleccionada al llamador(caller) de la función:
+
+<img width="963" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/00d89eb3-245a-4b7c-85c7-33837016ae65">
+
+<hr>
+
+**NO HAY PREGUNTAS TONTAS**
+
+**P: ¿Supongo que los dos puntos al final de la línea de `def` de la función son importantes?**
+
+**R:** Sí, mucho. Conocerá los dos puntos en detalle más adelante en este libro. Por ahora, considérelo como una parte de la sintaxis requerida que informa a todos que un bloque de código sangrado está a punto de comenzar (en la siguiente línea).
+
+**P: ¿Qué pasa con la versión anterior de `draw`? ¿Aún puedo acceder a él si es necesario?**
+
+**R:** La nueva versión de **`draw`** reemplaza a la anterior, que desapareció en el éter digital (en una nube de humo) y nunca más se supo de ella.
+
+**P: Sé que esta pregunta no tiene nada que ver con el código, pero me molesta... ¿por qué la ortografía divertida de Jupyter? ¿No se escribe el planeta con “i”?**
+
+**R:** Sí, el planeta se escribe con una “i”, pero la herramienta no lleva el nombre del planeta.
+
+Jupyter lleva el nombre de los tres lenguajes de programación que admitía inicialmente, a saber, **Julia**, **Python** y **R**. Es por eso que las letras "py" se incluyen en el nombre.
+
+Ese "py" también es una referencia a la extensión de nombre de archivo preferida de Python para archivos de código, que es ***.py***.
+
+**P: La extensión del notebook es bastante complicada: `.ipynb`. ¿Esto significa algo en particular?**
+
+**R:** Sí. Es una abreviatura del ***ipython notebook format***. ¿No te alegra haber preguntado?
+
+<img width="927" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c2502251-fc66-4e7a-bf52-38cc7de32bd6">
+
+Comprobemos que su nueva función **`draw`** esté funcionando como se esperaba.
+
+Continuando trabajando dentro del notebook de este capítulo (**`Cards.ipynb`**), escriba el código para su nueva función **`draw`** en la siguiente celda de código, luego presione **Shift+Enter** para definirlo:
+
+<img width="931" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9d6aa442-456a-4773-a55b-539599b706de">
+
+Invoque su nueva función con una llamada a **`print`** BIF, que muestra su carta seleccionada al azar en la pantalla:
+
+<img width="982" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/04c968af-6cb0-441d-8adf-95063e05bf80">
+
+Una rápida llamada al **len** BIF confirma que la baraja de cartas tiene una carta menos que antes:
+
+<img width="916" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3b81f629-28c9-4972-95da-3c6562e564eb">
+
+<img width="938" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7754223e-9d74-4476-9a33-2fb6ec5ababd">
+
+**Sí. Y es casi demasiado fácil.**
+
+Aunque ya has visto la palabra clave **in** como parte de tu bucle **for**, por sí sola es algo importante.
+
+Voltee la página para obtener más información sobre esta *superpotencia de Python*.
+
+
 ## "¿Necesitas encontrar algo?"
+
+Como se mencionó al final de la última página, ya conoce la palabra clave **in**:
+
+<img width="954" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc265e4a-1d38-489b-9d95-68ad5b5a6d55">
+
+Pero la palabra clave **in** puede hacer mucho más: puede ***buscar(search)***.
+
+Dada cualquier estructura de datos de Python, podemos realizar una *membership test(prueba de membresía)* y verificar si se encuentra un valor en ella. Comprobemos si el *As de Corazones(Ace of Hearts)* todavía está en nuestra baraja. Asegúrate de seguir las instrucciones y recuerda usar **Shift+Enter** para ejecutar cada celda:
+
+<img width="1103" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f8e8ae7a-1500-4818-801f-bbde18aa9c0a">
 
 ## “Hagamos una pausa y hagamos balance”
 
-## "Python viene con una rica biblioteca estándar"
+Recuerde la lista extraída de la entrevista con Python al comienzo de este capítulo. Aunque esta descripción general no aborda esta lista en orden (qué rebeldes somos), en esta etapa puedes marcar los puntos que te han presentado:
+
+1️⃣ El código Python de la imagen es fácil de leer. ✔️
+
+2️⃣ Image Python viene con una biblioteca estándar.
+
+3️⃣ Image Python tiene funciones integradas (BIF) prácticas, potentes y genéricas. ✔️
+
+4️⃣ Image Python viene con estructuras de datos integradas. ✔️
+
+5️⃣ Image Python tiene el índice de paquetes de Python (PyPI).
+
+6️⃣ Image Python no se toma a sí mismo demasiado en serio.
+
+<img width="1105" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/77b028a4-43e4-44e2-89e4-98a6f7693909">
+
+**¡Genial, estamos progresando!**
+
+Ahora... en una ruptura bastante impactante con la tradición, veamos los tres puntos restantes en el orden en que aparecen en la lista.
+
+Primero está la ***Python Standard Library***.
+
+
+## "Python viene con una rica Standard Library"
+
+***The Python Standard Library (PSL)*** es el nombre que se utiliza para referirse a una gran colección de functions, types, modules, classes y packages incluidos con Python. Se garantiza que estarán allí una vez que se instale Python.
+
+<img width="1086" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5e22e35d-ed79-46ab-b371-042f62569c28">
+
+Cuando escuchas a los programadores referirse a Python como si viniera con “baterías incluidas”, se están refiriendo en parte al PSL. Hay mucho que hacer: https://docs.python.org/3/library/index.html.
+
+**En este libro, "PSL" es la abreviatura de "Python Standard Library".**
+
+<img width="1111" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d71dbfd3-7cc2-4b89-9c58-0bf94fbb2944">
+
+<img width="1142" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e7d82844-78cc-4ed1-ab2e-1127d707a0c6">
+
+**Sí. Y todos hemos estado allí.**
+
+Abres tu último regalo y te das cuenta de que no viene con todo lo que necesitas: *faltan* las pilas. Cue la música triste...
+
+Python, por otro lado, rara vez decepciona ya que PSL viene con muchas bibliotecas integradas. Ya has visto (y usado) la library **`random`**, pero hay mucho más. Miremos más de cerca.
+
+<hr>
+
+**¿QUIEN HACE QUE?**
+
+Sabemos que todavía tienes que ver el PSL con gran detalle pero, para darte una idea de lo que incluye, hemos ideado una pequeña prueba. Sin echar un vistazo a la documentación mencionada en la última página, considere los nombres de algunos de los módulos del PSL que se muestran a la izquierda de esta página. Toma tu lápiz y dibuja una flecha que conecte el nombre del módulo con lo que crees que es la descripción correcta a la derecha. Para comenzar, el primero ya está hecho para usted. A ver cómo te va con el resto. Nuestras respuestas están en la página siguiente.
+
+<img width="845" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/57273743-68b6-4178-aeee-76be94e95350">
+
+<hr>
+
+**¿QUIÉN HACE QUÉ SOLUCIÓN?**
+
+<img width="757" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bf644106-2624-4ed4-8bfd-66a28c39500f">
+
+<hr>
+
+<img width="975" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6da474ee-cac0-4442-84fa-b8b24b6e7769">
+
+**Seguro que están pasando muchas cosas allí.**
+
+Nuestro objetivo es darle una idea de lo que hay en el PSL, no que usted lo explore con gran detalle.
+
+<hr>
+
+**NOTA**
+
+Para ser claros: no estamos hablando de café…
+
+<hr>
+
+No se espera que usted sepa todo esto, ni recuerde lo que hay en la última página, aunque hay tres puntos que debe considerar.
+
+  1️⃣ **Sólo has arañado la superficie.**
+
+El PSL tiene mucho que ofrecer, y lo que hay en las dos páginas anteriores proporciona un breve vistazo. A medida que avance en este libro, le indicaremos los usos del PSL para que no se pierda ninguno.
+
+  2️⃣ **El PSL representa una gran cantidad de código probado que no es necesario escribir, solo utilizar.**
+
+Como el PSL existe desde hace décadas, los módulos que contiene han sido probados hasta su destrucción por legiones de programadores de Python en todo el mundo. En consecuencia, puede utilizar los módulos PSL con confianza.
+
+  3️⃣ **Se garantiza que el PSL estará allí, por lo que puede confiar en que sus módulos estarán disponibles.**
+
+Aparte de algunos casos extremos muy específicos (como un pequeño microcontrolador integrado que proporciona un entorno Python mínimo), puede estar seguro de que su código que utiliza cualquier módulo PSL será portátil a otros sistemas que también admitan PSL.
+
 
 ## “Con Python sólo escribirás el código que necesitas”
+
+El PSL es un excelente ejemplo de cómo Python trabaja arduamente para garantizar que solo escriba código nuevo cuando sea absolutamente necesario. Si un módulo del PSL resuelve su problema, úselo: resista la tentación de codificar todo desde cero.
+
+Y cuando se trata de reutilizar código, hay más que PSL para extraer.
+
+
+El ecosistema de paquetes de Python es para morirse
+No contenta con lo que ya está incluido en PSL, la comunidad Python admite un repositorio centralizado en línea de módulos, clases y paquetes de terceros. Se llama Índice de paquetes de Python y se encuentra aquí: https://pypi.org.
+
+Conocido como PyPI (y pronunciado “pie-pea-eye”), el índice es una enorme colección de software. Una vez que encuentre lo que está buscando, la instalación es muy sencilla y obtendrá mucha práctica en la instalación desde PyPI a medida que avance este libro.
+
+Por ahora, tómate diez minutos para visitar el sitio de PyPI (que se muestra a continuación) y echa un vistazo.
 
 ## “Justo cuando pensabas que habías terminado…”
 
