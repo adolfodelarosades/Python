@@ -871,4 +871,56 @@ Tome sus tijeras, ya que aquí hay una práctica tabla recortada de los atajos d
 
 <hr>
 
+## 💻 Práctica en mi Computadora
+
+Creamos la carpeta donde vamos a meter nuestro código.
+
+<img width="1108" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/00f4a0a5-7352-4048-a241-62277520c6c8">
+
+Abrimos VSC y abrimos la carpetan **Learning**.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/81e347a9-8bbf-4d06-a19b-dbb43299b354">
+
+Vamos a crear un archivo con la opción de menú **File - New File**.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f1e36855-32d9-45f7-a2f5-3082e6baab8f">
+
+Vamos a seleccionar la tercer opción **Jupyter Notebook**, con lo que se va a crear el archivo **Untitled-1.ipynb**.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/892fab36-3362-4e9a-8521-860d5cb44bf8">
+
+Podemos ver una **"code cell"** que es una ventana interactiva dentro de Python que le permite intrducir código Python. Es como un pequeño editor de código dentro de su Notebook.
+
+Vamos a introducir el siguiente código:
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4fc31200-96c0-47c7-b435-fe220b0a9fc4">
+
+Lo ejecutamos con **Shift+Enter**.
+
+Pero no se presentando ningún resultado.
+
+Vamos a introducir **suits** en la nueva celda y presionamos **Shift+Enter**.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/48a55cb0-f97f-4468-9a0f-958ab3d717e4">
+
+Se nos presenta una salida, el valor de **suits**.
+
+Vamos a crear la función **`draw`** en una nueva celda y lo ejecutamos.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e318b0cb-13c5-482d-915d-f7545b3872cc">
+
+Observamos que todas las celdas que se ejecutan exitosamente se van numerando.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
