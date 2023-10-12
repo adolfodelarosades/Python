@@ -1030,34 +1030,90 @@ Podemos usar **`in`** para ver si una carta se encuentra en nuestra baraja.
 <img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3ac33e4e-3920-477c-b7e9-16f7701d7c67">
 
 
+#### Mi versión para mostrar todas las cartas de la baraja
+
+```py
+import random
+
+suits = ["Clubs", "Spades", "Hearts", "Diamonds"]
+faces = ["Jack", "Queen", "King", "Ace"]
+numbered = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+baraja = set()
+
+for suit in suits:
+    for card in faces + numbered:
+        baraja.add((card, "of", suit))
+
+len(baraja)
+
+def dibujarBaraja():
+    carta = random.choice(list(baraja))
+    baraja.remove(carta)
+    return carta
+
+for _ in range(len(baraja)):
+    print(len(baraja),  ".- ",  dibujarBaraja())
+```
 
 
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/00b64bda-f1e1-49a5-afd4-2fc91c71cdef">
 
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/964f87c5-f157-41af-ae58-79172069ad00">
 
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/43cfc5ba-8384-4e2b-96c5-252369b3d27d">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```sh
+52 .-  (2, 'of', 'Clubs')
+51 .-  (5, 'of', 'Diamonds')
+50 .-  ('Jack', 'of', 'Clubs')
+49 .-  (10, 'of', 'Spades')
+48 .-  ('King', 'of', 'Spades')
+47 .-  (4, 'of', 'Diamonds')
+46 .-  (6, 'of', 'Spades')
+45 .-  (8, 'of', 'Diamonds')
+44 .-  (5, 'of', 'Clubs')
+43 .-  ('Jack', 'of', 'Hearts')
+42 .-  (2, 'of', 'Spades')
+41 .-  (5, 'of', 'Spades')
+40 .-  (9, 'of', 'Hearts')
+39 .-  (9, 'of', 'Diamonds')
+38 .-  (3, 'of', 'Clubs')
+37 .-  (8, 'of', 'Hearts')
+36 .-  ('Queen', 'of', 'Clubs')
+35 .-  (10, 'of', 'Hearts')
+34 .-  ('King', 'of', 'Clubs')
+33 .-  (7, 'of', 'Clubs')
+32 .-  (4, 'of', 'Clubs')
+31 .-  (7, 'of', 'Spades')
+30 .-  (3, 'of', 'Hearts')
+29 .-  (8, 'of', 'Spades')
+28 .-  (6, 'of', 'Clubs')
+27 .-  (7, 'of', 'Hearts')
+26 .-  ('Ace', 'of', 'Spades')
+25 .-  (2, 'of', 'Hearts')
+24 .-  (9, 'of', 'Spades')
+23 .-  (10, 'of', 'Clubs')
+22 .-  (4, 'of', 'Spades')
+21 .-  ('Ace', 'of', 'Clubs')
+20 .-  ('Queen', 'of', 'Spades')
+19 .-  (10, 'of', 'Diamonds')
+18 .-  ('King', 'of', 'Diamonds')
+17 .-  ('Jack', 'of', 'Spades')
+16 .-  (9, 'of', 'Clubs')
+15 .-  (5, 'of', 'Hearts')
+14 .-  (3, 'of', 'Spades')
+13 .-  ('King', 'of', 'Hearts')
+12 .-  (8, 'of', 'Clubs')
+11 .-  (2, 'of', 'Diamonds')
+10 .-  ('Jack', 'of', 'Diamonds')
+9 .-  ('Queen', 'of', 'Hearts')
+8 .-  ('Queen', 'of', 'Diamonds')
+7 .-  (7, 'of', 'Diamonds')
+6 .-  (6, 'of', 'Diamonds')
+5 .-  (6, 'of', 'Hearts')
+4 .-  ('Ace', 'of', 'Diamonds')
+3 .-  ('Ace', 'of', 'Hearts')
+2 .-  (4, 'of', 'Hearts')
+1 .-  (3, 'of', 'Diamonds')
+```
