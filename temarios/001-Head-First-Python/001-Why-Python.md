@@ -911,6 +911,143 @@ Vamos a crear la función **`draw`** en una nueva celda y lo ejecutamos.
 
 Observamos que todas las celdas que se ejecutan exitosamente se van numerando.
 
+#### Sacar una carta de la baraja
+
+Vamos a escribir **`print(draw())`** en la siguiente celda y presionamos **Shift+Enter** para ejecutarlo.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0eb8efc6-fb14-4f7d-a4db-500a8d4110a5">
+
+Al ejecutar el código vemos que tenemos un error en nuestro código y la vemos como nos lo índica VSC.
+
+Corregimos el código y volvemos a ejecutarlo.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a94ffd77-4373-4b4b-8bdb-2250011e7a40">
+
+Ya vemos el resultado de la ejecución.
+
+Podemos volver a ejecutar para ver los resultados aleatorios que se van produciendo.
+
+<img width="1190" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cfb9004a-948f-4008-87fa-c0080d4c2027">
+
+<img width="1198" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/76218dd8-35c5-4ad8-a08c-1a1a038fcae8">
+
+Vamos a guardar el archivo con el nombre **`Cards.ipynb`**.
+
+#### Usar `for` para hacer un bucle y obtener varias cartas a la vez.
+
+Vamos a meter el siguiente código.
+
+<img width="1202" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a6a349f0-0254-4c0a-ba78-8ede38658b48">
+
+Si ejecutamos la aplicación algunas veces más podemos obtener un resultado como el siguiente, donde se obtiene la misma carta dos veces, cosa que en la vida real no podría pasar.
+
+<img width="1189" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/63760c09-1029-4591-8b89-44f6c8302ed9">
+
+Esto pasa por como tenemos implementada la función **`draw()`** donde usamos **listas**.
+
+#### Modela tu mazo de cartas con un set
+
+Un **set** es una colección de valores únicos donde no se permiten duplicados.
+
+Lo primero que vamos a hacer es crear un conjunto vacío con:
+
+```py
+deck = set()
+```
+
+Tenemos dos funciones integradas de Python (BIF) que ayudan aquí: **`type`** y **`len`**. **`type`** nos indica el tipo de la variable y **`len`** la longitud.
+Vamos a ver como funciona eso en el código.
+
+<img width="1203" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1ba62366-0462-43e4-9ffc-b186e636f50e">
+
+#### El print dir combo mambo
+
+
+Con la siguiente sentencia vamos a poder ver todos los atributos que podemos usar sobre la variable de tipo set.
+
+```py
+print(dir(deck))
+```
+
+<img width="1190" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/18420a19-6eaa-441b-adab-f740e9aacf4f">
+
+```sh
+['__and__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+```
+
+#### Obteniendo ayuda con la salida del directorio(dir’s output)
+
+La labor de **help** del BIF es mostrar documentación sobre algún atributo particular, por ejemplo:
+
+```py
+help(deck.add)
+```
+
+<img width="1193" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2e5464df-3406-43c4-af6b-64f136d5912d">
+
+#### Llena el set con cartas.
+
+Por un lado tenemos nuestras tres listas, 
+
+<img width="1185" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9fa45a2a-5061-45d2-877e-3650e78b2523">
+
+Observemos que tengo un error ya que me falta una coma para separar dos elementos, lo modifico.
+
+Vamos a usar las listas para llenar el set con los siguientes bucles.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7a7b71ec-9c29-43ef-9c5c-4c3c765b77da">
+
+Vemos que la longitud de nuestra baraja es de 52 cartas.
+
+#### Obtener nuestras cartas a partir del set
+
+Podría pensarse que podemos usar **`random.choice(deck)`** para obtener una carta pero **`random.choice`** NO funciona para set.
+
+Tenemos que hacer una adecuación. Un truco rápido le permite convertir primero una copia de su set de cartas en una lista, que luego puede usarse con **`random.choice`**.
+
+<img width="1187" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2d73aa29-24c7-4bcf-91cf-73300772905d">
+
+Una vez obtenida una carta deberíamos eliminarla de la baraja.
+
+<img width="1182" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f7f47a3c-4fe0-47d6-b501-d1580aa5f359">
+
+#### ¿Qué es exactamente “card”?
+
+Si se pregunta que es la variable **`card`**, podemos usar **type** para que nos informe el tipo de valor actualmente asignado a **`card`**:
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/41cd90a8-85d7-47a3-9a97-4189161d45bf">
+
+Podemos observar que **`card`** es una **tupla**.
+
+#### Reescribir la función `draw()` para que use nuestro set
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7675ee78-5f7d-4d08-8cfb-ba97c698ba0d">
+
+#### ¿Necesitas encontrar algo?
+
+Podemos usar **`in`** para ver si una carta se encuentra en nuestra baraja.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3ac33e4e-3920-477c-b7e9-16f7701d7c67">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
