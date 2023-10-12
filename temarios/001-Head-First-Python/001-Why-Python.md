@@ -1068,7 +1068,7 @@ for _ in range(len(barajaSet)):
 
 <img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7f2630a1-3b82-4b30-a236-284a94d396a6">
 
-<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4a3971bd-24cb-48c7-ac5a-520d5979b480">
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ab9d6971-16d8-405a-9044-791bb2b1130c">
 
 Si ejecutamos el código de esta segunda parte.
 
