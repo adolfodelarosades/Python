@@ -115,7 +115,7 @@ De hecho, Python tiene mucho en común con otros lenguajes de programación. Hay
 * “Justo cuando pensabas que habías terminado…”
 
 
-## Capitulo 2
+## [Capitulo 2](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/002-Diving-in.md)
 
 La mejor manera de aprender un nuevo lenguaje es escribir código.
 
@@ -154,7 +154,7 @@ Y si vas a escribir código, necesitarás un problema real. Quiso la suerte que 
 * “Tarea #2: Procesar los datos en el archivo”
 
 
-## Chapter 3
+## [Chapter 3](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/003-Lists-of-Numbers.md)
 
 The more code you write, the better you get. It’s that simple.
 
