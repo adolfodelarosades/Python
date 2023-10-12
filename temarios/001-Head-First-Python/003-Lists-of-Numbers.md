@@ -1,8 +1,11 @@
-# Capítulo 3. Listas de números: procesamiento de datos de listas
+# Capítulo 3. Listas de números: *procesamiento de datos de listas*
 
-Cuanto más código escribas, mejor serás. Es así de simple.
+<img width="744" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/62331a69-da66-408d-bbdf-a7acfa9794fb">
 
-En este capítulo, continuará creando código Python para ayudar al entrenador. Aprenderá a leer datos de un archivo de datos proporcionado por Coach, integrando sus líneas en una lista, una de las estructuras de datos integradas más poderosas de Python. Además de crear listas a partir de los datos del archivo, también aprenderá cómo crear listas desde cero, haciendo crecer su lista dinámicamente según sea necesario. Y procesará listas utilizando una de las construcciones de bucle más populares de Python: el bucle for. Convertirás valores de un formato de datos a otro e incluso harás un nuevo mejor amigo (tu propio mejor amigo de Python). Ya te has saciado de café y pastel, así que es hora de arremangarte y volver al trabajo.
+
+**Cuanto más código escribas, mejor serás. Es así de simple.**
+
+En este capítulo, continuará creando código Python para ayudar al entrenador. Aprenderá a **leer** datos de un **archivo** de datos proporcionado por Coach, integrando sus líneas en una **lista**, una de las **estructuras de datos** integradas más poderosas de Python. Además de crear listas a partir de los datos del archivo, también aprenderá cómo crear listas desde cero, haciendo **crecer** su lista **dinámicamente** según sea necesario. Y procesará listas utilizando una de las construcciones de bucle más populares de Python: el bucle **for**. Convertirás valores de un formato de datos a otro e incluso harás un nuevo mejor amigo (tu propio mejor amigo de Python). Ya te has saciado de café y pastel, así que es hora de arremangarte y volver al trabajo.
 
 Tarea n.º 2: procesar los datos del archivo
 Una vez completada la Tarea n.° 1, es hora de pasar a la Tarea n.° 2. Hay un poco de trabajo por hacer pero, al igual que con las actividades del capítulo anterior, puedes abordar las cosas poco a poco como se detalla en el último capítulo:
