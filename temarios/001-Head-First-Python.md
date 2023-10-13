@@ -156,49 +156,49 @@ Y si vas a escribir código, necesitarás un problema real. Quiso la suerte que 
 
 ## [Chapter 3](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/003-Lists-of-Numbers.md)
 
-The more code you write, the better you get. It’s that simple.
+Cuanto más código escribas, mejor serás. Es así de simple.
 
-In this chapter, you continue to create Python code to help the Coach. You learn how to read data from a Coach-supplied data file, sucking its lines into a list, one of Python’s most-powerful built-in data structures. As well as creating lists from the file’s data, you’ll also learn how to create lists from scratch, growing your list dynamically as need be. And you’ll process lists using one of Python’s most popular looping constructs: the for loop. You’ll convert values from one data format to another, and you’ll even make a new best friend (your very own Python BFF). You’ve had your fill of coffee and pie, so it’s time to roll up your sleeves and get back to work.
+En este capítulo, continuará creando código Python para ayudar al entrenador. Aprenderá a leer datos de un archivo de datos proporcionado por Coach, integrando sus líneas en una lista, una de las estructuras de datos integradas más poderosas de Python. Además de crear listas a partir de los datos del archivo, también aprenderá cómo crear listas desde cero, haciendo crecer su lista dinámicamente según sea necesario. Y procesará listas utilizando una de las construcciones de bucle más populares de Python: el bucle **for**. Convertirás valores de un formato de datos a otro e incluso harás un nuevo mejor amigo (tu propio mejor amigo de Python). Ya te has saciado de café y pastel, así que es hora de arremangarte y volver al trabajo.
 
-“Task #2: Process the data in the file”
+* “Tarea #2: Procesar los datos en el archivo”
 
-“Grab a copy of the Coach’s data”
+* “Obtenga una copia de los datos del entrenador”
 
-“The open BIF works with files”
+* “El open BIF funciona con archivos”
 
-“Using with to open (and close) a file”
+* "Usar open para abrir (y close) un archivo"
 
-“Variables are created dynamically, as needed”
+* "Las variables se crean dinámicamente, según sea necesario"
 
-“The file’s data is what you really want”
+* “Los datos del archivo son lo que realmente quieres”
 
-“We have the swimmer’s data from the file”
+* “Tenemos los datos del nadador del expediente”
 
-“What needs to happen next feels familiar”
+* “Lo que debe suceder a continuación me resulta familiar”
 
-“The previous chapter is paying dividends”
+* “El capítulo anterior está dando dividendos”
 
-“Converting a time string into a time value”
+* "Convertir una time string en un time value"
 
-“To hundredths of seconds with Python”
+* “A centésimas de segundo con Python”
 
-“A quick review of Python’s for loop”
+* "Una revisión rápida del bucle for de Python"
 
-“The gloves are off… for loops vs. while loops”
+* “Nos quitamos los guantes… bucles for versus bucles while”
 
-“You’re cruising now and making great progress!”
+* "¡Ahora estás navegando y haciendo grandes progresos!"
 
-“Let’s keep a copy of the conversions”
+* “Conservemos una copia de las conversiones”
 
-“Displaying a list of your list’s methods”
+* "Mostrar una lista de los métodos de su lista"
 
-“It’s time to calculate the average”
+* “Es hora de calcular el promedio”
 
-“Convert the average to a swim time string”
+* "Convierta el promedio en una time string de natación"
 
-“It’s time to bring everything together”
+* “Es hora de unirlo todo”
 
-“Task #2 (finally) gets over the line!”
+* “¡La tarea número 2 (finalmente) supera la línea!”
 
 ## Chapter 4
 
