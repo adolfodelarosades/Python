@@ -314,18 +314,86 @@ Cuando esté listo, pase la página para ver el código que se nos ocurrió.
 <img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/086c8633-efb4-4b2d-a4d1-476230d3357e">
 
 En el capítulo anterior tomó un string y luego le aplicó los métodos **split** y **removesuffix** para producir los valores de datos que necesitaba a partir del nombre del archivo.
-AQUIIIIIIII
-Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar removesuffix. La cadena con la que estás trabajando tiene un carácter de nueva línea (\n) al final que no necesitas. Sabiendo esto, se le pidió que encontrara un método de cadena para usar en lugar de removesuffix para permitirle eliminar el carácter de nueva línea de la cadena. Debías combinar la llamada al nuevo método en una cadena que debía incluir split para separar la cadena por "", y producir una nueva lista para asignarla a una nueva variable llamada times. Debías experimentar en tu cuaderno alojado en VS Code hasta que hubieras escrito el código, luego debías usar el código para asignarlo a la variable de tiempos. Debes proporcionar el código que se te ocurrió así como el código que asigna los tiempos en este espacio:
+
+Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar **removesuffix**. El string con el que estás trabajando tiene un carácter de nueva línea (**`\n`**) al final que no necesitas. Sabiendo esto, se le pidió que encontrara un método de string para usar en lugar de **removesuffix** para permitirle eliminar el carácter de nueva línea de la cadena. Debías combinar la llamada al nuevo método en un string que debía incluir **`split`** para separar la cadena por **","** y producir una nueva lista para asignarla a una nueva variable llamada **`times`**. Debías experimentar en tu notebook alojado en VS Code hasta que hubieras escrito el código, luego debías usar el código para asignarlo a la variable **`times`**. Debes proporcionar el código que se te ocurrió así como el código que asigna los **`times`** en este espacio:
 
 
-PRUEBA DE CONDUCCIÓN
+<img width="988" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/142de99f-7f6c-410d-805f-e266d6ec5474">
 
-Así es como se veía nuestro código en VS Code. El valor en el primer espacio de la lista de líneas (una cadena) se convierte en una lista de subcadenas. Observe cómo han desaparecido el carácter de nueva línea y todas esas comas.
+
+Así es como se veía nuestro código en VS Code. El valor en el primer espacio de la lista **`lines`** (un string) se convierte en una lista de subcadenas. Observe cómo ha desaparecido el carácter de nueva línea y todas esas comas.
+
+<img width="989" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4bd959a5-9ed2-41c4-b0f7-9f8b44d72255">
+
+<hr>
+
+
 ## “El capítulo anterior está dando dividendos”
+
+Con su experiencia previa trabajando con strings del capítulo anterior, esperamos que el ***Sharpen*** más reciente no haya sido demasiado agotador.
+
+Es importante llamar a **`strip`** *antes* de **`split`**, produciendo una nueva lista a partir del valor de datos en el primer espacio de las **`lines`** (**`lines[0]`**). De hecho, su último código es muy similar al código del capítulo anterior:
+
+<img width="973" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/92f39e11-62cf-4a13-8b17-33fc5104c4d4">
+
+Con el resultado de su último código asignado a la variable **`times`**, ha completado la subtarea (c). Es hora de hacer otra marca de verificación.
+
+<hr>
+
+**NOTA**
+
+Casi puedes saborear la limonada multivitamínica de mango, ¿no?
+
+<hr>
+
+<img width="1085" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4e484f73-48fa-429b-9500-75945f69bb13">
+
+**Esos confirman que tenemos una list de strings.**
+
+Aunque esos strings parecen times, no hay tiempos reales, son strings. Todavía tenemos que encontrar una manera de convertirlos en un valor en tiempo “real” antes de intentar realizar cualquier tipo de cálculo sobre ellos…
 
 ## "Convertir una time string en un time value"
 
-## “A centésimas de segundo con Python”
+Después de ejecutar el código de la página anterior, la variable **`times`** hace referencia a una lista de strings, que no es lo que quiere el entrenador. El entrenador necesita números.
+
+<img width="947" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/89baea2b-982b-4341-8f92-3ff3c73c7553">
+
+Los valores en cada uno de los espacios de la lista de **`times`** ciertamente parecen tiempos de natación, pero no lo son. Son strings. Para realizar cualquier cálculo numérico en esta lista, como calcular un promedio, estos strings deben convertirse en valores numéricos.
+
+Echemos un vistazo más de cerca a un solo valor (el primero). Si puede idear una estrategia para convertir esta primera vez, luego puede aplicarla al resto de la lista de time strings.
+
+<img width="1048" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f7cd792e-40e1-4757-bec1-e81de099b456">
+
+Suponiendo que pueda extraer los tres números que necesita de la cadena, ¿se le ocurre un cálculo que convierta el string en un valor numérico?
+
+<hr>
+
+**NOTA**
+
+Hay más de una forma de hacer esto, así que no te preocupes si lo que piensas no es el mismo método que el nuestro (que se detalla en la página siguiente).
+
+<hr>
+
+## “Convertir el times a centésimas de segundo con Python”
+
+Por el momento, todos los tiempos de natación son *strings*, aunque nuestro cerebro los vea como tiempos. Sin embargo, no es así para nuestras computadoras (y mucho menos para Python). Nuestros amigos digitales necesitan un poco de ayuda con la conversión, y así es como sugerimos que se pueda hacer:
+
+<img width="999" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5cba918b-6acb-4632-8bc0-059db97564af">
+
+Convertir esta estrategia de conversión en código Python es notablemente sencillo. Vamos a ver.
+
+### A centésimas de segundo con Python
+
+Hicimos todo lo posible con ese objeto visual en la página anterior, y convertir los pasos del objeto visual a código Python es una coincidencia casi uno por uno. El código que se muestra a continuación realiza el cálculo del primer tiempo de natación tomado de su lista de **times**, con el código escrito en una sola celda en el notebook **`Average.ipynb`**.
+
+Para ayudarlo a mantener la claridad, agregamos algunos comentarios a este código. Cuando Python ve el carácter **`#`**, ignora todo lo que sigue a **`#`** hasta el final de la línea actual. (Observe cómo VS Code muestra de manera útil los comentarios en verde).
+
+Escribe este código en tu notebook y no te sientas culpable si decides excluir los comentarios (no te preocupes, no lo diremos). Los colocamos para hacer coincidir el código con los pasos de conversión del objeto visual de la página de vista previa.
+
+<img width="1159" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bab3e091-c23a-40de-ab3f-5b79caedc5d6">
+
+<img width="1161" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7d1911e6-6b5b-4e5e-93c0-d54bb982163b">
+
 
 ## "Una revisión rápida del bucle for de Python"
 
