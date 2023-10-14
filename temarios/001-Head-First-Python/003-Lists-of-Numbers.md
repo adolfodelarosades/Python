@@ -170,7 +170,49 @@ El PSL también ofrece alternativas a la hora de trabajar con nombres de archivo
 
 ## "Las variables se crean dinámicamente, según sea necesario"
 
+Las variables **`file`** y **`lines`** se crearon como resultado de la asignación. Aunque es fácil ver cómo surgieron las **`lines`** gracias al uso del operador de asignación (**`=`**), no está tan claro qué sucede con el archivo.
+
+
+<img width="1150" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/78781f3a-7790-443d-be05-2231a2f1f916">
+
+La palabra clave es **"as"**.
+
+Gracias a que **`with`**, la palabra clave **`as`** toma el valor de retorno del **open** BIF y lo asigna al nombre de la variable identificada, que es **`file`** en su código. Es como si se ejecutara este código:
+
+<img width="1089" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ad9bee53-a77a-4f9e-9f50-b89f5f859fc8">
+
+La palabra clave **`as`**, junto con **`with`**, hace lo mismo (y también se ve mejor).
+
+Echemos un vistazo más de cerca a qué es un **`file`** y aprendamos un poco sobre lo que puede hacer:
+
+<img width="1204" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/51d09856-5d5c-44ce-8301-00cd59973e81">
+
+
 ## “Los datos del archivo son lo que realmente quieres”
+
+El objeto file es simplemente un medio para un fin: cargar las líneas del archivo en la variable **`lines`**. Entonces, ¿qué son las **`lines`** y qué puedes hacer con ellas?
+
+<img width="1143" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1ce8d421-baf8-45f9-86d8-07a01518bf1d">
+
+**No olvide presionar Shift+Enter para ejecutar celdas de código.**
+
+Echemos un vistazo a las **`lines`** que contiene:
+
+<img width="1177" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dc5caba4-3c4a-4933-b168-cd09a5b2febc">
+
+Al igual que los arrays, las lists de Python entienden la conocida notación de corchetes, por lo que es fácil llegar al primer elemento de la lista:
+
+**0 se refiere al primer elemento, 1 al segundo, 2 al tercero, y así sucesivamente…**
+
+<img width="1175" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc40c042-cd35-4dad-af97-3da30f383b52">
+
+**Sí, con un poco de ayuda de “with”.**
+
+A pesar de ser un bloque de código de una sola línea, aquí también están sucediendo muchas cosas.
+
+No solo se creó su lista, se asignó a su variable **`lines`** y se completó con los datos contenidos en el archivo del nadador, sino que con la sentencia **`with`** logró completar las dos primeras subtareas de la Tarea n.° 2. ¿Cuan genial es eso?
+
+Échale un vistazo (en la página siguiente).
 
 ## “Tenemos los datos del nadador del expediente”
 
