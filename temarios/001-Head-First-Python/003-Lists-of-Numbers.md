@@ -14,7 +14,7 @@
 
 * “Los datos del archivo son lo que realmente quieres”
 
-* “Tenemos los datos del nadador del expediente”
+* “Tenemos los datos del nadador en el archivo”
 
 * “Lo que debe suceder a continuación me resulta familiar”
 
@@ -214,10 +214,113 @@ No solo se creó su lista, se asignó a su variable **`lines`** y se completó c
 
 Échale un vistazo (en la página siguiente).
 
-## “Tenemos los datos del nadador del expediente”
+## “Tenemos los datos del nadador en el archivo”
+
+Esas dos líneas de código tienen un gran impacto. Aquí están de nuevo:
+
+<img width="1083" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4d68218a-e817-4e66-81b4-05c0c10f7cda">
+
+El valor de los datos en el primer espacio de la lista **`lines`** es una cadena que representa los tiempos del nadador (en **`lines[0]`**):
+
+<img width="1094" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ecec5a6f-04f7-49a6-89a1-dd4d47198fcb">
+
+
+Puede ignorar con seguridad cualquier otra cosa en el archivo (incluida esa línea en blanco adicional), ya que los datos que necesita se encuentran en el string anterior.
+
+<img width="1230" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/04240f8a-c6e1-4ea0-b153-6134163c7a89">
+
+**No se preocupe, entrenador, lo tenemos cubierto.**
+
+Piense en la línea anterior como los datos sin procesar del archivo. Todavía queda algo de procesamiento por hacer, al que llegaremos pronto.
+
+## Hagamos un balance de nuestro progreso hasta el momento
+
+Con solo unas pocas líneas de código hasta ahora, tienes las subtareas (a) y (b) resueltas:
+
+<img width="1028" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2cd0165c-8e79-43f9-924e-43f6c18d9178">
+
+La tercera subtarea no debería ser difícil para cualquiera que haya pasado algún tiempo trabajando con la tecnología de string de Python. Quiso la suerte que acabas de trabajar con el material de string del capítulo anterior, así que estás listo para intentarlo. Pero antes de pasar a esa subtarea, debemos hablar un poco sobre una parte específica de la sentencia: los dos puntos **`:`**.
+
+**Para su información: los documentos de Python se refieren a un *"bloque de código"* como una *"suite"*.**
+
+<hr>
+
+**NOTA**
+
+Creemos que esto también es extraño.
+
+<hr>
+
+#### Tu nuevo mejor amigo, el colon `:` de Python
+
+Los dos puntos (**`:`**) indican que un bloque de código está a punto de comenzar. Y un bloque de código en Python finaliza cuando finaliza la sangría.
+
+En su declaración **with**, el bloque contiene solo una línea de código, pero potencialmente podría contener cualquier cantidad de líneas de código. El código con sangría al mismo nivel que la línea de código inmediatamente anterior pertenece al mismo bloque.
+
+El uso de **`:`** es fundamental aquí (por eso es tu nuevo mejor amigo). Como en la vida real, si olvidas a tu mejor amigo, suceden cosas malas. Si olvida los dos puntos **`:`** al final de esa línea, ¡Python se niega a ejecutar su código!
+
+Piense en los dos puntos **`:`** y la sangría como algo que va de la mano: ***no se puede tener uno sin el otro***.
+
+
+<img width="1091" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c6daca66-6ff4-45d3-a2d0-d1a742917d36">
+
+<img width="952" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2a68c01a-22a8-4bf2-bdbe-2aa02a24a62d">
+
+Las rosas son rojas, las violetas son azules. No olvides los dos puntos, porque no le agradarás a Python.
 
 ## “Lo que debe suceder a continuación me resulta familiar”
 
+Recuerde el código del final del capítulo anterior, que tomó el nombre del archivo, que era un string en la variable **`fn`**, y lo transformó en cuatro variables individuales:
+
+<img width="964" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/df79e32b-97ae-4a8b-b748-dbde0428d6dc">
+
+Debe hacer algo similar a lo que hace la línea de código anterior con los datos sin procesar en **`lines[0]`**:
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f14b80c8-1792-4a45-b048-7681c7a7b099">
+
+<img width="958" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eaa2f963-1c60-466e-8783-126c9ddbf04b">
+
+Como se muestra en la parte superior de la última página, en el capítulo anterior, tomó un string y luego le aplicó los métodos **split** y eliminar sufijo **removesuffix** para producir los valores de datos que necesitaba a partir del nombre del archivo.
+
+Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar **removesuffix**. La cadena con la que estás trabajando tiene un carácter de nueva línea (**`\n`**) al final que no necesitas. Encuentre un método de cadena para usar en lugar de **removesuffix** para permitirle eliminar el carácter de nueva línea de la cadena. Combine la llamada al nuevo método en una cadena que incluya **split** para separar el string por **","** y produzca una nueva lista, que puede asignar a una nueva variable llamada **`times`**.
+
+Experimente en su notebook alojado en VS Code hasta que haya escrito el código que necesita, luego use el código para asignarlo a la variable **`times`**. Proporcione el código que se le ocurrió así como el código que asigna los **`times`** en este espacio:
+
+___________________________________________
+
+___________________________________________
+
+___________________________________________
+
+<hr>
+
+**NOTA**
+
+Sugerencia: el “print dir” combo manbo enumera los atributos y métodos de una variable.
+
+<hr>
+
+<img width="1078" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4ae54867-1dcf-4b42-a6c9-2016039ddfd8">
+
+
+**Sí, a ambas preguntas.**
+
+Sí, de hecho introdujimos strings en el capítulo anterior y sí, nos concentraremos en las listas en este.
+
+Recuerde que el método **split** produce una lista a partir de un string, que es precisamente la razón por la que necesita usarlo ahora. Si la variable **`times`** anterior no es una lista, es probable que estés haciendo algo mal.
+
+Cuando esté listo, pase la página para ver el código que se nos ocurrió.
+
+<img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/086c8633-efb4-4b2d-a4d1-476230d3357e">
+
+En el capítulo anterior tomó un string y luego le aplicó los métodos **split** y **removesuffix** para producir los valores de datos que necesitaba a partir del nombre del archivo.
+AQUIIIIIIII
+Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar removesuffix. La cadena con la que estás trabajando tiene un carácter de nueva línea (\n) al final que no necesitas. Sabiendo esto, se le pidió que encontrara un método de cadena para usar en lugar de removesuffix para permitirle eliminar el carácter de nueva línea de la cadena. Debías combinar la llamada al nuevo método en una cadena que debía incluir split para separar la cadena por "", y producir una nueva lista para asignarla a una nueva variable llamada times. Debías experimentar en tu cuaderno alojado en VS Code hasta que hubieras escrito el código, luego debías usar el código para asignarlo a la variable de tiempos. Debes proporcionar el código que se te ocurrió así como el código que asigna los tiempos en este espacio:
+
+
+PRUEBA DE CONDUCCIÓN
+
+Así es como se veía nuestro código en VS Code. El valor en el primer espacio de la lista de líneas (una cadena) se convierte en una lista de subcadenas. Observe cómo han desaparecido el carácter de nueva línea y todas esas comas.
 ## “El capítulo anterior está dando dividendos”
 
 ## "Convertir una time string en un time value"
