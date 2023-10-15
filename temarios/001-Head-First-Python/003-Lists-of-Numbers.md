@@ -280,7 +280,7 @@ Debe hacer algo similar a lo que hace la línea de código anterior con los dato
 
 <img width="958" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eaa2f963-1c60-466e-8783-126c9ddbf04b">
 
-Como se muestra en la parte superior de la última página, en el capítulo anterior, tomó un string y luego le aplicó los métodos **split** y eliminar sufijo **removesuffix** para producir los valores de datos que necesitaba a partir del nombre del archivo.
+Como se muestra en la parte superior de la última página, en el capítulo anterior, tomó un string y luego le aplicó los métodos eliminar sufijo **removesuffix** y **split** para producir los valores de datos que necesitaba a partir del nombre del archivo.
 
 Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar **removesuffix**. La cadena con la que estás trabajando tiene un carácter de nueva línea (**`\n`**) al final que no necesitas. Encuentre un método de cadena para usar en lugar de **removesuffix** para permitirle eliminar el carácter de nueva línea de la cadena. Combine la llamada al nuevo método en una cadena que incluya **split** para separar el string por **","** y produzca una nueva lista, que puede asignar a una nueva variable llamada **`times`**.
 
@@ -313,7 +313,7 @@ Cuando esté listo, pase la página para ver el código que se nos ocurrió.
 
 <img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/086c8633-efb4-4b2d-a4d1-476230d3357e">
 
-En el capítulo anterior tomó un string y luego le aplicó los métodos **split** y **removesuffix** para producir los valores de datos que necesitaba a partir del nombre del archivo.
+En el capítulo anterior tomó un string y luego le aplicó los métodos **removesuffix** y **split** para producir los valores de datos que necesitaba a partir del nombre del archivo.
 
 Se puede aplicar una estrategia similar a su siguiente subtarea, aunque es poco probable que necesite utilizar **removesuffix**. El string con el que estás trabajando tiene un carácter de nueva línea (**`\n`**) al final que no necesitas. Sabiendo esto, se le pidió que encontrara un método de string para usar en lugar de **removesuffix** para permitirle eliminar el carácter de nueva línea de la cadena. Debías combinar la llamada al nuevo método en un string que debía incluir **`split`** para separar la cadena por **","** y producir una nueva lista para asignarla a una nueva variable llamada **`times`**. Debías experimentar en tu notebook alojado en VS Code hasta que hubieras escrito el código, luego debías usar el código para asignarlo a la variable **`times`**. Debes proporcionar el código que se te ocurrió así como el código que asigna los **`times`** en este espacio:
 
@@ -394,20 +394,269 @@ Escribe este código en tu notebook y no te sientas culpable si decides excluir 
 
 <img width="1161" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7d1911e6-6b5b-4e5e-93c0-d54bb982163b">
 
+Con este código escrito en una celda vacía de su notebook, presione **Shift+Enter** para ejecutarlo. Aparece en pantalla el valor **8795**.
+
+<img width="931" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a98ddb9d-68e0-4324-acc6-d5fe76def4d7">
+
+Vale la pena tomarse un momento para considerar el cálculo realizado por este código:
+
+<img width="946" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/df8eced4-7458-4f56-a11f-3142a15e6ec4">
+
+Si ejecuta el código en su celda de código más reciente, produce el resultado esperado: **8795** centésimas de segundo, por lo que el cálculo anterior es correcto.
+
+Ahora, es posible reescribir el código anterior de la siguiente manera (tenga en cuenta la ausencia de algunos de los paréntesis circundantes):
+
+<img width="916" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5c11c153-426d-4759-9d19-c3f53a128314">
+
+Esta versión del cálculo también produce el mismo valor: **8795**. Sin embargo, para entender lo que está pasando, otros programadores necesitan entender las reglas de precedencia de Python para estar en condiciones de determinar cómo ocurrió el cálculo, por ejemplo: ¿el **`*`** ¿Ocurre antes del **`+`** o después? ¿Quién sabe? No existe tanta confusión con la primera versión del cálculo, ya que los paréntesis dejan explícito qué se calcula y cuándo. Sí, es más escribir (y más código), pero no se puede subestimar la capacidad de comprender lo que sucede con el cálculo.
+
+<img width="941" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e4e86c59-9d22-4b34-ba75-9c09210396b2">
+
+**Si puedes convertir un tiempo de natación...**
+
+Puedes convertirlos todos. Y no hay crédito adicional por adivinar que necesitas un **bucle** aquí.
+
+Como la mayoría de los lenguajes de programación, Python ofrece muchas formas de realizar bucles, siendo el bucle **for** uno de los favoritos.
+
+Lo vio por primera vez en la charla inicial, pero recordemos cómo se ve un bucle **for** considerando un bucle simple que toma cada una de los strings de la lista **`times`** y las muestra en la pantalla.
 
 ## "Una revisión rápida del bucle for de Python"
 
+Aquí hay un bucle **for** simple que toma cada una de los strings de tiempo en la lista **`times`** y las muestra en la pantalla (gracias a **print** BIF):
+
+<img width="942" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c6a55cd5-5d6a-4746-8361-c090fb041613">
+
+**P:** ¿No utilizan la mayoría de los programadores **“i”** como variable de bucle en esta situación?
+
+**R:** Sí, lo hacen. Pero siempre consideramos **"i"** como una abreviatura de "índice-index", lo que no tiene sentido en el bucle anterior. Usar **"t"** como abreviatura de "time" tiene más sentido para nosotros.
+
+**P:** Me pregunto si hay algo en el PSL que pueda ayudar a convertir estas time strings.
+
+**R:** Buena pregunta y la respuesta es: *casi*. La PSL (Python Standard Library) incluye dos módulos que pueden ayudar: **`time`** y **`datetime`**. Si necesita trabajar con fechas y/u horas, ambas libraries proporcionan muchas funciones integradas. Sin embargo, (hasta donde podamos ver) no brindamos ningún soporte para realizar las operaciones aritméticas o de clasificación que necesitarán aquí para calcular el tiempo promedio de natación según lo requiera el entrenador, por lo que no utilice cualquiera de las libraries aquí. Por supuesto, nos reservamos el derecho de cambiar de opinión si nuestras manipulaciones del tiempo se convierten en un lío espinoso en algún momento...
+
+**P:** ¿Supongo que Python admite otros operadores además de “**`+`**” y “**`*`**”?
+
+R: Sí, seguro que sí. Todos los habituales están ahí: **`+`**, **`-`**, **`*`**, **`/`**, etc. Hay un par de extras que son específicos de Python, por ejemplo **`//`** y **`**`**, y (si los necesita) nos aseguramos de contarle todo lo que necesita saber.
+
+<img width="929" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dc46445c-4cc6-4704-b5df-21d7caa0c338">
+
+<img width="965" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2dc1bbf2-36ea-4914-a0ce-ae5467764b64">
+
+<img width="1038" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7acffb7c-b632-4335-803c-88f34206cc7e">
+
+**Genial, ¿no?**
+
+El bucle **for** es lo suficientemente inteligente como para saber todo sobre la longitud de la lista que está procesando.
+
+Siempre existe la tentación de utilizar el **len** BIF para calcular el tamaño de su lista antes de que se repita, pero este es un paso innecesario. El bucle **for** comienza con el primer valor de la lista, toma cada valor en orden, procesa el valor y luego pasa al siguiente. Cuando la lista se agota, el bucle **for** termina.
+
+Este es el tipo de magia que amamos.
+
+<img width="940" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fe3c5cd1-0f2a-4366-bf6f-9363a314d0d4">
+
+Ahora que has visto el bucle **for** en acción, tómate un momento para experimentar en tu notebook y combinar el código de centésimas de segundo de unas cuantas páginas atrás con un bucle **for** para convertir todos los tiempos de natación en la lista **`times`**. mostrando los tiempos de natación y sus valores convertidos en la pantalla a medida que avanza. Cuando haya terminado, escriba el código que utilizó en el espacio a continuación. Nuestro código aparecerá en dos páginas.
+
+___________________________________________
+
+___________________________________________
+
+___________________________________________
+
+___________________________________________
+
+___________________________________________
+
+___________________________________________
+
+<img width="1028" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e6fb2ffc-3eaa-4f68-b139-995326051856">
+
+**De hecho, Python admite while.**
+
+Pero el bucle **while** en Python se usa mucho menos que su equivalente **for**.
+
+Antes de llegar a nuestro código de solución para el ejercicio anterior, tomemos un momento para comparar los bucles **for** con los bucles **while**.
+
 ## “Nos quitamos los guantes… bucles for versus bucles while”
+
+Aquí está el bucle **for** anterior, junto con su resultado:
+
+<img width="988" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/53b5bef4-bc66-442e-b9d0-81a6befbf39f">
+
+Y aquí hay un bucle **while** equivalente que hace exactamente lo mismo:
+
+<img width="993" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6fbf7f4f-dac2-44fa-8a83-67d54a0e8321">
+
+¡No solo el código del bucle **while** tiene el doble de líneas que el bucle **for**, sino que también mira todas las cosas adicionales de las que tienes que preocuparte! Hay muchos lugares donde el bucle **while** puede salir mal, a diferencia del bucle **for**. No es que los bucles **while** no deban usarse, solo recuerda usar primero el bucle **for** en la mayoría de los casos.
+
+<img width="930" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8bb6bb62-2b4a-4a00-949a-d28f9921bb87">
+
+Ahora que ha visto el bucle **for** en acción, debe tomarse un momento para experimentar en su notebook para combinar el código de centésimas de segundo de unas cuantas páginas atrás con un bucle **for** para convertir todos los tiempos de natación a centésimas de segundos, mostrando los tiempos de natación y sus valores convertidos en pantalla. Debías escribir el código que usaste en el espacio a continuación. Aquí está el código que se nos ocurrió:
+
+
+<img width="1132" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/80bf0002-43ac-42fe-88fb-0350a70d901d">
+
+Al probar el código de la solución del ejercicio se obtiene el resultado esperado:
+
+<img width="945" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2150cda0-091f-4c48-b5aa-756a23c905b1">
+
+<hr>
 
 ## "¡Ahora estás navegando y haciendo grandes progresos!"
 
+Ahora ha pasado el punto medio de sus subtareas para la Tarea n.° 2:
+
+<img width="1013" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/05373331-3cb4-4fef-b473-d0d5e9add78b">
+
+<img width="1219" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4caaf293-f5b1-4652-9e96-176a3039ae77">
+
+**Si y no.**
+
+Nadie va a sugerir que calcular un promedio es difícil, pero: ¿hacemos esto manteniendo un total acumulado, luego dividimos o recordamos los valores de conversión en (digamos) otra lista y luego realizamos el cálculo promedio más tarde?
+
+Cualquiera de los dos enfoques funciona, pero quizás conservar una copia de los tiempos convertidos no sea tan mala idea. ¿Qué opinas?
+
+
 ## “Conservemos una copia de las conversiones”
+
+Suponemos que esos valores convertidos serán necesarios al menos una vez más en nuestro código, por lo que es mejor si los colocamos en otra lista a medida que realizamos cada conversión.
+
+Para hacer esto, necesita aprender un poco más sobre las listas. Específicamente, cómo crear una lista nueva y vacía y cómo agregar valores de datos de forma incremental a su lista a medida que itera sobre la lista **`times`**.
+
+## Creando una lista nueva y vacía
+
+Paso 1: piense en un nombre de variable significativo para su lista. Paso 2: Asigne una lista vacía a su nuevo nombre de variable.
+
+Llamemos a su nueva lista **`converts`**. A continuación se explica cómo realizar los pasos 1 y 2 en una sola línea de código:
+
+<img width="955" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3e042150-e365-4bc5-81bc-a06528cea29d">
+
+
+Recuerde que el **type** BIF se utiliza para determinar a qué tipo se refiere una variable. Una llamada rápida para escribir confirma que está trabajando con una lista y una llamada al BIF **len** confirma que su nueva lista está *vacía*:
+
+<img width="925" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/81fe2c6c-32f5-4a89-a56a-a8913a62b430">
+
+**¿Recuerdas lo que debes hacer para mostrar los métodos integrados de tu nueva lista?**
 
 ## "Mostrar una lista de los métodos de su lista"
 
+¡Es hora de combo mambo!
+
+Como ocurre con cualquier objeto en Python, la combinación **print dir** enumera los atributos y métodos integrados del objeto. Y como todo en Python es un objeto, ¡las listas también son objetos!
+
+<img width="978" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/14dfff27-611d-4e05-8649-9e7d7d9bc64f">
+
+El primer nombre del método es **append**. Probablemente puedas adivinar lo que hace, pero usemos el **help** BIF para confirmarlo:
+
+<img width="944" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4acb6f18-396b-4089-86a3-73deda9210df">
+
+¡Ah, ja!
+
+Esa última línea de resultado (*“Append object to the end of the list.”*) es todo lo que necesita saber, aunque es tentador tomarse un tiempo para experimentar con esos otros métodos, algunos de los cuales suenan bien. Pero no hagamos eso ahora.
+
+<hr>
+
+**NOTA**
+
+Por supuesto, si sientes la necesidad de experimentar con esos otros métodos, no dejes que te detengamos.
+
+<hr>
+
+Sigamos con la tarea de crear una nueva lista de valores de tiempo de natación convertidos a medida que avanzamos.
+
+<img width="1052" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/14508a1d-77e7-4553-82f5-b7511c2acfb1">
+
+**No, no necesitas preocuparte.**
+
+En el capítulo inicial, dimos mucha importancia a que las listas en Python sean *como* arrays en otros lenguajes de programación.
+
+Sin embargo, a diferencia de algunos arrays, donde normalmente hay que decir el tamaño probable del array (por ejemplo, 1000 slots) y qué tipo de datos contendrá (por ejemplo, números enteros), no es necesario declarar ninguno de estos con tus listas de Python.
+
+Las listas de Python son dinámicas, lo que significa que crecen según sea necesario (por lo que no es necesario declarar previamente el número de espacios). Y las listas de Python no contienen valores de datos, contienen **referencias de objetos**, por lo que puedes poner cualquier dato de cualquier tipo en una lista de Python. ***Incluso puedes mezclar tipos de combinaciones***.
+
+<img width="930" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/66c6c943-8ac1-40ce-a554-0bf1474c50c1">
+
+Toma tu lápiz, ya que tienes trabajo que hacer. Aquí está el código más reciente, que muestra las time strings de natación junto con la conversión equivalente a centésimas de segundo:
+
+<img width="930" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/96ff06d1-0c64-4a0a-b1fe-de95e59c490b">
+
+Ajuste el código anterior para hacer dos cosas: (1) crear una nueva lista vacía llamada **`converts`** justo antes de que comience el ciclo y (2) reemplazar la línea que comienza con una llamada al **print** BIF con una línea de código que agrega el código convertido al final de la lista **`converts`**. Escriba su código en el espacio a continuación (y, cuando esté listo, compare su código con el nuestro en la página siguiente):
+
+<img width="950" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/17d3b465-1b3f-4708-82a1-13913bc498e8">
+
+<img width="888" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5209e15a-5783-47f8-839f-2fd990e2db6b">
+
+Debías agarrar tu lápiz, como harías en el trabajo. Se le mostró el código más reciente, que muestra los time strings de natación junto con la conversión equivalente a centésimas de segundo:
+
+<img width="859" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/633e5331-76b8-4e06-bcf2-2079539c3526">
+
+Su trabajo consistía en ajustar el código anterior para hacer dos cosas: (1) crear una nueva lista vacía llamada **`converts`** justo antes de que comience el ciclo y (2) reemplazar la línea que comienza con una llamada al **print** BIF con una línea de código que agrega el valor convertido al final de la lista de convertidos.
+
+Aquí está el código que se nos ocurrió:
+
+<img width="1007" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c5135e86-c8c9-4967-953e-683e501c88cd">
+
+<img width="856" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/01b5a9f4-a803-497d-94b5-ce0f4222f609">
+
+Probemos su último código. Recuerde que la versión anterior de su bucle produjo este resultado:
+
+<img width="864" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e7fa5872-3eee-45f3-92ce-5d34cb35e635">
+
+Su nuevo código de bucle es similar, pero no produce ningún resultado. En cambio, la lista **`converts`** se completa con los valores de conversión. A continuación, el nuevo código de bucle se ejecuta en una celda de código (sin generar resultados) y luego, en dos celdas de código posteriores, se muestra el contenido de la lista **`times`** y la (nueva) lista **`converts`**:
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/975a5dfa-11df-4451-bfb7-ae6c13ddcb43">
+
+<hr>
+
 ## “Es hora de calcular el promedio”
 
+No es necesario ser programador para saber cómo calcular un promedio cuando se le da una lista de números. El código no es difícil, pero este hecho por sí solo no justifica su decisión de escribirlo. Cuando se encuentre con una necesidad de codificación que parezca que alguien más ya la ha codificado, hágase esta pregunta: Me pregunto si hay algo en la Python Standard Library que pueda ayudar.
+
+**Oye, ¿recuerdas ese útil PSL? No, no el delicioso café con leche de temporada, ¡el otro PSL!**
+
+No es ninguna vergüenza reutilizar código existente, incluso para algo que consideras simple. Con eso en mente, aquí se explica cómo calcular el promedio de la lista **`converts`** con la ayuda del PSL:
+
+<img width="1068" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4de0c983-7fdd-4580-a1a3-589267b2ce74">
+
+Aunque calcular el promedio es fácil, como se muestra arriba, no ha tenido que escribir un bucle, mantener un conteo, mantener un total acumulado ni realizar el cálculo promedio. Todo lo que debes hacer es pasar el nombre de la lista de números a la función **mean(media)**, que devuelve la media aritmética (es decir, el promedio) de tus datos. Cool. Eso servirá.
+
+<img width="1214" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b752596e-d907-4d86-88cc-113ab551713d">
+
+**Sí, como mins:secs.hundredths.**
+
+De hecho, debes revertir el proceso anterior que convirtió la time string de natación original en su equivalente numérico.
+
+No puede ser tan difícil, ¿verdad?
+
 ## "Convierta el promedio en una time string de natación"
+
+Los programadores experimentados de Python saben lo suficiente como para aplicar algunos "trucos" al problema de convertir sus centésimas de segundo nuevamente al formato de string **mins:secs.hundredths**. Aprenderá acerca de estas técnicas más adelante en este libro, ya que mostrárselas ahora probablemente duplicaría el tamaño de este capítulo. Entonces, por ahora, sigamos (principalmente) con el Python que ya conoce para realizar esta tarea.
+
+Siga en su notebook mientras recorre los cinco pasos para realizar la conversión. Esto es lo que estás intentando hacer:
+
+<img width="1138" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0b8c2664-f882-4fc9-81bb-02612af04544">
+
+<img width="1142" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/28ea2be6-d0b3-48dc-b7be-8053fdf011a4">
+
+<img width="1094" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d509fb5c-aad6-458f-9f6e-26edfaf3e97b">
+
+<img width="1278" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cd74de07-6ccc-4611-90c1-787a112e3b7d">
+
+<img width="1226" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eabd0876-ffe9-4485-8ee3-c799d3fc2bc5">
+
+<img width="1174" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/15456384-cd11-43dc-8418-b39888c53818">
+
+<img width="1224" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/25e43aee-6a62-4066-88c5-c8ca976b1155">
+
+**Sí, y es más fácil de lo que piensas.**
+
+Podrías comenzar y aprender a escribir pruebas automatizadas en Python y luego codificar cualquier cantidad de pruebas para verificar tus cálculos...
+
+O simplemente puede echar otro vistazo a la hoja de cálculo del entrenador de natación para confirmar que su tiempo de natación calculado de **`1:26,58`** coincide con el promedio calculado en la hoja de cálculo del entrenador.
+
+Y lo hace, como se muestra a continuación.
+
+<img width="1115" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/08370954-8ae0-4264-a76f-3bb5f0bcabf3">
+
 
 ## “Es hora de unirlo todo”
 
