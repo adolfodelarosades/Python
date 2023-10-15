@@ -660,5 +660,124 @@ Y lo hace, como se muestra a continuación.
 
 ## “Es hora de unirlo todo”
 
+¡Felicidades! Por fin puedes marcar la bien merecida subtarea (e).
+
+Todo lo que queda es combinar el código del capítulo anterior con el código visto hasta ahora en este capítulo. Una vez hecho esto, también se realizará la subtarea (f):
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a36515f2-3472-4c9d-830e-5a0b7467b218">
+
+<hr>
+
+**NOTA**
+
+Todo lo que queda…
+
+<hr>
+
+<img width="1048" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7b8fc2bc-e233-4a11-8396-773433024065">
+
+En esta etapa, debería tener varios Jupyter notebooks en su carpeta *Learning*. Para completar este ejercicio, necesitarás estudiar el código de dos de ellos: **`Darius.ipynb`** y **`Average.ipynb`**.
+
+Cree un nuevo notebooks, llamado **`Times.ipynb`**, luego agregue el código Python que necesita para completar la subtarea (f). Todo el código que necesita ya existe y todo lo que debe hacer aquí es copiar el código relevante de sus dos notebooks existentes al nuevo.
+
+Asegúrese de ejecutar todo el código en su nuevo notebook para confirmar que se ejecuta como se esperaba.
+
+Tómate tu tiempo con este ejercicio y luego, cuando estés listo, voltea la página para ver nuestro **`Times.ipynb`** en acción.
+
+<img width="1134" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/641cb78b-bada-42be-8dc2-487c2af475b8">
+
+En esta etapa, debería tener varios upyter notebooks en su carpeta *Learning*. Para completar este ejercicio, debías estudiar el código de dos de ellos: **`Darius.ipynb`** y **`Average.ipynb`**.
+
+Debías crear un nuevo cuaderno, llamado **`Times.ipynb`**, que contiene el código Python que necesitabas ejecutar para completar la subtarea (f). Todo el código que necesitas ya existe.
+
+Debías asegurarte de ejecutar todo el código en tu nueva computadora portátil para confirmar que se ejecuta como se esperaba.
+
+Aquí está el código que copiamos en **`Times.ipynb`** y ejecutamos. ¿Cómo se compara el código que copiaste?
+
+<img width="1233" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/25b1c387-bc1d-44fe-8cec-62603a357a2f">
+
+<img width="1151" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eb7e2383-6008-43b8-acef-66e1a22e0242">
+
+<img width="1194" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8c61473c-4ea6-4600-a1a3-c555dea53be6">
+
+<img width="1130" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e926384d-822a-4fa7-991a-ee8c1fd15587">
+
+<hr>
+
 ## “¡La tarea número 2 (finalmente) supera la línea!”
 
+¡Bien hecho! Con la creación (y ejecución) del notebook **`Times.ipynb`**, las dos tareas identificadas al comienzo del capítulo anterior ya están completas. ¡Es un caso de marcas de verificación por todas partes!
+
+<img width="1219" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/97e8d38c-c31f-4097-82b7-a779b05fea70">
+
+Por supuesto, llegar a este punto no significa necesariamente que haya terminado...
+
+<img width="1098" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0e61f448-3a36-444f-8a7a-b9e65bb80142">
+
+**¡Excelente! ¡Estamos en camino!**
+
+El siguiente capítulo sienta las bases para llegar al punto en el que pueda abordar el requisito de gráficos del entrenador.
+
+Por ahora, su código solo funciona con los datos de un archivo específico (para Darius). Hay otros 59 archivos en el conjunto de datos del Coach. Sería bueno si hubiera una manera de usar el código desarrollado en este y el capítulo anterior con cualquier otro archivo.
+
+Hacerlo es algo que puede reflexionar de camino al siguiente capítulo, cuando trabajemos juntos para encontrar una solución a este problema.
+
+Por ahora, concluyamos este capítulo con otro resumen y un crucigrama de gran actualidad. ¡Disfrutar!
+
+<img width="1068" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b5debfec-c5ce-4381-aabb-cfa045692ddd">
+
+* Python no tiene una noción real de un valor **constante**, por lo que ha surgido una convención de programación mediante la cual las constantes se asignan a nombres de variables en MAYÚSCULAS. En algunos casos, la library **`enum`** del PSL puede ser lo que necesita.
+
+* La sentencia **`with`** se utiliza para gestionar el contexto dentro del cual se ejecuta su bloque de código.
+
+* Cuando se usa con el **open** BIF, la instrucción **`with`** se organiza automáticamente para cerrar cualquier archivo aún abierto una vez que termina el bloque de código de **`with`**.
+
+* Además, la instrucción **`with`** asigna el archivo abierto a un **file object**, que se utiliza como abreviatura del archivo abierto.
+
+* El objeto de archivo tiene muchos métodos integrados, incluyendo **readlines** que... emm, eh... lee líneas. Las líneas se devuelven como una **list**.
+
+* El resto de los métodos del objeto de archivo se pueden mostrar con el **print dir** combo mambo.
+
+* De forma predeterminada, el **open** BIF abre un archivo con nombre para su lectura. Se supone que el archivo contiene **datos textuales**.
+
+* Los dos puntos, además de ser tu mejor amigo **BFF**, le indican a Python que un bloque **indentado** está a punto de comenzar en la siguiente línea de código.
+
+* La cadena **`.strip().split()`** es muy popular. Es utilizado en muchos lugares por muchos programadores de Python.
+
+* Python tiene todos los operadores habituales (p. ej., **`+`**, **`-`**, **`*`**, **`/`**), y algunos más (p. ej., **`//`** y **`**`**).
+
+* El operador **`//`** realiza la **floor division**, lo que garantiza, entre otras cosas, que el resultado de la división sea siempre un número entero.
+
+* Aunque está en su derecho de amar los bucles **for** y **while** por igual, el bucle **for** tiene mucho más uso en la comunidad y, por lo general, se utiliza primero cuando un programador de Python necesita iterar.
+
+* La **list** de Python es una estructura de datos incorporada muy popular, que comprende la conocida notación de corchetes.
+
+* Una lista vacía se parece a esto: **`[]`**.
+
+* Los elementos de una lista están entre **corchetes(square brackets)** y separados entre sí por una **coma**. Saber esto hace que las listas sean fáciles de detectar.
+
+* Las listas vienen con muchas funciones integradas, pero la estrella del espectáculo (en este capítulo) es el método de **append(agregar)**.
+
+* El **int** BIF convierte su argumento único en un número entero, si puede. El valor **`"42"`** se convierte sin problemas, mientras que **`"cuarenta y dos" `** envía **`int`** al estado de fusión.
+
+* El **PSL** (¡¡no el café!!) proporciona el módulo de **statistics** que, entre otras cosas, proporciona una útil función **mean**. La función **mean(media)** tiene todo que ver con el cálculo de promedios, en lugar de no ser agradable estar cerca...
+
+* El **round** BIF elimina los decimales no deseados.
+
+* El **str** BIF convierte su argumento en un string.
+
+* El entrenador está muy **contento** con tu progreso hasta la fecha, como deberías estarlo tú. Hay mucho buen trabajo en este (y en el anterior) capítulo.
+
+<img width="1092" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9d20ab9a-def3-4e09-8196-e5606a0c4c86">
+
+Todas las respuestas a las pistas se encuentran en las páginas de este capítulo y la solución está en la página siguiente. ¡A por ello!
+
+<img width="823" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/03173b36-3194-4dac-b52f-fd8fdfe14647">
+
+<img width="1228" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cfa92816-f833-4407-86f3-55c9193a6c08">
+
+<img width="1031" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7e7f75d3-58d6-4c21-b0e0-b49f2a9e3313">
+
+<img width="1129" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ff6b34b1-e9dd-40f9-9664-7a7e6a4d7783">
+
+<img width="889" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/445d0dfb-b245-46a8-aa77-57ef4eba4a9b">
