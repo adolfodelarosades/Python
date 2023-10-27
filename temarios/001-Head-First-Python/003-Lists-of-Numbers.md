@@ -2,8 +2,6 @@
 
 <img width="744" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/62331a69-da66-408d-bbdf-a7acfa9794fb">
 
-<img width="1004" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/323bfad3-3891-47a8-94a5-dc653182209b">
-
 * “Tarea #2: Procesar los datos en el archivo”
 
 * “Obtenga una copia de los datos del entrenador”
@@ -53,6 +51,8 @@ En este capítulo, continuará creando código Python para ayudar al entrenador.
 ## “Tarea #2: Procesar los datos en el archivo”
 
 Una vez completada la Tarea n.° 1, es hora de pasar a la Tarea n.° 2. Hay un poco de trabajo por hacer pero, al igual que con las actividades del capítulo anterior, puedes abordar las cosas poco a poco como se detalla en el último capítulo:
+
+<img width="1004" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/323bfad3-3891-47a8-94a5-dc653182209b">
 
   1️⃣ **Lea las líneas del archivo.**
 
