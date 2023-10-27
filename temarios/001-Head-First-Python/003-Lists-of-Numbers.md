@@ -2,6 +2,8 @@
 
 <img width="744" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/62331a69-da66-408d-bbdf-a7acfa9794fb">
 
+<img width="1004" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/323bfad3-3891-47a8-94a5-dc653182209b">
+
 * “Tarea #2: Procesar los datos en el archivo”
 
 * “Obtenga una copia de los datos del entrenador”
