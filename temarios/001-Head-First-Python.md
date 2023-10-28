@@ -200,43 +200,44 @@ En este capítulo, continuará creando código Python para ayudar al entrenador.
 
 * “¡La tarea número 2 (finalmente) supera la línea!”
 
-## [Chapter 4](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/004-Lists-of-Files.md))
+## [Chapter 4](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/004-Lists-of-Files.md)
 
-Your code can’t live in a notebook forever. It wants to be free.
+Su código no puede vivir en un notebook para siempre. Quiere ser libre.
 
-And when it comes to freeing your code and sharing it with others, a bespoke function is the first step, followed shortly thereafter by a module, which lets you organize and share your code. In this chapter, you’ll create a function directly from the code you’ve written so far, and in the process create a shareable module, too. You’ll immediately put your module to work as you process the Coach’s swim data with for loops, if statements, conditional tests, and the PSL (Python Standard Library). You’ll learn how to comment your functions, too (which is always a good idea). There’s lots to be done, so let’s get to it!
+Y cuando se trata de liberar su código y **compartirlo** con otros, el primer paso es una **función** personalizada, seguida poco después por un **módulo** que le permite organizar y compartir su código. En este capítulo, creará una función directamente a partir del código que ha escrito hasta ahora y, en el proceso, también creará un módulo que se puede **compartir**. Inmediatamente pondrás tu módulo a funcionar mientras procesas los datos de natación del entrenador con bucles **for**, declaraciones **if**, pruebas condicionales y **PSL**(*Python Standard Library*). También aprenderá a **comentar** sus funciones (lo cual siempre es una buena idea). ¡Hay mucho por hacer, así que vamos a ello!
 
-“You already have most of the code you need”
+* "Ya tienes la mayor parte del código que necesitas"
 
-“How to create a function in Python”
+* "Cómo crear una función en Python"
 
-“Save your code as often as you wish”
+* “Guarda tu código tantas veces como quieras”
 
-“Simply copying code is not enough”
+* “No basta con copiar el código”
 
-“Be sure to copy all the code you need”
+* "Asegúrate de copiar todo el código que necesitas"
 
-“Use modules to share code”
+* "Utilice módulos para compartir código"
 
-“Bask in the glory of your returned data”
+* "Disfruta de la gloria de los datos devueltos"
 
-“Functions return a tuple when required”
+* "Las funciones devuelven una tupla cuando es necesario"
 
-“Let’s get a list of the Coach’s filenames”
+* "Consigamos una lista de los nombres de archivos del entrenador"
 
-“It’s time for a bit of detective work…”
+* "Es hora de hacer un poco de trabajo detectivesco..."
 
-“What can you do to lists?”
+* "¿Qué puedes hacer con las listas?"
 
-“Is the issue with your data or your code?”
+* "¿El problema está en tus datos o en tu código?"
 
-“Decisions, decisions, decisions”
+* “Decisiones, decisiones, decisiones”
 
-“Let’s look for the colon “in” the string”
+* “Busquemos los dos puntos” en “la cadena”
 
-“Did you end up with 60 processed files?”
+* "¿Terminaste con 60 archivos procesados?"
 
-“The Coach’s code is taking shape…”
+* “El código del entrenador está tomando forma…”
+
 
 ## Chapter 5
 
