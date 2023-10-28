@@ -200,7 +200,7 @@ En este capítulo, continuará creando código Python para ayudar al entrenador.
 
 * “¡La tarea número 2 (finalmente) supera la línea!”
 
-## Chapter 4
+## [Chapter 4](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/004-Lists-of-Files.md))
 
 Your code can’t live in a notebook forever. It wants to be free.
 
@@ -238,7 +238,7 @@ And when it comes to freeing your code and sharing it with others, a bespoke fun
 
 “The Coach’s code is taking shape…”
 
-Chapter 5
+## Chapter 5
 
 Sometimes it’s the simplest approaches that get the job done.
 
