@@ -1032,14 +1032,145 @@ for t in times:
 1:28.30 -> 8830
 ```
 
+#### Crear una Lista Vacia.
+
+Vamos a crear una nueva lista **`converts`** la cual va a estar vacia.
+
+<img width="1112" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e1f036ac-a61c-4e55-8572-d2597df2a4fe">
+
+#### Desplegar los métodos de la lista
+
+Vamos a ver que métodos podemos usar en nuestra nueva lista.
+
+<img width="1116" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f52e4146-a4db-4de3-91f3-1a682f580492">
+
 ```py
+print(dir(converts))
+```
+
+```sh
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__',
+'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+'__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',
+'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear',
+'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+Existe un método **`append`** que nos hace pensar que nos puede servir para añadir elementos en la lista, para confirmalo vamos a usar la ayuda y ver que nos dice sobre este método.
+
+<img width="1116" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2e67b52b-6ea1-4f3c-975b-9fc70f5c6d3d">
+
+**Agregar objeto al final de la lista**. 
+
+#### Llenar la lista `converts` con los valores de centecimas de segundos de los valores de `times`
+
+Vamos a llenar la lista **`converts`** con los valores de centecimas de segundos de los valores de **`times`**.
+
+<img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/76a93aa9-88cb-4c2b-bce9-020c70790b53">
+
+```py
+converts = []
+for t in times:
+    minutes, rest = t.split(":")
+    seconds, hundredths = rest.split(".")
+    converts.append((int(minutes) * 60 * 100) + (int(seconds) * 100) + int(hundredths))
+
+times
+```
+
+```sh
+['1:27.95', '1:21.07', '1:30.96', '1:23.22', '1:27.95', '1:28.30']
 ```
 
 ```py
+converts
 ```
 
-```py
+```sh
+[8795, 8107, 9096, 8322, 8795, 8830]
 ```
+
+#### Calcular el Promedio
+
+Para calcular el promedio vamos a usar la **Python Standard Library**.
+
+<img width="1125" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/81798caf-0dd3-4f76-a5f2-88c81cbd4be4">
+
+
+```py
+import statistics
+
+statistics.mean(converts)
+```
+
+El promedio es **`8657.5`** centesimas de segundo.
+
+#### Transformar el Promedio al formato MM:SS:CC
+
+1. Lo primero que vamos a hacer es convertir las centesimas de segundos a segundos por lo que tendremos que dividir el promedio entre **`100`** 
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5ebd5a94-ee6f-463d-9249-12b33dc9fe16">
+
+Tenemos que **`8657.5`** centesimas de segundo equivalen a **`86.58`**, 86 segundos y 58 centesimas.
+
+```py
+import statistics
+
+average = statistics.mean(converts)
+
+average / 100
+
+round(average / 100, 2)
+```
+
+2. Vamos a dividir el resultado en dos componentes separados.
+
+<img width="1122" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ed175b82-8977-4247-95ea-c921c038ccfc">
+
+```py
+str(round(average / 100, 2)).split(".")
+```
+
+3. Calcular el número de minutos.
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8d4f3356-30c9-4eda-b163-f4e1903aacc3">
+
+```py
+mins_secs, hundredths = str(round(average / 100, 2)).split(".")
+
+mins_secs = int(mins_secs)
+
+minutes = mins_secs // 60
+
+minutes
+```
+
+4. Calcular el número de Segundos
+
+<img width="1123" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dd778c44-3a3f-4d00-9d6e-fd667667893b">
+
+```py
+seconds = mins_secs - minutes * 60
+
+seconds
+```
+
+5. Construir el string que represente el tiempo promedio
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/43463cc8-ff56-4463-bfbd-2cce094a63da">
+
+```py
+minutes, seconds, hundredths
+
+str(minutes) + ":" + str(seconds) + "." + hundredths
+
+average = str(minutes) + ":" + str(seconds) + "." + hundredths
+
+average
+```
+
+
 
 ```py
 ```
