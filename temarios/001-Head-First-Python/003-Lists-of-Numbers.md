@@ -783,3 +783,144 @@ Todas las respuestas a las pistas se encuentran en las páginas de este capítul
 <img width="1129" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ff6b34b1-e9dd-40f9-9664-7a7e6a4d7783">
 
 <img width="889" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/445d0dfb-b245-46a8-aa77-57ef4eba4a9b">
+
+## 💻 “Tarea #2: Procesar los datos en el archivo”
+
+  1️⃣ **Lea las líneas del archivo.**
+
+  2️⃣ **Ignora la segunda línea.**
+
+  3️⃣ **Separe la primera línea con "," para producir una lista de horas.**
+
+  4️⃣ **Toma cada uno de los tiempos y conviértelos a un número del formato “mins:secs.hundredths (minutos: segundos.centésimas)”.**
+
+  5️⃣ **Calcule el tiempo promedio y luego conviértalo nuevamente al formato “mins:secs.hundredths (minutos: segundos.centésimas)” (para fines de visualización).**
+
+  6️⃣ **Muestre las variables de la Tarea n.° 1, luego la lista de tiempos y el promedio calculado de la Tarea n.° 2.**
+
+### “Obtenga una copia de los datos del entrenador”
+
+En los archivos de soporte podemos encotrar los archivos con los datos del entrenador.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9e399f11-0ff7-49c0-8494-a9cba2ad7e63">
+
+Si abrimos por ejemplo el archivo **`Darius-13-100m-Fly.txt`** vemos su contenido.
+
+<img width="687" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d17a0fca-18eb-4360-bd8c-73ae9ade7847">
+
+### Creando el notebook `Average.ipynb`
+
+Para que el código que sigue funcione, se supone que ya has descargado los datos del entrenador, descomprimiendo el archivo en una carpeta llamada **`swimdata`** dentro de tu carpeta de **`Learning`**.
+
+<img width="387" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e3e25771-1c30-4d0a-9378-a35d7f3e8a0e">
+
+Cree un nuevo notebook en VS Code y asígnele el nombre **`Average.ipynb`**, vamos a introducir el siguiente código, pulsando **Shift + Enter** después de cada cell.
+
+#### Leyendo un archivo
+
+<img width="1503" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e5e9b388-6454-424a-9a23-7b41575e982c">
+
+```py
+FN = "Darius-13-100m-Fly.txt";
+
+FOLDER = "swimdata/"
+
+with open(FOLDER + FN) as file:
+    lines = file.readlines()
+```
+
+Vamos a ver que tipo es **`file`** así como su documentación.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/78d4af7b-4242-415c-9762-64a6b27eb509">
+
+```py
+FN = "Darius-13-100m-Fly.txt";
+
+FOLDER = "swimdata/"
+
+with open(FOLDER + FN) as file:
+    lines = file.readlines()
+
+type(file)
+
+_io.TextIOWrapper
+
+
+print(dir(file))
+```
+
+```sh
+['_CHUNK_SIZE', '__class__', '__del__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__',
+'__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__',
+'__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__next__', '__reduce__', '__reduce_ex__', '__repr__',
+'__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_checkClosed', '_checkReadable', '_checkSeekable',
+'_checkWritable', '_finalizing', 'buffer', 'close', 'closed', 'detach', 'encoding', 'errors', 'fileno', 'flush', 'isatty',
+'line_buffering', 'mode', 'name', 'newlines', 'read', 'readable', 'readline', 'readlines', 'reconfigure', 'seek',
+'seekable', 'tell', 'truncate', 'writable', 'write', 'write_through', 'writelines']
+```
+
+Ahora vamos a ver que tipo es **`lines`** y su documentación.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d78192f1-77c3-4363-8c16-ba82e16edb36">
+
+type(lines)
+
+list
+
+
+print(dir(lines))
+```
+
+```sh
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__',
+'__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__',
+'__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__',
+'__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',
+'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+Hemos visto que **`lines`** es una **`list`**, podemos ver su contenido:
+
+<img width="1111" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/de7faf3b-dcc3-499a-a234-a96101d35d7f">
+
+
+Vemos que **`lines`** es una lista con un solo elemento el cual podemos acceder con **`lines[0]`** y podemos conocer de que tipo es el elemnto, en este caso es un **`str`**.
+
+
+```py
+lines
+
+lines[0]
+
+type(lines[0])
+```
+
+#### Obtener datos individuales
+
+Ahora que ya tenemos la lista de datos en un **`str`** vamos a separar los diferentes datos que estan separados por comas usando el método **`split(",")`**. Pero antes debemos eliminar el carácter **`"\n"`**. Dentro de los métodos de **`String`** tenemos el método **`strip()`** el cual elimina todos los espacios en blanco pero también elimina el carácter **`"\n"`**.
+
+Así que vamos a aplicar los métodos como sigue:
+
+<img width="1121" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/24fa74c4-3bf8-4547-a32e-da4382e45081">
+
+
+```py
+times = lines[0].strip().split(",")
+
+times
+```
+
+```sh
+['1:27.95', '1:21.07', '1:30.96', '1:23.22', '1:27.95', '1:28.30']
+```
+
+```py
+```
+
+```py
+```
+
+
+
+
+
