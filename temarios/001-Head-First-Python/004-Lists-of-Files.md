@@ -180,4 +180,224 @@ Enojado por este éxito, es posible que también sienta la tentación de copiar 
 
 <img width="951" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/61158f90-f868-4622-baf5-0985cb1bf638">
 
+<img width="925" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/12a2f2e0-059c-46b0-8d78-cd3b526280a9">
+
+Con su función definida, asegúrese de guardarla antes de continuar con esta *Test Drive*.
+
+Deje su código **`swimclub.py`** abierto en VS Code (si lo desea), luego abra otro notebook nuevo y llámelo **`Files.ipynb`**. Ya sabes cómo funciona la sentencia **`import`** de Python con PSL. Resulta que **`import`** también puede importar sus módulos personalizados. ¿Y adivina qué? El archivo **`swimclub.py`** es un módulo de Python, por lo que puedes usar **`import`**, como se muestra a continuación:
+
+<img width="1053" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cca17241-c5ea-4c14-a099-0225456a9b6c">
+
+<img width="915" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/668899e4-9886-4ead-b8a2-ef8ec51ab5ac">
+
+**Sí, eso es exactamente.**
+
+Los argumentos enviados a una función se asignan a los nombres de los parámetros definidos en la firma de la función, mientras que los resultados se devuelven al código de llamada mediante una sentencia **`return`**.
+
+<img width="914" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0d1e182a-35b5-412c-9535-797ce4d52c77">
+
+No es un gran cambio, pero sí importante.
+
+Tómese un momento para revisar su función **`read_swim_data`** en el archivo **`swimclub.py`** y luego, en el espacio a continuación, escriba la sentencia **return** que agregaría al final de su función para enviar valores de regreso a la persona que llama a la función.
+
+Encontrará nuestra sentencia **return** sugerida en la página siguiente, pero intente crear esta única línea de código usted mismo antes de pasar la página. (Pista: decidimos return seis valores de la función).
+
+<img width="922" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7277c63a-bd53-4317-817d-f94c1093c6bf">
+
+<img width="922" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a172f7ba-c249-4097-beec-28828ce80a8b">
+
+### Actualiza y guarda tu código antes de continuar...
+
+Antes de pasar a la página siguiente, asegúrese de agregar la siguiente línea de código como última línea en su función **`read_swim_data`** dentro de su archivo **`swimclub.py`**. Tenga cuidado de hacer coincidir la sangría de esta línea de código con la sangría utilizada para el resto del código de su función:
+
+<img width="931" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bde1b53b-ab75-4cc1-8fc4-835893b4364e">
+
+Habiendo guardado este cambio en el código de su módulo, probablemente no pueda esperar a volver a su notebook **`Files.ipynb`** para ver qué diferencia hace el cambio, ¿verdad?
+
+Nosotros tampoco, pero… odiamos tener que decirles que a todos nos espera la *decepción*.
+
+<img width="911" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6c03965f-c946-462e-8974-13de2172fb76">
+
+Con la sentencia **return** agregada a su función **`read_swim_data`** y el módulo **`swimclub`** guardado, regrese a su notebook **`Files.ipynb`**, haga clic en la primera celda del código, luego use **Shift+Enter** para volver a ejecutar las dos celdas de su notebook.
+
+<img width="926" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d0111e34-078d-47bd-ab97-4f03be39a1e7">
+
+Aunque cambió y guardó el código de su módulo, volver a ejecutar la sentencia **`import`** y luego volver a invocar la función no hizo ninguna diferencia. Todavía no hay resultados. **¿Qué está sucediendo?**
+
+<img width="921" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4c026931-4fc4-4ef6-af1c-f06ec80bff6d">
+
+**Sí, se siente como si hubiera algo seriamente roto aquí...**
+
+En realidad, no es Jupyter el que está causando el problema, sino el intérprete de Python. Y (por extraño que parezca) las cosas deben funcionar de esta manera.
+
+Creemos que alguien tiene algunas preguntas serias que responder.
+
+<img width="913" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b785061e-da12-44c1-b515-a61052df5097">
+
+**Head First**: Gracias por sentarse con nosotros, especialmente con tan poca antelación.
+
+**import**: Feliz de estar aquí.
+
+**Head First**: tengo que admitir que la prueba de manejo más reciente me ha desconcertado un poco. Modifiqué y guardé mi código, luego volví a ejecutar mi sentencia **`import`**, pero nada cambió. ¿Se supone que las cosas deben funcionar de esta manera?
+
+**import**: Sí.
+
+**Head First**: ¿En serio?
+
+**import**: Así es como ruedo…
+
+**Head First**: Pero, ¿cómo soluciono esto?
+
+**import**: En realidad no es tan difícil, pero… necesitabas reiniciar, no volver a importar.
+
+**Head First**: ¿Eh?
+
+**import**: Déjame explicarte.
+
+**Head First**: por favor hazlo. Soy todo oídos…
+
+**import**: cuando creó su nuevo notebook, el intérprete de Python creó una nueva sesión para que se ejecutara su código. Lo primero que hizo en esta nueva sesión fue ejecutarme, su sentencia **`import`** amigable, en su módulo **`swimclub`**.
+
+**Head First**: Sí, luego ejecuté mi función, me di cuenta de que no devolvía ningún dato, lo arreglé, lo guardé y luego importé mi módulo nuevamente.
+
+**import**: Sólo que no lo hiciste.
+
+**Head First**: Me has perdido...
+
+**import**: Hiciste todo eso, excepto el último bit: la parte "importé mi módulo nuevamente". Verá, tengo fama de ser un poco pesado en lo que respecta al uso de recursos, por lo que los desarrolladores del intérprete de Python siempre están buscando formas de optimizar mi uso. Me han dicho que puedo tomarme un tiempo para hacer lo mío.
+
+**Head First**: Em... Está bien...
+
+**import**: Entonces... como la importación a veces puede ser costosa desde el punto de vista computacional, se tomó la decisión de almacenar en caché los módulos importados. No importa cuántas veces se importe un módulo dentro de una sesión particular de Python, solo se ejecuta la primera importación y se ignoran las repeticiones posteriores.
+
+**Head First**: Entonces, si escribe, por ejemplo, **`import abc`** en tres celdas de código y luego presiona **Shift+Enter** en cada una de ellas, ¿solo se ejecuta la primera celda?
+
+**import**: Bueno... todas las celdas se ejecutan, pero solo la primera importación hace algo. La segunda y tercera importaciones se ignoran porque el módulo importado ya está en la caché.
+
+**Head First**: e incluso si el código del módulo cambia entre la primera y la segunda importación, o entre la segunda y la tercera, el intérprete de Python ignora las últimas importaciones ya que está optimizado para leer desde el caché, ¿verdad?
+
+**import**: Sí.
+
+**Head First**: ¡Ah, ja! Ahora lo entiendo. Pero, ¿cómo soluciono este problema? ¿Puedo borrar el caché o decirle al intérprete que lo ignore?
+
+**import**: la mejor “solución” es reiniciar su sesión de Python, en lugar de volver a importar su módulo. De esa manera, la próxima vez que importe su módulo, lo hará en una nueva sesión de Python que tiene un caché de reinicio.
+
+**Head First**: OK, todo eso tiene sentido. Pero, ¿cuál es la mejor manera de reiniciar mi sesión?
+
+**import**: con Jupyter Notebook, hay un ***gran botón brillante de Reiniciar en la parte superior de la ventana*** de VS Code que funcionará. Cuando haces clic en eso, tu sesión anterior de Python se elimina, incluido su caché, y puedes comenzar de nuevo.
+
+**Head First**: Genial, me voy a hacer eso ahora mismo. Gracias por tu ayuda, **¡importa!**
+
+**import**: ¡De nada!
+
+<img width="917" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/505f50ad-4e3f-4d24-9273-14a3e9d018bb">
+
+¿Será que a la tercera va vencida?
+
+Haga clic en el botón ***Restart*** en la parte superior de la ventana de VS Code (mientras muestra su notebook **`Files.ipynb`**):
+
+<img width="890" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/75b94724-1301-4289-9577-aefa8af3a2b1">
+
+Su clic reinicia su sesión de Python, lo que restablece el caché del módulo y elimina cualquier variable existente y sus valores de la RAM. Nos gusta seguir un reinicio con otro clic rápido en este botón:
+
+<img width="917" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a82afe40-62f2-4765-88a0-cfcac35498e4">
+
+Con su sesión de Python reiniciada, usemos **Shift+Enter** para ejecutar esas dos celdas de código una vez más:
+
+<img width="914" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/93f39279-4154-4f89-9ddd-d6db50acd147">
+
+## Utilice módulos para compartir código
+
+Si observa el código en su archivo **`swimclub.py`**, consta de una única declaración **`import`**, una única definición constante y una única función.
+
+Una vez que mueves el código a su propio archivo, se convierte en un **módulo de Python**, que puedes importar según sea necesario.
+
+<img width="909" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3d48eb29-35d7-4a44-886f-6825c4cc9446">
+
+<img width="927" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9cbcfa81-3853-4505-9c2e-b83dccfa4565">
+
+**Este es un nombre completamente calificado.**
+
+Cuando te refieres a tu función con **“module DOT function”**, estás calificando el nombre de tu función con el nombre del módulo que la contiene. Esto es muy común en la práctica, aunque existen otras técnicas de importación comunes. Verá ejemplos de estos a medida que continúe trabajando en este libro.
+
+### Disfrute de la gloria de los datos devueltos
+
+Echemos otro vistazo a los datos devueltos por su invocación más reciente de su función **`read_swim_data`**:
+
+<img width="934" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d16ce9b2-8dc6-413a-b58f-b97a35ddfb41">
+
+<img width="814" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2138605a-919f-4f5a-8b16-a47355cd0d55">
+
+**Buen ojo. Bien visto también.**
+
+Puede que esta no sea la explicación que esperas aquí, pero esos paréntesis deben estar ahí.
+
+Profundicemos un poco en esto para que puedas apreciar lo que está pasando. Ya hemos analizado la sentencia **`import`**, por lo que ahora es el turno de **`Function’s`**.
+
+<img width="916" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9d374a24-f67e-4e86-86a4-13317176668d">
+
+**Head First**: Gracias por tomarse el tiempo de su ajetreado día para charlar con nosotros.
+
+**Function**: No hay problema.
+
+**Head First**: ¿Cómo es que estás tan ocupado?
+
+**Function**: Me utilizan en todas partes, todo el tiempo.
+
+**Head First**: ¿Y trabajarás con cualquier cosa?
+
+**Function**: Si te refieres a los datos que aceptaré, entonces sí, aceptaré con gusto todo lo que me des.
+
+**Head First**: ¿Le importaría expandirse?
+
+**Function**: Claro. Puede enviarme cualquier cantidad de valores de argumentos, que felizmente haré coincidir con mis parámetros, y todo lo que necesita hacer es asegurarse de enviarme el número correcto. Si tengo dos parámetros, asegúrese de enviarme dos valores de argumento.
+
+**Head First**: ¿Qué sucede si envío, digamos, un argumento o tres?
+
+**Function**: Me pongo de mal humor.
+
+**Head First**: ya veo. Es así, ¿verdad?
+
+**Function**: Sí. Soy bastante estricto en ese tipo de cosas. A menos, por supuesto, que uno de mis dos parámetros esté declarado como opcional.
+
+**Head First**: ¿Qué pasa entonces?
+
+**Function**: Continuando con mi ejemplo de una función de dos parámetros... si, por ejemplo, el segundo parámetro es opcional, aceptaré con gusto uno o dos valores de argumento, sin hacer preguntas.
+
+**Head First**: Y si te llamo con un solo argumento, ¿qué se asigna al segundo parámetro?
+
+**Function**: normalmente asigno un valor predeterminado que ha sido decidido por el programador que me creó.
+
+**Head First**: Eso suena un poco complejo.
+
+**Function**: En realidad no lo es y, para ser honesto, no es algo que toda función necesite, pero es parte de mí si lo necesitas. Soy bastante flexible.
+
+**Head First**: ¿Y qué pasa con los valores devueltos? ¿Es el mismo trato? ¿Se puede devolver cualquier número de valores?
+
+**Function**: No.
+
+**Head First**: ¿En serio? ¿No? ¿Eso es todo lo que vas a decir sobre esto?
+
+**Function**: Bueno… pensé que era algo obvio. Piense en las matemáticas donde las funciones devuelven un único resultado, no múltiples resultados. Es lo mismo conmigo. Cualquier número de valores, pero solo UN resultado.
+
+**Head First**: Pero… emm… err… mira la llamada a la función read_swim_data en la página anterior. Se devuelven seis resultados.
+
+**Function**: No, no la hay, sólo hay UNO.
+
+**Head First**: ¿Qué...?
+
+**Function**: si miras de cerca, notarás esos paréntesis que rodean los seis valores de datos, ¿verdad?
+
+**Head First**: Sí, pero…
+
+**Function**: Sin “peros” al respecto. Esos paréntesis son una única tupla que contiene los seis valores de datos individuales. Como dije, solo se devuelve UN resultado, ya sea un resultado único o una única tupla con múltiples valores contenidos en él.
+
+**Head First**: pero el código no convierte los seis valores de retorno en una tupla.
+
+**Function**: Sí, el código no, pero yo sí. Lo hago automáticamente cuando veo que un programador intenta devolver más de UN resultado. Me lo puedes agradecer después.
+
+**Head First**: No, te lo agradeceré ahora. Es importante saberlo. ¡Gracias por el chat!
+
+**Function**: ¡Siempre estoy feliz de aclarar las cosas!
+
 
