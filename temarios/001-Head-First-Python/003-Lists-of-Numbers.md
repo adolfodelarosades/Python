@@ -901,11 +901,14 @@ Ahora que ya tenemos la lista de datos en un **`str`** vamos a separar los difer
 
 Así que vamos a aplicar los métodos como sigue:
 
-<img width="1121" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/24fa74c4-3bf8-4547-a32e-da4382e45081">
+<img width="1113" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/56591884-38c8-4302-ab15-facd1f03ebf7">
+
 
 
 ```py
 times = lines[0].strip().split(",")
+
+type(times)
 
 times
 ```
@@ -914,13 +917,136 @@ times
 ['1:27.95', '1:21.07', '1:30.96', '1:23.22', '1:27.95', '1:28.30']
 ```
 
+Tenemos una **`list`** de **`str`** que representan los tiempos individuales del competidor.
+
+#### Convertir los string en valores numerícos
+
+Vamos a convertir los valores mm:ss:cc a centisimas de segundo. Vamos a hacerlo para el primer elemento de la lista  después aplicaremos lo mismo al resto de los elementos de la lista.
+
+<img width="1108" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/96b17ef7-ba5f-428e-8205-5c3b8f8b80fc">
+
+```py
+# Iniciar con el string.
+first = times[0]
+
+# Extraer las partes del componente: comenzamos con el valor de minutos
+minutes, rest = first.split(":")
+
+# Extraer las partes del componente: tomar los valores de segundos y centesimas
+seconds, hundredths = rest.split(".")
+
+# Convertir los strings a números con la ayuda de otra llamada al BIF "int",
+# entonces realizar los calculos.
+converted_time = (int(minutes) * 60 * 100) + (int(seconds) * 100) + int(hundredths)
+
+# Desplegar el resultado.
+print(converted_time)
+```
+
+Vemos que **`'1:27.95'`** equivale a **`8795`** centecimas de segundo.
+
+#### Revisar for loop
+
+Recordemos el ciclo **`for`** para mostrar los diferentes valores de la lista **`times`**.
+
+<img width="1119" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bccc19f1-76de-438d-bc68-5b140a13234a">
+
+```py
+for t in times:
+    print(t)
+```
+
+```sh
+1:27.95
+1:21.07
+1:30.96
+1:23.22
+1:27.95
+1:28.30
+```
+
+#### Revisar while loop
+
+Recordemos el ciclo **`while`** para mostrar los diferentes valores de la lista **`times`**.
+
+<img width="1122" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/172dbf21-af53-4b73-9093-2d18435a1821">
+
+```py
+i = 0
+while i < len(times):
+    print(times[i])
+    i = i + 1
+```
+
+```sh
+1:27.95
+1:21.07
+1:30.96
+1:23.22
+1:27.95
+1:28.30
+```
+
+Como podemos observar el ciclo **`while`** es un poco menos compacto que el ciclo **`for`**
+
+
+#### Ejercicio: Usando un ciclo `for` obtenga los valores en centecimas de segundo de todos los valores de `times`.
+
+<img width="1121" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/112d57fa-4ded-4332-8d40-c2eed1acb4ed">
+
+```py
+for t in times:
+    minutes, rest = t.split(":")
+    seconds, hundredths = rest.split(".")
+    converted_time = (int(minutes) * 60 * 100) + (int(seconds) * 100) + int(hundredths)
+    print(converted_time)
+```
+
+```sh
+8795
+8107
+9096
+8322
+8795
+8830
+```
+
+La solución del libro es:
+
+<img width="1116" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eefd8e61-fcbd-4bbb-a22b-aeae7d766a32">
+
+
+```py
+for t in times:
+    minutes, rest = t.split(":")
+    seconds, hundredths = rest.split(".")
+    print(t, "->", (int(minutes) * 60 * 100) + (int(seconds) * 100) + int(hundredths))
+```
+
+```sh
+1:27.95 -> 8795
+1:21.07 -> 8107
+1:30.96 -> 9096
+1:23.22 -> 8322
+1:27.95 -> 8795
+1:28.30 -> 8830
+```
+
+```py
+```
+
 ```py
 ```
 
 ```py
 ```
 
+```py
+```
 
+```py
+```
 
-
+```py
+```
 
