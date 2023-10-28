@@ -1170,14 +1170,67 @@ average = str(minutes) + ":" + str(seconds) + "." + hundredths
 average
 ```
 
+## 💻 Cree el notebook `Times.ipynb` y ponga todo el código junto
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/118fe6b1-9427-4819-8935-932d69c67452">
+
+<img width="1128" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9f4834ac-f69c-4e9b-b334-7fb8b9c0435b">
 
 
 ```py
+FN = "Darius-13-100m-Fly.txt"
+FOLDER = "swimdata/"
 ```
 
 ```py
+swimmer, age, distance, stroke = FN.removesuffix(".txt").split("-")
 ```
 
 ```py
+with open(FOLDER + FN) as file:
+    lines = file.readlines()
+    times = lines[0].strip().split(",")
 ```
 
+```py
+converts = []
+for t in times:
+    minutes, rest = t.split(":")
+    seconds, hundredths = rest.split(".")
+    converts.append((int(minutes)*60*100) + (int(seconds)*100) + int(hundredths))
+```
+
+```py
+import statistics
+
+average = statistics.mean(converts)
+mins_secs, hundredths  = str(round(average / 100, 2)).split(".")
+mins_secs = int(mins_secs)
+minutes = mins_secs // 60
+seconds = mins_secs - minutes*60
+average = str(minutes) + ":" + str(seconds) + "." + hundredths
+```
+
+```py
+swimmer, age, distance, stroke
+```
+
+```sh
+('Darius', '13', '100m', 'Fly')
+```
+
+```py
+times
+```
+
+```sh
+['1:27.95', '1:21.07', '1:30.96', '1:23.22', '1:27.95', '1:28.30']
+```
+
+```py
+average
+```
+
+```sh
+'1:26.58'
+```
