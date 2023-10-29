@@ -239,49 +239,49 @@ Y cuando se trata de liberar su código y **compartirlo** con otros, el primer p
 * “El código del entrenador está tomando forma…”
 
 
-## Chapter 5
+## [Capítulo 5](https://github.com/adolfodelarosades/Python/blob/main/temarios/001-Head-First-Python/005-Formatted-String-Literals.md)
 
-Sometimes it’s the simplest approaches that get the job done.
+A veces son los enfoques más simples los que hacen el trabajo.
 
-In this chapter you finally get around to producing bar charts for the Coach. You’ll do this using nothing but strings. You already know that Python’s strings come packed full of built-in goodness, and Python’s formatted string literals, aka f-strings, enhance what’s possible in some rather neat ways. It might feel weird that we’re proposing creating bar charts with text but, as you’re about to discover, it’s not as absurd as it sounds. Along the way you’ll use Python to create files as well as launch a web browser with just a few lines of code. Finally, the Coach gets his wish: the automatic generation of charts from his swim times data. Let’s get to it!
+En este capítulo, finalmente comenzará a producir gráficos de barras para el Entrenador. Harás esto usando nada más que cuerdas. Ya sabes que las cadenas de Python vienen repletas de bondades incorporadas, y las cadenas literales formateadas de Python, también conocidas como f-strings, mejoran lo que es posible de maneras bastante interesantes. Puede parecer extraño que estemos proponiendo crear gráficos de barras con texto pero, como estás a punto de descubrir, no es tan absurdo como parece. En el camino, utilizará Python para crear archivos e iniciar un navegador web con solo unas pocas líneas de código. Finalmente, el entrenador cumple su deseo: la generación automática de gráficos a partir de sus datos de tiempos de natación. ¡Hagámoslo!
 
-“Create simple bar charts with HTML and SVG”
+"Cree gráficos de barras simples con HTML y SVG"
 
-“Getting from a simple chart to a Coach chart”
+“Pasar de un gráfico simple a un gráfico de Coach”
 
-“Build the strings your HTML needs in code”
+"Construya las cadenas que su HTML necesita en el código"
 
-“String concatenation doesn’t scale”
+"La concatenación de cadenas no escala"
 
-“f-strings are a very popular Python feature”
+"Las cadenas f son una característica muy popular de Python"
 
-“Generating SVG is easy with f-strings!”
+"¡Generar SVG es fácil con f-strings!"
 
-“The data is all there, or is it?”
+"Todos los datos están ahí, ¿o no?"
 
-“Make sure you return all the data you need”
+"Asegúrate de devolver todos los datos que necesitas"
 
-“You have numbers now, but are they usable?”
+“Ahora tienes números, pero ¿son utilizables?”
 
-“All that’s left is the end of your webpage”
+“Lo único que queda es el final de tu página web”
 
-“Writing to files, like reading, is painless”
+"Escribir en archivos, como leer, es indoloro"
 
-“It’s time to display your handiwork”
+“Es hora de mostrar tu obra”
 
-“All that’s left are two aesthetic tweaks…”
+"Todo lo que queda son dos ajustes estéticos..."
 
-“It’s time for another custom function”
+"Es hora de otra función personalizada"
 
-“Let’s add another function to your module”
+“Agreguemos otra función a su módulo”
 
-“What’s with that hundredths value?”
+“¿Qué pasa con ese valor de centésimas?”
 
-“Rounding is not what you want (in this case)”
+“Redondear no es lo que quieres (en este caso)”
 
-“Things are progressing well…”
+"Las cosas están progresando bien..."
 
-Chapter 6
+## Chapter 6
 
 Your code needs to put its in-memory data somewhere…
 
