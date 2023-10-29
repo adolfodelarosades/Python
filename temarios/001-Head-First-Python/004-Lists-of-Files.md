@@ -534,24 +534,298 @@ Para comenzar a intentar descubrir qué está sucediendo aquí, primero mostremo
 
 Usemos el combo mambo **print dir** para ver qué está integrado en las listas.
 
-<img width="1087" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c885aa36-3fb0-4d0e-91a0-a2440d5309be">
-
-
 ### ¿Qué puedes hacer con las listas?
 
 Aquí está la salida mambo del combo **print dir** para su lista **`swim_files`**:
 
+<img width="1087" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c885aa36-3fb0-4d0e-91a0-a2440d5309be">
+
 <img width="1040" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2baa95cf-efc7-46dd-9e8f-e1cf2fa1008b">
 
+**Es necesario tener cuidado con las listas integradas (especialmente si cambian su lista).**
 
-<img width="1046" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0231dfdc-689e-470d-a70c-7c97228102a8">
+*Si se frota las manos de alegría ante la perspectiva de utilizar el método **sort** para reordenar su lista, dé un paso atrás. El método **sort** realiza su reordenamiento "en el lugar", lo que significa que el nuevo orden **sobrescribe**(!!) lo que estaba anteriormente en la lista. El antiguo orden de la lista se pierde para siempre... y no se puede deshacer.*
+
+*Si desea mantener el orden existente en su lista pero aún necesita ordenar, hay un BIF que puede ayudar aquí. El BIF **sorted** devuelve una copia ordenada de los datos de su lista, dejando intacto el orden de la lista existente. Aquí tampoco se puede deshacer, ya que la lista original no se modifica.*
+
+<img width="1062" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2faf52d0-32be-43c3-831e-f65b15a8f761">
+
+<img width="974" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b21b08f6-8e8b-433b-b3da-5b35e12dd516">
+
+**Sí, ese es un problema potencial.**
+
+Como el archivo **`swimdata.zip`** se creó inicialmente en una Mac, el archivo **`.DS_Store`** se agregó automáticamente al archivo ZIP. Este tipo de problema específico del sistema operativo suele ser motivo de preocupación.
+
+Antes de continuar, es importante eliminar ese nombre de archivo no deseado de la lista **`swim_files`**.
+
+<img width="1035" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bbf8a7b5-ba83-450f-b44b-81f0462aab9b">
+
+Aquí está la lista de métodos integrados disponibles cuando se trabaja con listas:
+
+<img width="1019" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/669ed8ca-a62d-4f6b-b71f-e5521f6804b6">
+
+Ya sabes lo que hacen los métodos **`append`** y **`sort`**, pero ¿qué pasa con los demás?
+
+Utilizando el BIF **`help`**, dedique algo de tiempo a su notebook para aprender qué hacen algunos de estos otros métodos. Su objetivo es identificar el método a utilizar para eliminar ese nombre de archivo **`.DS_Store`** no deseado de su lista. Cuando crea que ha identificado un método, escriba su nombre en el espacio a continuación:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/94a0ee74-4de7-49cf-964b-9038ba038cb1">
+
+<img width="1044" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e2730529-ce4b-4ac2-baa5-1d4256ea8d67">
+
+No se estrese si, como resultado de completar el ejercicio anterior, identifica más de una forma de realizar la tarea asignada. Esto está bien, ya que a veces el mismo resultado se puede lograr de muchas maneras diferentes. Rara vez existe una manera absolutamente correcta de hacer algo. Como ocurre con la mayoría de las cosas, primero debe concentrarse en lograr que su código haga lo que necesita antes de intentar cualquier tipo de optimización.
+
+<img width="1042" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/97e1f6f6-b233-4665-9e8d-8c0dbe88d048">
+
+Aquí está la lista de métodos integrados disponibles cuando se trabaja con listas:
+
+<img width="1019" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/669ed8ca-a62d-4f6b-b71f-e5521f6804b6">
+
+Ya sabes lo que hacen los métodos **`append`** y **`sort`**, pero ¿qué pasa con los demás?
+
+Utilizando el BIF **`help`**, dedique algo de tiempo a su notebook para aprender qué hacen algunos de estos otros métodos. Su objetivo es identificar el método a utilizar para eliminar ese nombre de archivo **`.DS_Store`** no deseado de su lista. Cuando crea que ha identificado un método, escriba su nombre en el espacio a continuación:
+
+<img width="1054" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e15f430d-37bd-4eee-819d-eee985d90afb">
+
+**P: Si descomprimo `swimdata.zip` en algo que no sea una Mac, ¿seguiré viendo ese `.DS_Store` específico de Mac?**
+
+**R**: Lamentablemente, sí. El archivo ZIP se creó en un dispositivo Apple, por lo que el archivo **`.DS_Store`** estará allí, a menos que quien haya creado el archivo haya indicado a su herramienta zip que excluya el archivo infractor (lo que no ha sucedido en este caso).
+
+**P: ¿No podemos evitar este problema pidiéndole al entrenador que use algo que no sea una Mac para esto?**
+
+**R**: Preguntamos y el entrenador nos dijo que prefería comer vidrio…
+
+**P: Puedo ver la relación entre tuplas y listas, en el sentido de que son algo similares. Supongo que una lista también es una secuencia, pero ¿es inmutable?**
+
+**R**: Las listas son de hecho una secuencia, pero (no) **las listas no son inmutables**. Más bien, **las listas son mutables**, ya que pueden cambiar dinámicamente a medida que se ejecuta el código (a diferencia de las tuplas).
+
+**P: Supongo que las listas son mucho más útiles que las tuplas, ¿verdad?**
+
+**R**: Depende. Tanto las listas como las tuplas tienen sus usos. En general, las listas ven más acción que las tuplas, ya que las listas admiten muchos más casos de uso. Pero no es cierto que las listas sean “mejores” o “más útiles” que las tuplas: las listas y las tuplas están diseñadas para propósitos diferentes.
+
+<img width="1052" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cddbec3b-1627-4434-b77d-ff130c767f3b">
+
+De los 11 métodos integrados en cada lista de Python, el que nos llamó la atención fue **`remove`**.
+
+Esto es lo que informó el BIF **`help`** sobre **`remove`**:
+
+<img width="1078" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/af9a982e-c874-4b39-a1d3-c700a5e98652">
+
+Efectivamente, cuando se invoca el método **`remove`** en la lista **`swim_files`** (con **`.DS_Store`** dado como el nombre de archivo asignado para el corte), la lista se reduce de 61 elementos a 60:
+
+<img width="1102" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/83005328-0be9-441a-9bf7-0c6925179dbb">
+
+<img width="771" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4cd55c31-7444-47c0-b8e3-5a675dd8f9e8">
+
+**Sería bueno, ¿no?**
+
+Podríamos dejar de lado la precaución y lanzarnos a crear algunos gráficos de barras, pero puede que sea demasiado pronto para eso.
+
+Tu función **`read_swim_data`** ha funcionado hasta ahora, pero ¿puedes estar seguro de que funcionará para el archivo de cualquier nadador? Dediquemos un momento a asegurarnos de que nuestra función **`read_swim_data`** funcione como se esperaba sin importar el archivo de datos que se presente.
+
+<img width="1238" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4442909b-70ff-44e9-b614-1adc837130c1">
+
+Veamos si puedes confirmar que tu función **`read_swim_data`** funciona con el archivo de cualquier nadador.
+
+Escriba un bucle **`for`** que procese los nombres de archivos en **`swim_files`** uno a la vez. En cada iteración del bucle, muestre el nombre del archivo que se está procesando actualmente, luego haga arreglos para llamar a su función **`read_swim_data`** con el nombre del archivo actual. No necesita mostrar los datos devueltos por su función, pero sí necesita invocar la función.
+
+Escribe el código que usaste aquí y anota todo lo que aprendiste al ejecutar tu bucle **`for`** en el espacio a continuación:
+
+<img width="907" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c310d620-e927-4546-8b99-3e7031a6201d">
+
+<img width="851" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6ab56b13-5b9a-4121-9673-843bfa58ca84">
+
+Este es el código que se nos ocurrió después de experimentar en nuestro notebook **`Files.ipynb`**, junto con el resultado generado por el código:
+
+<img width="949" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/edaf5bbb-2f32-459d-bc3e-e9a1727242b6">
+
+### ¿El problema está en tus datos o en tu código?
+
+Ahora que ha identificado el archivo infractor, echemos un vistazo a su contenido para ver si puede llegar a la raíz del problema. Aquí está el archivo **`Abi-10-50m-Back.txt`** abierto en VS Code:
+
+<img width="945" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1fde77e0-3916-4656-b236-28f277b0de00">
+
+Aquí está la línea de código que genera el error. ¿Puedes ver cuál es el problema?
+
+<img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1052d1f1-5f3e-47fc-85b0-0b18cd94e29c">
+
+**El problema es una suposición incorrecta.**
+
+Su código, tal como está escrito, asume que cada tiempo de natación se ajusta al formato **mins:secs.hundredths**, pero este claramente no es el caso con los tiempos de natación de 50m de Abi, y es por eso que obtiene ese **`ValueError`**.
+
+Ahora que sabes cuál es el problema, ¿cuál es la solución?
+
+<img width="1032" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/920d442b-3f02-4787-978d-cd8a6701fd46">
+
+**Sam**: ¿Cuáles son nuestras opciones aquí?
+
+**Alex**: Podríamos arreglar los datos, ¿verdad?
+
+**Mara**: ¿Cómo es eso?
+
+**Alex**: ¿Podríamos preprocesar cada archivo de datos para asegurarnos de que no falten minutos, tal vez anteponiendo un cero y dos puntos cuando falten minutos? De esa forma no tendremos que cambiar ningún código.
+
+**Mara**: Eso funcionaría, pero…
+
+**Sam**: …sería un desastre. Además, no estoy muy interesado en preprocesar todos los archivos, ya que no será necesario cambiar la gran mayoría, lo que parece un desperdicio.
+
+**Mara**: Y aunque, como estrategia, no tendríamos que cambiar ningún código existente, tendríamos que crear el código para realizar el preprocesamiento, tal vez como una utilidad separada.
+
+**Sam**: Recuerde también que los datos están en un formato fijo y que los genera el cronómetro inteligente del entrenador. Realmente no deberíamos alterar los datos, así que dejémoslos como están.
+
+**Alex**: Entonces, ¿estamos pensando en cambiar nuestra función **`read_swim_data`**?
+
+**Mara**: Sí, creo que es una mejor estrategia.
+
+**Sam**: Yo también.
+
+**Alex**: Entonces, ¿qué tenemos que hacer?
+
+**Mara**: Necesitamos identificar en qué parte de nuestro código se deben realizar los cambios...
+
+**Sam**: …y cuáles deben ser esos cambios de código.
+
+**Alex**: Está bien, suena bien. Entonces, vamos a echar un vistazo más de cerca a nuestra función **`read_swim_data`** para que podamos decidir qué código debemos cambiar.
+
+**Mara**: Sí, entonces podemos usar una declaración **`if`** para tomar una decisión basada en si el tiempo de natación que se está procesando actualmente tiene o no un valor de minutos.
+
+<img width="913" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/836d725e-1771-4b83-a408-8d1999b01e99">
+
+Aquí está la versión más reciente del código del módulo **`swimclub`**.
+
+Toma tu lápiz y rodea el área del código que crees que necesita incorporar una declaración **`if`**:
+
+<img width="1054" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/066a9e93-2c5f-4047-be40-6e92b1c0ee79">
+
+<img width="969" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/466b2ac7-b37f-41b7-b300-d200cc3a0311">
+
+Se le mostró la versión más reciente del código del módulo **`swimclub`**.
+
+Tomando su lápiz, se le pidió que rodeara el área del código que cree que necesita incorporar una declaración **`if`**:
+
+<img width="939" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc5481b6-c742-4c9d-9569-693e5c657986">
+
+### Decisiones, decisiones, decisiones.
+
+Eso es lo que la sentencia **if** hace, día tras día: tomar decisiones.
+
+<img width="1053" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2dc12df0-9c3a-4e59-8152-5d932e2666f4">
+
+**Sí, eso es lo que se necesita aquí.**
+
+Echemos un vistazo más de cerca a los dos posibles formatos de tiempo de natación.
+
+Primero, aquí está uno de los tiempos registrados para Darius en su expediente:
+
+<img width="753" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/53a3bc35-5e47-4858-aeb8-6a21342721fc">
+
+Y aquí hay un tiempo tomado de los datos de Abi:
+
+<img width="838" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4abea39e-4a4c-4891-8534-e5673f12968f">
+
+Es fácil detectar la diferencia: los datos de Abi no muestran ningún minuto. Teniendo esto en cuenta, es posible proponer una condición a comprobar a la hora de tomar una decisión. ¿Puedes averiguar qué es? (Pista: considera a tu mejor amiga, los dos puntos).
+
+### Busquemos los dos puntos “en” el string
+
+Si los dos puntos aparecen en cualquier cadena de tiempo de natación, entonces el tiempo tiene un valor de minutos. Aunque los strings vienen con muchos métodos integrados, incluidos métodos que pueden realizar una búsqueda, no usemos ninguno de estos aquí. Como la búsqueda es un requisito tan común, Python proporciona el operador **`in`**. Ya lo has visto antes, con **`for`**:
+
+<hr>
+
+**NOTA**
+
+Los métodos de string **"find"** e **"index"** realizan búsquedas.
+
+<hr>
+
+<img width="845" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/131bb115-4fd8-42f6-a91a-02307ef40fd1">
+
+Usar **`in`** con **`for`** identifica la secuencia que se está iterando. Sin embargo, cuando **`in`** se usa fuera de un bucle, adquiere poderes de búsqueda. Considere estos usos de ejemplo de **`in`**:
+
+<img width="865" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/71865a01-964e-4fc2-9cf5-870151ab3191">
 
 
-Es necesario tener cuidado con las listas integradas (especialmente si cambian su lista).
+<img width="855" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b8ec1ae7-182d-4261-8197-f606c4ce2008">
 
-Si se frota las manos de alegría ante la perspectiva de utilizar el método de clasificación para reordenar su lista, dé un paso atrás. El método de clasificación realiza su reordenamiento "en el lugar", lo que significa que el nuevo orden sobrescribe (!!) lo que estaba anteriormente en la lista. El antiguo orden de la lista se pierde para siempre... y no se puede deshacer.
 
-Si desea mantener el orden existente en su lista pero aún necesita ordenar, hay un BIF que puede ayudar aquí. El BIF ordenado devuelve una copia ordenada de los datos de su lista, dejando intacto el orden de la lista existente. Aquí tampoco se puede deshacer, ya que la lista original no se modifica.
+**También nos encanta la palabra clave "in".**
+
+Es una superpotencia de Python.
+
+<img width="1037" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c27a26c4-47e3-4598-9112-5555385f196b">
+
+Como se vio en el Capítulo 1, aquí está la estructura general de una declaración **`if`** simple:
+
+<img width="1032" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eb6807a9-0c80-44ab-9b01-e1b5a6c73952">
+
+Ahora que conoce la palabra clave **`in`**, ¿puede idear una declaración condicional que verifique cuándo aparecen los dos puntos en el tiempo de natación actual (que se almacena en una variable denominada **`t`**)? Complete el espacio en blanco a continuación:
+
+<img width="1117" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4ab813d3-0a34-4e24-81a2-9046f8e97d50">
+
+<img width="1040" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/43244dbf-7b6f-44b6-b01b-d50af033984d">
+
+**Asegúrese de escribir sus declaraciones `if` en forma Pythonic**
+
+*Si llega a Python desde uno de los lenguajes tipo C, es posible que sus dedos insistan en codificar paréntesis adicionales alrededor de la condición. O tal vez sienta la necesidad de verificar explícitamente si la condición se evalúa como **True** (o **False**). No caigas en la tentación de hacer ninguna de las dos cosas. El intérprete de Python no te impedirá hacer lo que se muestra a continuación, ¡pero debes resistir, resistir, resistir!*
+
+<img width="1088" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/258761c5-0d07-4b7d-b74d-fa3f8fbb41dc">
+
+Hay una última tarea, y es determinar el código que se ejecuta cuando la condición se evalúa como **`False`**. Aquí está tu declaración **`if`** hasta ahora. ¿Puedes encontrar el código que se debe agregar al bloque de código **`else`**? Experimente en su notebook y luego agregue el código a continuación. Como siempre, nuestra solución está en la página.
+
+<img width="1088" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5bb2efbf-f783-4579-9127-325281b6eba9">
+
+**P: Supongo que `True` y `False` son los valores booleanos de Python. ¿Puedo usar `1` y `0` en su lugar?**
+
+**R**: Dentro de un contexto *booleano*, **`1`** se evalúa como **`True`** y **`0`** se evalúa como **`False`**. Dicho esto, los programadores de Python rara vez usan **`1`** y **`0`** de esta manera. Esto tiene que ver con el hecho de que cualquier valor en Python se puede utilizar dentro de un contexto booleano.
+
+**P: ¿Existe alguna forma de comprobar qué valor se evalúa dentro de un contexto booleano?**
+
+**R**: Sí, existe un BIF para eso. Se llama **`bool`**. Puede usarlo de forma interactiva (o en su código) para verificar la evaluación booleana de cualquier valor.
+
+**P: ¿Qué pasa con el uso de `true` y `false`, es decir, todo en minúsculas? ¿Cómo se evalúan esos valores?**
+
+**R**: No de la forma que cabría esperar. Usar **`true`** y **`false`** es una mala idea, ya que el caso es significativo. **`True`** es un valor booleano, al igual que **`False`**, mientras que **`true`** y **`false`** no lo son. Son nombres de variables válidos, no booleanos. Y como variables, existen, lo que significa que siempre se evaluarán como **`True`** (¿cómo puede algo que existe ser distinto de **`True`**?). Y sí, estamos de acuerdo en que algo llamado evaluación **`false`** como **`True`** es un poco extraño. Lección de vida: nunca uses **`true`** y **`false`** en minúsculas para representar un valor booleano, usa **`True`** y **`False`** en su lugar.
+
+<img width="1046" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/90a7ad6f-506b-44fe-91a7-f3e6059dbc93">
+
+Tenía una tarea final, que era elaborar el código que se ejecuta cuando la condición se evalúa como **`False`**. Hasta ahora se le proporcionó su declaración **`if`** y se le ocurrió el código que debe agregarse al bloque de código **`else`**. Esto es lo que usamos. ¿Su código es similar, igual o completamente diferente?
+
+<img width="1093" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc51e565-be83-45f6-845e-930f00d22247">
+
+<img width="1050" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a3a588cc-7a42-4e6a-9cef-a0a296d43a37">
+
+**Ya casi llegamos. Una última edición.**
+
+Asegúrese de agregar el código que se muestra arriba a su función **`read_swim_data`** dentro del módulo **`swimclub`** y no olvide guardar su archivo.
+
+Su código **`swimclub.py`** debe ser el mismo que el de la página siguiente.
+
+<img width="679" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f36d615b-159d-4f8d-8805-5bde8d8ca47f">
+
+<img width="928" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7f865d72-ca15-4b81-8459-a52cb218823e">
+
+Para utilizar la última versión del módulo **`swimclub`**, debe reiniciar su sesión de notebook. La forma más sencilla de hacer esto es borrar todas las celdas de su computadora portátil, reiniciarla y luego ejecutar cada celda. En la parte superior de VS Code, observe las siguientes opciones, en las que debe hacer clic en el orden que se muestran (1, luego 2 y luego 3):
+
+<img width="930" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ac02654e-ebb9-4df8-ad75-34d9848e2b80">
+
+Una vez que complete los tres pasos anteriores, su bucle **`for`** producirá (con suerte) 60 líneas de salida. Esta vez no hay ningún error de tiempo de ejecución (suponiendo que ninguna otra celda de código genere un error):
+
+<img width="1054" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6d315409-20d0-4ff9-9e66-1752bc95a26e">
+
+### ¿Terminaste con 60 archivos procesados?
+
+Probablemente esté seguro de que su código más reciente está procesando todos los archivos en su carpeta de datos de natación. Nosotros también. Sin embargo, a menudo es bueno volver a comprobar estas cosas. Como siempre, hay varias maneras de hacer esto, pero numeremos los resultados de su bucle **`for`** agregando una enumeración, comenzando desde 1, a cada línea de salida que se muestra en la pantalla.
+
+Para hacerlo, usemos otro BIF creado para este mismo propósito llamado **enumerate**:
+
+<img width="980" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/17c5a9bc-eff5-473a-8c1f-8aa3e4cd3379">
+
+<img width="912" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5bfd1639-9da2-445a-9d27-fb00a19068c7">
+
+
+
 
 
 
