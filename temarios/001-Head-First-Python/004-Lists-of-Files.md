@@ -824,6 +824,66 @@ Para hacerlo, usemos otro BIF creado para este mismo propósito llamado **enumer
 
 <img width="912" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5bfd1639-9da2-445a-9d27-fb00a19068c7">
 
+**P: ¿Por qué tuvimos que reiniciar de nuevo? ¿Seguramente escribir `import swimclub` en una celda vacía recarga el código más nuevo del módulo previamente importado?**
+
+**R**: (Esperamos que estés sentado…) No, no es así. Recuerde de nuestra discusión anterior que el intérprete de Python implementa un esquema de almacenamiento en caché agresivo para los módulos importados que, para todos los efectos, prohíbe efectivamente la reimportación de un módulo ya importado incluso si el código del módulo ha cambiado mientras tanto. Aunque existen algunas técnicas para anular este comportamiento predeterminado de almacenamiento en caché del módulo, según nuestra experiencia, lo más seguro es reiniciar siempre una computadora portátil después de un cambio en el código de un módulo. De esta manera, tiene la garantía de ejecutar el código que cree que está ejecutando.
+
+
+## El código del Entrenador va tomando forma…
+
+Su módulo **`swimclub`** ya está listo. Dado el nombre de un archivo que contiene una colección de cadenas de tiempo de natación, su nuevo módulo puede producir datos utilizables. El coach espera ver algunos gráficos de barras creados a partir de estos datos, así que profundicemos en la implementación de esa funcionalidad en el próximo capítulo.
+
+Como siempre, puede continuar después de haber revisado el resumen del capítulo y luego intentar resolver el crucigrama de este capítulo.
+
+<img width="927" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3a8641f3-c087-4bcc-ba67-a087b2b7d7f4">
+
+* La palabra clave **`def`** define una función nueva y personalizada.
+
+* Cuando colocas código en su propio archivo (con una extensión **`.py`**), **creas un módulo**.
+
+* Las sentencias **`import`** le permiten reutilizar un módulo, por ejemplo, **`import swimclub`**.
+
+* Utilice un **fully qualified name** para invocar una función desde un módulo, por ejemplo, **`swimclub.read_swim_data`**.
+
+* La sentencia **return** permite que una función personalizada devuelva un resultado.
+
+* Si una función intenta devolver más de un resultado, la colección de valores devueltos se **agrupa** como una única **tupla**. Esto se debe al hecho de que las funciones de Python solo devuelven un único resultado.
+
+* Una **tupla** es una **estructura de datos de secuencia inmutable**. Una vez que se asignan valores a una tupla, **la tupla no puede cambiar**.
+
+* Las **listas** son como tuplas, salvo el hecho de que **las listas son mutables**.
+
+* El módulo **`os`** (incluido como parte del PSL) permite que su código Python se comunique con su sistema operativo subyacente.
+
+* Aunque las listas vienen con un método **sort** útil, tenga cuidado al usarlo ya que el orden se aplica in situ. Si desea mantener el orden actual de cualquier lista, utilice el BIF **sorted** (que siempre devuelve una copia ordenada de sus datos).
+
+* Las listas vienen integradas con muchos métodos (no solo **sort**), incluido el útil método **remove**.
+
+* El operador **`in`** es uno de nuestros favoritos y debería ser uno de los suyos también. Es excelente para realizar búsquedas (también conocido como *verificar membresía*).
+
+* Cuando necesitas tomar una decisión, nada supera al combo **`if else`**.
+
+* Un BIF a menudo pasado por alto, pero verdaderamente maravilloso, es el de **`enumerate`**. Se puede utilizar para numerar las iteraciones de cualquier bucle **`for`**.
+
+<img width="923" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/16a07106-c7a3-406c-a5f2-abba0bc5d143">
+
+El módulo **`swimclub`** contiene código que funciona, pero se puede mejorar agregando algunos comentarios bien colocados (y bien intencionados). Aquí hay otra versión de **`swimclub.py`** que hace precisamente eso. Depende de usted si decide agregar estos comentarios (o similares) a su código, pero tenga en cuenta que el código disponible en la página de GitHub de este libro los incluye.
+
+<img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/abd9b099-0d15-4c91-b007-9149cad85333">
+
+<img width="923" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/64558562-266b-4ea5-b213-fe1a60d188fd">
+
+Las respuestas a las pistas se encuentran en las páginas de este capítulo y la solución, como siempre, en la página siguiente.
+
+<img width="691" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/86b98938-3341-4f86-8e98-70f544c4e1b5">
+
+<img width="1031" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/327db6e7-6a4b-4717-bc14-981883bf03c7">
+
+<img width="1038" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7261d1cc-a906-4b6b-8674-05252d8eb78a">
+
+<img width="948" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0c4ac577-7ab8-474d-b253-3cfde454dd7e">
+
+<img width="692" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/348f7c44-b6ba-45ea-b971-3bf94447cc5c">
 
 
 
