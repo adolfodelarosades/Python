@@ -396,10 +396,163 @@ Obviamente, ninguno de esos seis números mayores que 8000 es menor que 400. Y s
 
 Lo que se necesita aquí es alguna forma de reducir los números más grandes a un valor que se ajuste dentro del rango de 0 a 400, lo que parece que podría necesitar algunos cálculos complicados. ¡Ay!
 
-Quiso la suerte que Head First Coders acaba de enviar un pequeño módulo de Python (llamado hfpy_utils), junto con un cuaderno (llamado HowTo.ipynb) que le muestra cómo convertir cualquier número a su equivalente dentro de algún otro rango. Copie ambos archivos en su carpeta de Aprendizaje y luego únase a nosotros en la parte superior de la página siguiente.
+Quiso la suerte que *Head First Coders* acaba de enviar un pequeño módulo de Python (llamado **`hfpy_utils`**), junto con un notebook (llamado **`HowTo.ipynb`**) que le muestra cómo convertir cualquier número a su equivalente dentro de algún otro rango. Copie ambos archivos en su carpeta de *Learning* y luego únase a nosotros en la parte superior de la página siguiente.
 
-NOTA
-Encontrará el módulo y el cuaderno incluidos con el material de descarga de este libro.
+<hr>
+
+**NOTA**
+
+Encontrará el módulo y el notebook incluidos con el material de descarga de este libro.
+
+<hr>
+
+<img width="1045" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e718585b-4c31-4737-bad3-4b8e1aea53f6">
+
+<img width="639" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7e1c1bdc-2722-49e0-8e9b-b9666c5b8831">
+
+## Escalar valores numéricos para que encajen
+
+<img width="1035" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0a8e3e24-7e1c-4257-9695-b983188fe05c">
+
+No es necesario que comprenda cómo funciona el código del módulo **`hfpy_utils`** (ni se le pedirá que lo cambie de ninguna manera).
+
+Sin embargo, es necesario comprender qué hace la función **`convert2range`**. La prueba de manejo en la página anterior demostró la función en acción, convirtiendo los valores (bastante grandes) de centésimas de segundo en números en un rango de 0 a 400.
+
+Puede aprender a controlar cómo funciona la escala observando la firma de la función **`convert2range`**:
+
+<img width="1032" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2cf07239-ff6a-4d34-9766-0548fa42aaf6">
+
+Y para aquellos de ustedes que tienen una urgente necesidad de verlo, aquí, en todo su esplendor, está todo el código del módulo **`hfpy_utils`**:
+
+<img width="1054" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a646e4a1-8207-4627-983c-6f7dd1128175">
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9c321c92-06c3-4961-9666-ad60dd30ec75">
+
+**Sí, no lo hemos olvidado.**
+
+Y podemos ver de dónde viene el entrenador. Parece que nos estamos desviando de la generación de los gráficos de barras necesarios, pero no temas: todo está a punto de concretarse.
+
+<img width="912" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9caea642-4cc5-4c5b-a447-ebe8d43818e6">
+
+Ahora que ha visto las f-strings en acción y ha estudiado el código en el notebook **`HowTo.ipynb`**, tomemos un tiempo para crear el código necesario para generar los tags SVG para cada uno de los tiempos de natación del nadador actual. Revisaremos esto paso a paso, mientras usted piensa en lo que se requiere, experimenta con el código en su notebook y luego (toma su lápiz y) escribe el código que necesita en los espacios a continuación.
+
+Comience escribiendo una línea de código que cree tres variables a partir de los datos del nadador llamando a la función **`read_swim_data`**, creando la lista **`times`**, la variable **`average`** y la lista **`converts`**:
+
+__________________________________________________________________
+
+Crea otra variable llamada **`from_max`**, asignándole el valor máximo de la lista **`converts`**:
+
+__________________________________________________________________
+
+Importe el módulo **`hfpy_utils`**, luego cree una nueva variable llamada **`svgs`**, inicializándola en una cadena vacía:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+Supongamos que existe un valor llamado **`n`** que contiene un valor de ranura que se indexa en su lista **`converts`**. Proporcione una línea de código que cree una variable llamada **`bar_width`** y la establezca en un valor de **`n`** que escala de **`0-from_max`** a **`0-400`**:
+
+__________________________________________________________________
+
+<hr>
+
+**NOTA**
+
+Sugerencia: estudie el código en el cuaderno “**`HowTo.ipynb`**” para obtener una aproximación cercana al código que necesita aquí.
+
+<hr>
+
+__________________________________________________________________
+
+Escriba la primera línea de un bucle **`for`** que itere sobre una lista de tiempos enumerados, creando dos nuevas variables de bucle llamadas **`n`** y **`t`**:
+
+__________________________________________________________________
+
+Aquí está el fragmento de SVG tomado del archivo **`bar.html`**:
+
+<img width="912" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b05bc43b-68af-469e-8b77-3d580c34e1ab">
+
+Cree una f-string multilínea con comillas triples que utilice las variables **`bar_width`** y **`t`** de la última página para crear una etiqueta SVG para el tiempo de natación actual:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+Con su cadena f-string, muestre el código que la agrega al final de la variable **`svgs`** creada en la última página:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+
+<img width="936" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/98d3f44f-4ec2-4ee6-b797-d606edcb2538">
+
+
+Ahora que ha visto las f-strings en acción y ha estudiado el código en el notebook **`HowTo.ipynb`**, tomemos un tiempo para crear el código necesario para generar los tags SVG para cada uno de los tiempos de natación del nadador actual. Revisaremos esto paso a paso, mientras usted piensa en lo que se requiere, experimenta con el código en su notebook y luego (toma su lápiz y) escribe el código que necesita en los espacios a continuación.
+
+Comience escribiendo una línea de código que cree tres variables a partir de los datos del nadador llamando a la función **`read_swim_data`**, creando la lista **`times`**, la variable **`average`** y la lista **`converts`**:
+
+<img width="948" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bfd62607-bccb-4209-adb8-8043d005fa8c">
+
+Crea otra variable llamada **`from_max`**, asignándole el valor máximo de la lista **`converts`**:
+
+<img width="929" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4ff30bdb-3a08-43a3-b758-2b0bff12d6b8">
+
+Importe el módulo **`hfpy_utils`**, luego cree una nueva variable llamada **`svgs`**, inicializándola en una cadena vacía:
+
+<img width="921" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4baa3bc0-f9c2-4224-b7ff-9ff010455a84">
+
+Supongamos que existe un valor llamado **`n`** que contiene un valor de ranura que se indexa en su lista **`converts`**. Proporcione una línea de código que cree una variable llamada **`bar_width`** y la establezca en un valor de **`n`** que escala de **`0-from_max`** a **`0-400`**:
+
+<img width="929" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fe70688d-dc14-468a-b7aa-a9f73e3188c3">
+
+Escriba la primera línea de un bucle **`for`** que itere sobre una lista de tiempos enumerados, creando dos nuevas variables de bucle llamadas **`n`** y **`t`**:
+
+<img width="982" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f19669a1-2e6a-4af2-858a-df64808d8547">
+
+Aquí está el fragmento de SVG tomado del archivo **`bar.html`**:
+
+<img width="912" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b05bc43b-68af-469e-8b77-3d580c34e1ab">
+
+Cree una f-string multilínea con comillas triples que utilice las variables **`bar_width`** y **`t`** de la última página para crear una etiqueta SVG para el tiempo de natación actual:
+
+<img width="940" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e57a8e66-4505-4e3e-bb38-e567b306ddcd">
+
+
+Con su cadena f-string, muestre el código que la agrega al final de la variable **`svgs`** creada en la última página:
+
+<img width="942" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/74739b42-7085-4ed2-8375-7b28cbe112fa">
+
+<img width="923" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f089006a-2432-42af-b97b-a12a234f70be">
+
+Con sólo unos pocos ajustes menores, el código que creó durante el ejercicio que acaba de completar se puede combinar en una sola celda de código en su notebook, así:
+
+<img width="909" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/47f33044-89ad-4b44-8352-abb06f18ba7c">
+
+Al presionar **Shift+Enter** en esta celda se ejecuta el código, pero no se muestra nada. En la siguiente celda, use el BIF **print** para ver su obra:
+
+<img width="975" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2b59ee5a-a573-45fb-adc6-92f5b714f544">
+
+
+
 
 
 
