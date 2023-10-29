@@ -380,7 +380,7 @@ Profundicemos un poco en esto para que puedas apreciar lo que está pasando. Ya 
 
 **Function**: Bueno… pensé que era algo obvio. Piense en las matemáticas donde las funciones devuelven un único resultado, no múltiples resultados. Es lo mismo conmigo. Cualquier número de valores, pero solo UN resultado.
 
-**Head First**: Pero… emm… err… mira la llamada a la función read_swim_data en la página anterior. Se devuelven seis resultados.
+**Head First**: Pero… emm… err… mira la llamada a la función **`read_swim_data`** en la página anterior. Se devuelven seis resultados.
 
 **Function**: No, no la hay, sólo hay UNO.
 
@@ -399,5 +399,162 @@ Profundicemos un poco en esto para que puedas apreciar lo que está pasando. Ya 
 **Head First**: No, te lo agradeceré ahora. Es importante saberlo. ¡Gracias por el chat!
 
 **Function**: ¡Siempre estoy feliz de aclarar las cosas!
+
+## Las funciones devuelven una tupla cuando es necesario
+
+Cuando llamas a una función que parece que va a devolver múltiples resultados, piénsalo de nuevo, porque no es así. En su lugar, **obtendrá una única tupla que contiene una colección de resultados**, independientemente de cuántos valores de resultados individuales haya.
+
+<img width="909" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/76843c93-2214-4263-94a6-9d103a0f098c">
+
+<img width="844" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b69f2c57-3040-484d-93e3-1b90ada32a2b">
+
+**Esa es una gran sugerencia.**
+
+No es que estemos sugiriendo que haya un poco de lectura mental aquí, pero da un poco de miedo que tuviéramos la misma idea...
+
+<img width="922" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/64ac709f-f48b-4667-9085-df961d5e1e79">
+
+**De cerca y en persona con la tupla de Python.**
+
+Los documentos de Python afirman que una **tupla** es una *secuencia inmutable*.
+
+**¿Inmutable?**
+
+Ya conoces dos tipos de datos *inmutables*: **numbers** y **strings**. Ambos comparten la característica de que una vez que se crea un valor en el código, **el valor no se puede cambiar**. Por ejemplo, **`42`** es siempre **`42`**: no puede cambiar, es inmutable. Lo mismo ocurre con los **strings** en Python: "**`hello`**" siempre es "**`hello`**": una vez creada, no puede cambiar, es inmutable.
+
+La **tupla** de Python toma esta idea de inmutabilidad y la aplica a una colección de valores de datos. A veces puede resultar útil pensar en ***una tupla como una lista constante***. Una vez que se asignan valores a una tupla, la tupla no puede cambiar, es inmutable.
+
+**¿Secuencia?**
+
+Si puedes usar la notación entre corchetes para acceder a elementos (o espacios) de una colección, entonces estás trabajando con una ***secuencia***. La ***lista de Python es el tipo de secuencia más familiar***, pero existen otros, incluidas ***strings*** y… ***tuplas***. Además de admitir el uso de corchetes, ***las secuencias también mantienen el orden de los elementos que contienen***.
+
+<img width="928" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2528584d-ea8a-441e-a6b1-13a8376cff46">
+
+<img width="922" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b484a93d-f39f-4b6a-b1dd-caa31e345977">
+
+Suponga que la siguiente línea de código se ha ejecutado en una celda de código nueva y vacía en su notebook (pista: siga adelante y ejecute esta línea de código en su notebook para que pueda experimentar según sea necesario):
+
+<img width="871" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/939a1bc0-8bb9-496e-b6bb-9c3b480b28b5">
+
+Usando la notación de corchetes, extraiga la lista de tiempos de natación de la tupla **`data`**, asignándolos a una lista llamada **`times`**. Luego muestre el contenido de la lista **`times`**. Escribe el código que usaste aquí:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+Utilizando la tecnología de desempaquetado de Python (también conocida como asignación múltiple-*multiple assignment*), extraiga todos los elementos en variables nombradas: **`swimmer`**, **`age`**, **`distance`**, **`stroke`**, **`times2`** y **`average`**. Luego muestre el contenido de la lista **`times2`** en la pantalla:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="923" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/81cb3c5f-6981-4e25-a619-a3d741d03214">
+
+**P: Acabo de hacer un “print dir” en mi tupla `data` y solo hay dos métodos que no son tontos. ¿Se da el caso de que no puedes hacer nada útil con las tuplas?**
+
+**R**: No, ese no es el caso. Ahora bien, dicho esto, si comparas la salida del **print dir** combo mambo para una lista con una tupla, ciertamente parece que las tuplas son inferiores a las listas, ya que casi no tienen métodos asociados. Pero recuerde: las tuplas son inmutables, por lo que nunca podrá cambiar una tupla una vez que se le hayan asignado datos (este hecho por sí solo reduce la cantidad de métodos que necesita con las tuplas). A medida que avance en este libro, verá ejemplos de dónde tiene sentido utilizar una tupla sobre una lista y viceversa. En pocas palabras: necesitas ambos.
+
+<img width="918" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/82a6d62a-6308-4068-ac14-29c1e5e66bf4">
+
+
+Suponga que la siguiente línea de código se ha ejecutado en una celda de código nueva y vacía en su notebook (pista: siga adelante y ejecute esta línea de código en su notebook para que pueda experimentar según sea necesario):
+
+<img width="871" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/939a1bc0-8bb9-496e-b6bb-9c3b480b28b5">
+
+Usando la notación de corchetes, extraiga la lista de tiempos de natación de la tupla **`data`**, asignándolos a una lista llamada **`times`**. Luego muestre el contenido de la lista **`times`**. Escribe el código que usaste aquí:
+
+<img width="933" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/46e4c503-5a7a-414e-9f93-8f939b72594a">
+
+Utilizando la tecnología de desempaquetado de Python (también conocida como asignación múltiple-*multiple assignment*), extraiga todos los elementos en variables nombradas: **`swimmer`**, **`age`**, **`distance`**, **`stroke`**, **`times2`** y **`average`**. Luego muestre el contenido de la lista **`times2`** en la pantalla:
+
+<img width="926" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4f6d7635-271b-4460-8490-baad921df91c">
+
+<img width="904" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/5bf72c4c-97d7-4c69-9e5a-bc35a8347488">
+
+Esto es lo que vimos en nuestro notebook cuando ejecutamos las celdas de código del Ejercicio más reciente. A la variable **`data`** se le asigna la tupla completa (de seis partes) devuelta por **`read_swim_data`**, mientras que **`times`** y **`times2`** "seleccionan" los strings de tiempo de natación del espacio que las contiene dentro de la tupla de datos (aunque usando diferentes mecanismos de acceso):
+
+<img width="660" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8d8c2ec0-543a-422f-afed-5dd3aae26928">
+
+<img width="831" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/aecf17d2-483f-48a2-950a-f49394bf2bc3">
+
+**Una lista de nombres de archivos estaría bien.**
+
+Su función **`read_swim_data`**, parte del módulo **`swimclub`**, toma el nombre de archivo de cualquier nadador y le devuelve una tupla de resultados.
+
+<hr>
+
+**NOTA**
+
+Hasta ahora solo hemos usado uno de los archivos de datos de Darius. Siéntete libre de usar cualquier otro nombre de archivo de tu carpeta **"swimdata"** y pasarlo a tu función **"read_swim_data"** para confirmar que tu código funciona con cualquiera de los archivos de datos del entrenador. Recuerde: Jupyter Notebook *vive* para permitirle experimentar al crear su código.
+
+<hr>
+
+Lo que se necesita ahora es la lista completa de nombres de archivos, que debería poder obtener de su sistema operativo subyacente. Como puedes imaginar, el PSL te cubre cuando se trata de hacer este tipo de cosas.
+
+#### NO HAY PREGUNTAS TONTAS
+
+**P: Acaba de aparecer una nueva carpeta llamada `__pycache__` dentro de mi carpeta Learning. ¿Qué es eso y de dónde viene?**
+
+**R**: El intérprete de Python utiliza internamente esa carpeta para guardar copias compiladas en caché de cualquier módulo que cree y luego importe. Aunque no es necesario compilar el código Python para ejecutarlo, detrás de escena Python convierte el código en un código de bytes interno, que luego se ejecuta. Como este proceso a veces puede resultar costoso al importar módulos, el intérprete almacena en caché una copia del código de bytes compilado en la carpeta **`__pycache__`** durante el proceso de importación. La próxima vez que importe su módulo (en una nueva sesión), el intérprete compara la marca de tiempo de su módulo con la marca de tiempo del código de bytes almacenado en caché y, si son iguales, reutiliza el código de bytes. De lo contrario, el proceso de código a código de bytes comienza de nuevo. Puede ignorar con seguridad cualquier archivo en la carpeta **`__pycache__`** y dejar todo en manos del intérprete para que lo administre (aunque es posible que desee excluir la carpeta de su repositorio de Git).
+
+## Obtengamos una lista de los nombres de archivos del entrenador.
+
+Cuando se trata de trabajar con su sistema operativo (ya sea Windows, macOS o Linux), el PSL lo tiene cubierto. El módulo **`os`** permite que su código Python se comunique con su sistema operativo de una manera independiente de la plataforma, y ahora usará el módulo **`os`** para obtener una lista de los archivos en la carpeta **`swimdata`**.
+
+Asegúrese de seguirlo en su notebook **`Files.ipynb`**.
+
+<img width="885" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/df2d4f5f-4807-44bc-ac60-c82bdceee4c6">
+
+Quiere los nombres de los archivos en su carpeta **`swimdata`**, y el módulo del sistema operativo proporciona la útil función **`listdir`** para hacer precisamente eso. Cuando pasas la ubicación de una carpeta, **`listdir`** devuelve una lista de todos los archivos que contiene:
+
+<img width="860" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/19994b0f-08e8-40db-bf33-6a87582347b2">
+
+Se le perdonará si espera que la lista **`swim_files`** contenga 60 datos. Después de todo, hay 60 archivos en tu carpeta. Sin embargo, en nuestra Mac, nos llevamos una sorpresa cuando comprobamos dos veces el tamaño de **`swim_files`**:
+
+<img width="825" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f3c59000-280c-41ad-bf00-b8a0e15aca90">
+
+### Es hora de hacer un poco de trabajo detectivesco...
+
+Esperaba que su lista de archivos tuviera 60 nombres de archivo, pero el BIF **`len`** informa 61 elementos en su variable **`swim_files`**.
+
+Para comenzar a intentar descubrir qué está sucediendo aquí, primero mostremos el valor de la lista **`swim_files`** en la pantalla:
+
+<img width="889" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cff18b31-7779-43cd-afb8-a68f0bc6a266">
+
+<img width="1071" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/01711ec8-605e-4c67-a0fd-482c4d4c9601">
+
+<img width="1227" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/690902d7-4a81-422d-834e-41652ba80130">
+
+
+**Que buena idea.**
+
+Usemos el combo mambo **print dir** para ver qué está integrado en las listas.
+
+<img width="1087" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c885aa36-3fb0-4d0e-91a0-a2440d5309be">
+
+
+### ¿Qué puedes hacer con las listas?
+
+Aquí está la salida mambo del combo **print dir** para su lista **`swim_files`**:
+
+<img width="1040" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2baa95cf-efc7-46dd-9e8f-e1cf2fa1008b">
+
+
+<img width="1046" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0231dfdc-689e-470d-a70c-7c97228102a8">
+
+
+Es necesario tener cuidado con las listas integradas (especialmente si cambian su lista).
+
+Si se frota las manos de alegría ante la perspectiva de utilizar el método de clasificación para reordenar su lista, dé un paso atrás. El método de clasificación realiza su reordenamiento "en el lugar", lo que significa que el nuevo orden sobrescribe (!!) lo que estaba anteriormente en la lista. El antiguo orden de la lista se pierde para siempre... y no se puede deshacer.
+
+Si desea mantener el orden existente en su lista pero aún necesita ordenar, hay un BIF que puede ayudar aquí. El BIF ordenado devuelve una copia ordenada de los datos de su lista, dejando intacto el orden de la lista existente. Aquí tampoco se puede deshacer, ya que la lista original no se modifica.
+
+
+
+
 
 
