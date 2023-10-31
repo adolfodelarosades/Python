@@ -551,9 +551,99 @@ Al presionar **Shift+Enter** en esta celda se ejecuta el código, pero no se mue
 
 <img width="975" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2b59ee5a-a573-45fb-adc6-92f5b714f544">
 
+### Todo lo que queda es el final de tu página web.
+
+Probablemente esté ansioso por ver cómo se ve el marcado HTML y SVG generado en su navegador, pero aún no ha terminado. Recuerde que el final del archivo **`bar.html`** tiene este marcado:
+
+<img width="945" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c22fccc8-feb4-4fda-b696-e675c203f14a">
+
+Como estás en camino de convertirte en un ninja de f-string, solo te daremos el código para esta parte:
+
+<img width="967" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b75dd318-3605-40c5-ad53-5c844e83244d">
+
+Crear la página completa de marcado HTML no es difícil:
+
+<img width="1118" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1c0c688a-a58f-4c63-b38c-1c2d70b0f7a0">
+
+**Sí. Pero primero guardemos el HTML en un archivo.**
+
+El PSL incluye un módulo llamado **`webbrowser`**, que puede utilizar para mostrar HTML en su navegador web. Desafortunadamente, no puede enviar al módulo una gran cadena de HTML para mostrar. El HTML debe estar disponible en la web o guardarse primero en un archivo.
+
+## Escribir en archivos, como leer, es indoloro
+
+Recuerde este código que utilizó para leer los tiempos de natación de un archivo en una nueva lista llamada **`data`**:
+
+<img width="966" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/046ccde0-2657-4be1-bd93-7f68172d6cf0">
+
+El BIF **open**, de forma predeterminada, abre un archivo para lectura, pero también es posible abrir un archivo en *modo de escritura* proporcionando un segundo argumento para **open**:
+
+<img width="1064" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3fd6ece8-1d88-4043-a4bd-b293cda7a714">
+
+Si ejecuta este código en una nueva celda de código, crea **`test.txt`** si no existe, luego almacena el mensaje (demasiado interesante) en el archivo, antes de cerrar el archivo automáticamente (gracias a su viejo amigo, la sentencia **`with`** ).
+
+Si **`test.txt`** ya existe, este código sobrescribe (!!!) el contenido antiguo del archivo con el mensaje. Si desea conservar el contenido existente del archivo, el modo de agregar puede hacerlo por usted, suponiendo que reemplace el argumento "**`w`**" del BIF abierto con "**`a`**".
+
+**Sabiendo todo esto, usemos un código similar al que se muestra arriba para guardar la página web generada en un archivo.**
+
+<img width="916" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/19ae4f84-8886-4719-83b8-da956e272ed3">
+
+Antes de comenzar este ejercicio, cree una subcarpeta en su carpeta **Learning** y llámela **charts**.
+
+En lugar de usar un nombre genérico para el archivo de su página web, generemos uno a partir del nombre ya almacenado en la variable **`fn`**. Específicamente, creemos una cadena **`f`** que convierta un nombre de archivo que se ajuste a este patrón:
+
+<img width="1014" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/82e821e8-ebc5-4f7b-93d0-815b9b522879">
+
+en uno que se ajuste a este patrón:
+
+<img width="974" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8a61ad79-5c8b-4d3a-9fce-0d0081821423">
+
+Cuando hayas calculado la f-string que logra esto (pista: puedes poner código Python entre las llaves de una f-string, no solo nombres de variables), toma tu lápiz y escribe en la f-string que deseas. utilizar en el espacio siguiente. Asigne la f-string a una variable llamada **`save_to`**:
+
+__________________________________________________________________
+
+Proporcione el código que usaría para guardar su HTML (actualmente en la variable **`page`**) en el archivo cuyo nombre está en la variable **`save_to`**:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="961" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ee824ca9-59c4-457b-ae6c-b2bfdfaa46cb">
 
 
+Antes de comenzar este ejercicio, cree una subcarpeta en su carpeta **Learning** y llámela **charts**.
 
+En lugar de usar un nombre genérico para el archivo de su página web, generemos uno a partir del nombre ya almacenado en la variable **`fn`**. Específicamente, creemos una cadena **`f`** que convierta un nombre de archivo que se ajuste a este patrón:
+
+<img width="1014" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/82e821e8-ebc5-4f7b-93d0-815b9b522879">
+
+en uno que se ajuste a este patrón:
+
+<img width="974" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/8a61ad79-5c8b-4d3a-9fce-0d0081821423">
+
+Cuando hayas calculado la f-string que logra esto (pista: puedes poner código Python entre las llaves de una f-string, no solo nombres de variables), toma tu lápiz y escribe en la f-string que deseas. utilizar en el espacio siguiente. Asigne la f-string a una variable llamada **`save_to`**:
+
+<img width="955" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/408d518f-b018-429f-86e1-bd5c9918fc16">
+
+
+Proporcione el código que usaría para guardar su HTML (actualmente en la variable **`page`**) en el archivo cuyo nombre está en la variable **`save_to`**:
+
+<img width="928" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/de1692e8-97fd-4bdd-9db9-35587f4c28d0">
+
+## Es hora de mostrar tu obra
+
+Con su HTML y SVG guardados en un archivo en la carpeta **charts**, pedirle al módulo **`webbrowser`** del PSL que muestre el gráfico es sencillo:
+
+<img width="968" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/abc14037-147a-44cc-98ad-d14ff4a4a462">
+
+<img width="936" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/aac92149-07ba-4edf-954a-8621ab1572e8">
 
 
 
