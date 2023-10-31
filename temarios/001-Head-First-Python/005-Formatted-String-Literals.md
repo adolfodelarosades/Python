@@ -637,7 +637,7 @@ Proporcione el código que usaría para guardar su HTML (actualmente en la varia
 
 <img width="928" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/de1692e8-97fd-4bdd-9db9-35587f4c28d0">
 
-## Es hora de mostrar tu obra
+### Es hora de mostrar tu obra
 
 Con su HTML y SVG guardados en un archivo en la carpeta **charts**, pedirle al módulo **`webbrowser`** del PSL que muestre el gráfico es sencillo:
 
@@ -645,6 +645,198 @@ Con su HTML y SVG guardados en un archivo en la carpeta **charts**, pedirle al m
 
 <img width="936" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/aac92149-07ba-4edf-954a-8621ab1572e8">
 
+### Todo lo que queda son dos ajustes estéticos...
 
+Eche un vistazo a los dos gráficos que se muestran a continuación. El gráfico de su código está a la izquierda, mientras que el gráfico de "objetivo" de antes en este capítulo está a la derecha. ¿Notas alguna diferencia?
 
+<img width="1272" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dafd300f-7e24-458d-994a-f5e1c0364d71">
 
+<img width="1324" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4d2f32dc-4b4a-4d93-b2b3-87bbee95fc70">
+
+**Alex**: Ambos son muy similares...
+
+**Mara**: Pero hay diferencias sutiles.
+
+**Sam**: Para empezar, el gráfico de la izquierda muestra sus barras en el orden incorrecto.
+
+**Mara**: Sí, el entrenador fue bastante claro cuando nos dijo que quería ver el tiempo de natación más reciente en la parte superior de la tabla.
+
+**Alex**: ¿Seguramente es una solución fácil?
+
+**Sam**: Creo que sí, sí. Las listas vienen con un método inverso incorporado que creo que podemos explotar aquí.
+
+**Mara**: Es sólo cuestión de llamar a reversa en el lugar correcto para que el código generador de SVG procese los datos en el orden correcto.
+
+**Alex**: ¿Qué más pasa? No se me ocurre nada más.
+
+**Sam**: Mara dijo que la diferencia era sutil. Observe cómo el gráfico de barras de la derecha tiene espacios en blanco adicionales después de cada una de las barras, antes de que se muestren los tiempos.
+
+**Mara**: Eso no es un gran problema, pero ciertamente significa que el gráfico de la derecha es más agradable a la vista. El gráfico de la izquierda me parece desordenado.
+
+**Alex**: Ah, sí, ya lo veo. ¿También es una solución fácil?
+
+**Mara**: Eso espero.
+
+**Sam**: Recuerda que el *ancho* de cada barra se determina llamando a la función **`hfpy_utils.convert2range`**. Creo que podremos manipular esas llamadas para solucionar este problema sin demasiados problemas.
+
+**Alex**: Genial. Entonces, son dos soluciones rápidas. Eso no debería llevar mucho tiempo...
+
+<img width="1240" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f9e19766-2d00-46be-9d23-8d1292fd0d69">
+
+Ajuste su celda de código como se muestra a continuación, reinicie su notebook y luego vuelva a ejecutar todo su código para ver las diferencias que hacen estas pequeñas ediciones:
+
+<img width="1045" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6b5824b9-f0ba-4b5a-9b97-ef7c853519b9">
+
+Efectivamente, su última versión del gráfico de barras se ve mucho mejor que antes. El orden está arreglado y todo se ve un poco más ordenado ahora que hay un espacio adicional:
+
+<img width="1111" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6efe2c79-f393-452e-bb51-6a142ba17872">
+
+<img width="1102" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a9ddc8b1-f61c-40eb-befc-abd2d8719ab7">
+
+## Es hora de otra función personalizada
+
+El código en su notebook **`Charts.ipynb`** produce un gráfico de barras que es una buena aproximación de lo que el coach necesita, además de coincidir estrechamente con lo que el coach creó con la hoja de cálculo. El gráfico de barras no coincide exactamente y esto tiene que ver con el hecho de que el eje x de su gráfico comienza en cero, mientras que el eje x de la hoja de cálculo comienza en 1:13,44, por lo que la escala está un poco fuera de lugar. No te preocupes, lo que has producido aquí es más que suficiente.
+
+Todo lo que falta es la capacidad de llamar a su código para cualquier nombre de archivo, no sólo el que contiene los tiempos de natación de Darius. Crear otra función debería funcionar. Recuerde la estrategia de tres pasos para la creación de funciones del último capítulo:
+
+1️⃣ **Piensa en un nombre bonito y significativo.**
+
+Llamemos a su función **`produce_bar_chart`**, que, incluso si lo decimos nosotros mismos, es el nombre de función más fino que probablemente encontrará.
+
+2️⃣ **Decida el número y los nombres de los parámetros.**
+
+Al igual que **`read_swim_data`**, su nueva función toma un único parámetro que identifica el nombre del archivo para generar un gráfico de barras.
+
+3️⃣ **Sangra el código de tu función bajo una declaración `def`.**
+
+**`def`** introduce la función, especificando el nombre de la función y cualquier parámetro. Como siempre, el código sangrado bajo la palabra clave **`def`** es el bloque de código de la función.
+
+<img width="1064" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/41a30461-796e-4241-aefc-1535481256e1">
+
+**Acordado. Eso es una buena idea.**
+
+Después de todo, el código que estás creando es parte del sistema que estás construyendo para el Coach, así que mantengamos todo el código que planeas usar en un módulo.
+
+Eche un vistazo (en la página siguiente) al código que agregamos a nuestro archivo **`swimclub.py`**. También debes hacer esto, mientras prestas atención a los ajustes menores que hicimos en nuestra versión final.
+
+## Agreguemos otra función a su módulo.
+
+Agregue las siguientes dos líneas en la parte superior de su archivo **`swimclub.py`**, luego agregue la función modificada como se muestra:
+
+<img width="682" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/aa3872f4-9d7b-4341-9a5d-31c51a77a8be">
+
+<img width="1237" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d3339ac7-2f30-4a4b-8ec8-f28c1516403b">
+
+Asegúrese de que el módulo **`swimclub`** esté actualizado con el código modificado de la última página.
+
+Regrese a su cuaderno **`Charts.ipynb`** y haga clic en el botón **Restart** de VS Code para borrar del intérprete los restos de cualquier celda de código ejecutada anteriormente. Trabajando en la parte inferior de su notebook, agregue y ejecute el código como se muestra a continuación. Asegúrese de que los resultados que ve aquí se repliquen en su pantalla.
+
+<img width="805" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b8db0b61-59db-4381-802c-46b06e39492d">
+
+<img width="865" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0c5fddbf-b6c0-40b7-a43f-cb5ac694e6fd">
+
+<img width="902" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c841ae77-876d-4581-9dc1-e7eb1f35eed5">
+
+## ¿Qué pasa con ese valor de centésimas?
+
+Su código ha producido un valor de "**`2`**" para el valor de centésimas de Lizzie. El problema es que no está claro si este valor debería ser "**`20`**" o "**`02`**". Aquí está la línea de código del módulo **`swimclub`** que produce este valor:
+
+<img width="1253" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f8b51544-a83f-4a2f-8479-0026d4108369">
+
+<img width="1278" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c494d23d-c224-4b2d-83ec-8db93ca4b313">
+
+**Es un poco misterioso, ¿no?**
+
+De hecho, ese código se ve bien, pero no se puede escapar del hecho de que no funciona del todo con los datos de Lizzie. Gorrón.
+
+¿Qué hacer?
+
+<img width="1284" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9e40660e-6dd3-4ac2-a083-735c36b12e88">
+
+## Redondear no es lo que quieres (en este caso)
+
+Cuando se trata de redondear con el BIF **round**, el énfasis está en realizar correctamente el cálculo, no en formatear correctamente el resultado para su visualización. Es como si el redondeo fuera una operación demasiado contundente cuando se trata de utilizar el resultado de la **round** directamente con fines de visualización.
+
+Además de facilitar la *producción* de strings, la tecnología f-string de Python proporciona especificadores de **string formatting specifiers**. Hay muchos de estos especificadores y no vamos a entrar en describir lo que hacen todos aquí. En lugar de eso, veamos la solución que necesitamos:
+
+<img width="1273" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/43fef07f-c0cb-4ff9-9627-5f0e882f39eb">
+
+Asignar la split f-string a **`mins_secs`** y **`hundredths`** (como lo hizo con la línea de código ofensiva) le brinda un reemplazo directo que corrige el error y resuelve el misterio de la codificación.
+
+<img width="1248" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/37ddaf63-f24d-41e9-9957-50e6f422b73b">
+
+Si desea saber un poco más sobre los especificadores de formato de f-string, como se sugirió anteriormente, comience con los ejemplos incluidos en los documentos de Python: 
+
+https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+
+<img width="1244" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a15e06e7-b6e4-448d-aa97-d752d4b726f0">
+
+Ajuste la función **`read_swim_data`** en el módulo **`swimclub`** para reemplazar la línea de código que usaba el BIF **round** con el código f-string de la página anterior. Aquí está el fragmento de código que necesita:
+
+<img width="1264" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/da974b47-9199-4100-9e89-972dfccbec80">
+
+Con el módulo **`swimclub`** guardado, reinicie su notebook **`Charts.ipynb`** y luego vuelva a ejecutar las celdas de código que producen el gráfico de barras de Lizzie. Cuando lo hagas, verás el mismo gráfico que la última vez, pero la molesta arruga se solucionó y el tiempo promedio se muestra correctamente:
+
+<img width="1236" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c6992e0e-5485-4f68-af08-f0ed151145d0">
+
+## Un pequeño ajuste de formato más
+
+Ajustar el formato de visualización para el valor de las centésimas plantea otro problema: ¿qué sucede si el valor de los segundos es solo un dígito, digamos **`2`**? Por el momento, el código actual crea una cadena de tiempo que se parece a esta "**`1:2.20`**" (que parece decididamente extraña) en lugar de esta "**`1:02.20`**" (que se ve mucho mejor). La tecnología de formato f-string también puede ayudar en este caso. Para evitar que ocurra esta situación, cambie la penúltima línea de código en su función **`read_swim_data`** (en **`swimclub.py`**) para que se vea así:
+
+<img width="1260" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ebcd6fe6-2a73-4e71-9bfc-e20b70935f85">
+
+## Las cosas van bien...
+
+Con esta última solución aplicada, ahora tiene un mecanismo que, dado el nombre de archivo de cualquier nadador, puede producir un gráfico de barras asociado. Este es un paso importante para proporcionar al entrenador un sistema que reemplace su confiable portapapeles y su programa de hoja de cálculo.
+
+Cómo proporcionarás esta funcionalidad al coach sigue siendo una cuestión abierta. Pero no nos preocupemos por esos detalles ahora. Disfrute de la gloria de sus hermosos gráficos de barras HTML.
+
+<img width="1026" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/17fc77ed-39ea-488e-a57e-419bbb1d7603">
+
+**¡Excelente! Y hay más por venir.**
+
+Ahora que tenemos un código que dibuja un gráfico de barras para cualquiera de los archivos de datos del entrenador, debemos hacer arreglos para que el entrenador seleccione fácilmente con qué archivo de nadador trabajar. Comenzaremos con este trabajo en el próximo capítulo.
+
+Antes de eso, relájate, tómate un descanso, revisa el resumen de este capítulo y no olvides probar el crucigrama de este capítulo.
+
+<img width="831" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3770d3a3-0d5e-4e73-926b-b61f96c49040">
+
+* Aunque este libro no está diseñado para enseñarle **HTML**, como programador moderno de Python, le resultará difícil no encontrarse con el procesamiento de HTML en algún momento.
+
+* Además de generar una página HTML completa, este capítulo también utiliza el marcado **SVG** para dibujar las barras en los gráficos del Coach.
+
+* El PSL viene con el módulo **webbrowser** que, como su nombre indica, permite a Python interactuar con su navegador web favorito. El módulo **webbrowser** puede abrir HTML en un archivo, así como desde una dirección web.
+
+* Cuando se trata de crear **formatted strings**, Python te ofrece opciones. Además de construir strings con el venerable operador de concatenación (**`+`**), los chicos geniales (así como nosotros, los viejos) recurren cada vez más a **f-strings** para este tipo de cosas.
+
+* Las **f-strings** facilitan la inclusión del valor de una variable en una cadena formateada gracias a la **interpolación**. Piense en "insertar en" y estará bien. Las llaves se utilizan para indicar en qué parte de la cadena formateada debe ir el valor de la variable. Recuerde: en Python, **las llaves normalmente rodean los datos, no el código**.
+
+* El módulo **`hfpy_utils`** proporciona una función de conversión que puede convertir un valor de un rango en un valor de otro rango. Esta función, llamada (en una hazaña de imaginación incognoscible) **`convert2range`**, se utilizó para garantizar que el ancho de las barras en el gráfico del entrenador no terminara siendo de miles de píxeles.
+
+* Si cree que somos realmente inteligentes al crear la función **`convert2range`**, piénselo de nuevo. Eche un vistazo al código **`htpy_utils.py`** (parte de la descarga de este libro) y observe el comentario que le indica quién es la persona realmente inteligente.
+
+* Además de abrir archivos para leer, el BIF **open** también puede escribir en archivos, lo cual es muy útil cuando su código necesita crear un nuevo archivo. El modo "**`w`**" le dice a **open** que cree/sobrescriba/escriba en el archivo nombrado.
+
+* El método **`reverse`** (que viene integrado en todas las listas de Python) intercambia el orden de una lista con nombre en el lugar y nos salvó de la vergüenza de mostrarle al entrenador un gráfico de nadador con un orden de barras incorrecto.
+
+* Para ser claros, un “pedido de barra incorrecto” no tiene nada que ver con pedir tres cervezas en lugar de dos.
+
+* Una vez que todo funcionó según las especificaciones, creó la función **`produce_bar_chart`** y luego la agregó al módulo **swimclub**, para que su nueva funcionalidad pueda compartirse más fácilmente.
+
+* Por supuesto, una vez hecho esto, detectó un pequeño error (¿no es siempre así?), que provocó que el valor de centésimas de segundo se mostrara incorrectamente. La siempre versátil f-string vino a tu rescate una vez que te diste cuenta de que el BIF **round** estaba haciendo todo lo posible para arruinarte el día.
+
+* El **format specifier** del mecanismo de f-string te salvó de la ira de **round**, justo a tiempo para que mostraras tu código generador de gráficos de barras al entrenador, quien estaba encantado con tu progreso. ¡Uf!
+
+<img width="847" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f680ac09-5cca-43cf-b161-fd94ab76ecd1">
+
+Las respuestas a las pistas se encuentran en las páginas de este capítulo y la solución está en la página siguiente.
+
+<img width="598" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1248d7fa-8de0-4896-92d5-831552b3bcb4">
+
+<img width="868" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4ebe9cdf-6ebf-4e36-8756-2bb38d683bea">
+
+<img width="864" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/bbd5f6c7-7a5a-4c71-b9d6-eb1f5ba24b1a">
+
+<img width="836" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7ae519b6-53e8-4677-8171-c155dc7b4a43">
+
+<img width="1055" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a15a0599-9a56-4bad-9075-0e0d24ae0d50">
