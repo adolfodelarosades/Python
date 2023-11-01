@@ -1210,22 +1210,61 @@ Una vez que hemos guardado el modulo vamos a ejecutar nuevamente nuestro noteboo
 
 <img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ee64a2a8-46e7-4f6d-a0d5-157530a1de4b">
 
-
-
-
-
-
-
-
-
+Vemos que se han procesado todos los archivos, realmente no estamos seguros que se han procesado los 60 archivos, vamos a numerarlos para estar seguro de ello. Esto lo hacemos incluyendo un **enumerate** en el ciclo **`for`**.
 
 ```py
-
+for n, s in enumerate(swim_files, 1):
+    print(n, "Processing: ", s)
+    swimclub.read_swim_data(s)
 ```
+
+El valor de **`n`** es el que nos va ir indicando el número de la iteacción, normalmente las **enumerate** empiezan en **`0`**, pero nosotros la hemos inicializado con **`1`**. Al ejecutar nuestra celda tenemos:
+
+<img width="1116" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dfdca440-77b7-4b35-abd8-11c87e22e436">
+
+<img width="1118" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/af7b9df2-7b9d-4912-bc9a-f8d968c2aea7">
+
+Podemos observar que se han procesado los 60 archivos de la carpeta **`swimdata`**.
+
+Para finalizar vamos a incluir algunos comentarios en la función **`read_swim_data`** del módulo **`swimclub.py`**
 
 ```py
+import statistics
 
+FOLDER = "swimdata/"
+
+def read_swim_data(filename):
+    """Return swin data from a file.
+
+    Given the name of a swimmer's file (in filename), extract all the required
+    data, then return it to the caller as a tuple.
+    """
+    swimmer, age, distance, stroke = filename.removesuffix(".txt").split("-")
+    with open(FOLDER + filename) as file:
+        lines = file.readlines()
+        times = lines[0].strip().split(",")
+    converts = []
+    for t in times:
+        # The minutes value might be missing, so guard against this causing a crash.
+        if ":" in t:
+            minutes, rest = t.split(":")
+            seconds, hundredths = rest.split(".")
+        else:
+            minutes = 0
+            seconds, hundredths = t.split(".")
+        converts.append((int(minutes)*60*100) + (int(seconds)*100) + int(hundredths))
+    average = statistics.mean(converts)
+    mins_secs, hundredths = str(round(average / 100, 2)).split(".")
+    mins_secs = int(mins_secs)
+    minutes = mins_secs // 60
+    seconds = mins_secs - minutes * 60
+    average = str(minutes) + ":" + str(seconds) + "." + hundredths
+
+    return swimmer, age, distance, stroke, times, average # Returned as a tuple
 ```
+
+<img width="1134" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/759e5fcd-75ac-40d4-828b-0097c125e8b8">
+
 
 
 
