@@ -1001,6 +1001,83 @@ Vemos que ahora al invocar la función **`read_swim_data`**, nos retorna aparent
 
 Realmente nos son 6 valores es uno solo, lo podemos ver por que todo se devuelve entre **`( )`**, a esto se le conoce como **TUPLA**. La función devuelve una tupla con 6 valores.
 
+**Las TUPLAS son Inmutables, y son secuencias.**
+
+Podemos asignar lo que retorna la función a una variable(la cual contiene 6 valores) y posteriormente podemos obtener por ejemplo los tiempos como sigue:
+
+```py
+data = swimclub.read_swim_data("Darius-13-100m-Fly.txt")
+
+times = data[4]
+
+times
+```
+
+<img width="1115" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/58f14abc-4129-4530-9b5c-df2d538a8ef3">
+
+Otra forma de extraer los diferentes valores es usar la **asignación múltiple** de Python como sigue:
+
+```py
+swimmer, age, distance, stroke, times2, average = data
+
+times2
+```
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/88fd96e2-6819-4a76-be1e-dff527c2aba9">
+
+### Obtener la lista de archivos existentes en nuestra carpeta `swimdata`
+
+<img width="284" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/da764986-78c2-4b9e-84ff-c7b0dd3d3834">
+
+Observemos que dentro de **Learning** a aparecido la carpeta **__pycache__**. El intérprete de Python utiliza internamente esa carpeta para guardar copias compiladas en caché de cualquier módulo que cree y luego importe.
+
+Volviendo a obtener la lista de archivos existentes en la carpeta **`swimdata`**, Python nos provee el modulo **`os`** que nos permite que su código Python se comunique con su sistema operativo de manera independiente de la plataforma.
+
+En nuestro notebook **`Files.ipynb`** vamos a añadir lo siguiente:
+
+```py
+import os
+
+swim_files = os.listdir(swimclub.FOLDER)
+
+swim_files
+
+len(swim_files)
+```
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9fbe7c83-a3f9-447b-88e9-a3e5a7342b2b">
+
+<img width="1114" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6f718c4e-1696-4f45-9a9b-27d8d581ae5f">
+
+Observamos que existen 61 archivos en la carpeta **`swimdata`**, pero realmente solo deberían existir 60, se ha colado un archivo.
+
+Si pulsamos 
+
+```py
+print(swim_files)
+```
+
+```sh
+['Hannah-13-100m-Free.txt', 'Darius-13-100m-Back.txt', 'Owen-15-100m-Free.txt', 'Mike-15-100m-Free.txt',
+'Hannah-13-100m-Back.txt', 'Mike-15-100m-Back.txt', 'Mike-15-100m-Fly.txt', 'Abi-10-50m-Back.txt',
+'Ruth-13-200m-Free.txt', '.DS_Store', 'Tasmin-15-100m-Back.txt', 'Erika-15-100m-Free.txt',
+'Ruth-13-200m-Back.txt', 'Abi-10-50m-Free.txt', 'Maria-9-50m-Free.txt', 'Elba-14-100m-Free.txt',
+'Tasmin-15-100m-Free.txt', 'Abi-10-100m-Back.txt', 'Abi-10-50m-Breast.txt', 'Mike-15-200m-IM.txt',
+'Ali-12-100m-Back.txt', 'Ruth-13-100m-Back.txt', 'Chris-17-100m-Back.txt', 'Ali-12-100m-Free.txt',
+'Darius-13-100m-Breast.txt', 'Ruth-13-100m-Free.txt', 'Aurora-13-50m-Free.txt', 'Katie-9-100m-Breast.txt',
+'Alison-14-100m-Breast.txt', 'Ruth-13-400m-Free.txt', 'Emma-13-100m-Free.txt', 'Calvin-9-50m-Fly.txt',
+'Darius-13-100m-Fly.txt', 'Mike-15-200m-Free.txt', 'Emma-13-100m-Breast.txt', 'Tasmin-15-100m-Breast.txt',
+'Blake-15-100m-Free.txt', 'Abi-10-100m-Breast.txt', 'Chris-17-100m-Breast.txt', 'Blake-15-100m-Back.txt',
+'Bill-18-200m-Back.txt', 'Darius-13-200m-IM.txt', 'Dave-17-100m-Free.txt', 'Alison-14-100m-Free.txt',
+'Lizzie-14-100m-Free.txt', 'Katie-9-50m-Fly.txt', 'Katie-9-50m-Breast.txt', 'Katie-9-50m-Back.txt',
+'Lizzie-14-100m-Back.txt', 'Tasmin-15-200m-Breast.txt', 'Katie-9-50m-Free.txt', 'Dave-17-200m-Back.txt',
+'Erika-15-200m-Breast.txt', 'Calvin-9-50m-Back.txt', 'Calvin-9-50m-Free.txt', 'Carl-15-100m-Back.txt',
+'Bill-18-100m-Back.txt', 'Katie-9-100m-Free.txt', 'Blake-15-100m-Fly.txt', 'Erika-15-100m-Breast.txt',
+'Katie-9-100m-Back.txt']
+```
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/31ff6b8e-ed53-4dd5-8c82-ebaab5235968">
+
 
 
 
