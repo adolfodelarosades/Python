@@ -885,6 +885,134 @@ Las respuestas a las pistas se encuentran en las páginas de este capítulo y la
 
 <img width="692" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/348f7c44-b6ba-45ea-b971-3bf94447cc5c">
 
+## 💻 Practica
+
+### Crear el archivo `swimclub.py`
+Vamos a crear el archivo **`swimclub.py`** en la carpeta **`Learning`**.
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f9bc21d0-8d51-472b-bf32-486069be79bb">
+
+### Crear la función `read_swim_data`
+
+Vamos a crear la función que nos va a permitir leer los datos de los diferentes archivos y calcular el promedio.
+La función se define con **`def`** y a continuación se pone la firma de la función que consiste del nombre y los parámetros de la función. En el cuerpo de la función vamos a copiar lo que tenemos en nuestro archivo **`Times.ipynb`**, quedandonos así:
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/64a5adcf-b4ad-4062-9d0f-11f4e1e3b37a">
+
+```py
+def read_swim_data(filename):
+    swimmer, age, distance, stroke = FN.removesuffix(".txt").split("_")
+    with open(FOLDER + FN) as file:
+        lines = file.readlines()
+        times = lines[0].strip().split(",")
+    converts = []
+    for t in times:
+        minutes, rest = t.split(":")
+        seconds, hundredths = rest.split(".")
+        converts.append((int(minutes)*60*100) + (int(seconds)*100) + int(hundredths))
+    average = statistics.mean(converts)
+    mins_secs, hundredths = str(round(average / 100, 2)).split(".")
+    mins_secs = int(mins_secs)
+    minutes = mins_secs // 60
+    seconds = mins_secs - minutes * 60
+    average = str(minutes) + ":" + str(seconds) + "." + hundredths
+```
+
+Hay cosas que nos faltan en nuestro código para que sea funcional y que tambíen se encuentran en el notebook **`Times.ipynb`**, vamos a añadir lo siguiente:
+
+```py
+import statistics
+
+FOLDER = "swimdata/"
+```
+
+Ademas vamos a cambiar **`FN`** por **`filename`**, el código nos queda así:
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4b454f7d-f225-41bb-9716-3c72fdf160c1">
+
+Ya no tenemos fallos.
+
+```py
+import statistics
+
+FOLDER = "swimdata/"
+
+def read_swim_data(filename):
+    swimmer, age, distance, stroke = filename.removesuffix(".txt").split("-")
+    with open(FOLDER + filename) as file:
+        lines = file.readlines()
+        times = lines[0].strip().split(",")
+    converts = []
+    for t in times:
+        minutes, rest = t.split(":")
+        seconds, hundredths = rest.split(".")
+        converts.append((int(minutes)*60*100) + (int(seconds)*100) + int(hundredths))
+    average = statistics.mean(converts)
+    mins_secs, hundredths = str(round(average / 100, 2)).split(".")
+    mins_secs = int(mins_secs)
+    minutes = mins_secs // 60
+    seconds = mins_secs - minutes * 60
+    average = str(minutes) + ":" + str(seconds) + "." + hundredths
+```
+
+### Crear el notebook `Files.ipynb`
+
+Vamos a incluir el siguiente código en **`Files.ipynb`**.
+
+```py
+import swimclub
+
+swimclub.read_swim_data("Darius-13-100m-Fly.txt")
+```
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/53e5cfdf-c8f8-4a69-9a82-f6ecb9dbfe82">
+
+Para invocar a la función primero se pone el nombre del módulo, un punto y el nombre de la función, **module DOT function**.
+
+Vemos que al ejecutar el código de nuestro notebook **`Files.ipynb`** no nos retorna ninguna salida.
+
+Revisando la función **`read_swim_datafunción`** de nuestro archivo **`swimclub.py`** observamos que no retorna nada. Vamos a incluir la sentencia **return** para que retorne los diferentes valores que calculamos.
+
+```py
+return swimmer, age, distance, stroke, times, average
+```
+
+Si volvemos a ejcutar el notebook **`Files.ipynb`**, (debemos pulsar el botón RESET de VSC para que importe nuevamente **`swimclub.py`** ya que ha tenido cambios, sino lo hacemos no se mostrara nada por que toma la verión anterior que se encuentra en la cache) tenemos:
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d1998c1d-2050-42a4-8021-807ccc5af97e">
+
+Vemos que ahora al invocar la función **`read_swim_data`**, nos retorna aparentemente 6 valores que son los que pusimos en la sentencia **return**.
+
+```sh
+('Darius',
+ '13',
+ '100m',
+ 'Fly',
+ ['1:27.95', '1:21.07', '1:30.96', '1:23.22', '1:27.95', '1:28.30'],
+ '1:26.58')
+```
+
+* Nombre del nadador
+* Grupo de edad
+* Distancia nadada
+* Estilo
+* Lista de tiempos
+* Tiempo promedio
+
+Realmente nos son 6 valores es uno solo, lo podemos ver por que todo se devuelve entre **`( )`**, a esto se le conoce como **TUPLA**. La función devuelve una tupla con 6 valores.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
