@@ -1051,7 +1051,7 @@ len(swim_files)
 
 Observamos que existen 61 archivos en la carpeta **`swimdata`**, pero realmente solo deberían existir 60, se ha colado un archivo.
 
-Si pulsamos 
+Si pulsamos la siguiente sentencia podemos ver todo el contenido de la lista.
 
 ```py
 print(swim_files)
@@ -1078,6 +1078,154 @@ print(swim_files)
 
 <img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/31ff6b8e-ed53-4dd5-8c82-ebaab5235968">
 
+Esta lista podríamos intentar ordenarla para que sea más facil observar los nombres de los archivos.
+
+Vamos a ver que métodos tiene la lista para ver si podemos usar alguno que la ordene, vamos a usar el combo mambo **print dir**.
+
+```py
+print(dir(swim_files))
+```
+
+```sh
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__',
+'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+'__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',
+'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear',
+'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+<img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3546a0f3-b371-4528-a5f4-d0a09f476b94">
+
+Podemos ver que existe el método **`sort`** para ordenar la lista, pero este método tiene un pequeño inconveniente, *el método **`sort`** realiza su reordenamiento “in situ”, lo que significa que el nuevo orden sobrescribe (!!) lo que estaba anteriormente en la lista. El antiguo orden de la lista se pierde para siempre... y no se puede deshacer*.
+
+*Si desea mantener el orden existente en su lista pero aún necesita ordenar, hay un BIF que puede ayudar aquí. El BIF **sorted** devuelve una copia ordenada de los datos de su lista, dejando intacto el orden de la lista existente. Aquí tampoco se puede deshacer, ya que la lista original no se modifica.*
+
+```py
+print(sorted(swim_files))
+```
+
+```sh
+['.DS_Store', 'Abi-10-100m-Back.txt', 'Abi-10-100m-Breast.txt', 'Abi-10-50m-Back.txt', 'Abi-10-50m-
+Breast.txt', 'Abi-10-50m-Free.txt', 'Ali-12-100m-Back.txt', 'Ali-12-100m-Free.txt', 'Alison-14-100m-
+Breast.txt', 'Alison-14-100m-Free.txt', 'Aurora-13-50m-Free.txt', 'Bill-18-100m-Back.txt', 'Bill-18-200m-
+Back.txt', 'Blake-15-100m-Back.txt', 'Blake-15-100m-Fly.txt', 'Blake-15-100m-Free.txt', 'Calvin-9-50m-
+Back.txt', 'Calvin-9-50m-Fly.txt', 'Calvin-9-50m-Free.txt', 'Carl-15-100m-Back.txt', 'Chris-17-100m-Back.txt',
+'Chris-17-100m-Breast.txt', 'Darius-13-100m-Back.txt', 'Darius-13-100m-Breast.txt', 'Darius-13-100m-Fly.txt',
+'Darius-13-200m-IM.txt', 'Dave-17-100m-Free.txt', 'Dave-17-200m-Back.txt', 'Elba-14-100m-Free.txt', 'Emma-13-
+100m-Breast.txt', 'Emma-13-100m-Free.txt', 'Erika-15-100m-Breast.txt', 'Erika-15-100m-Free.txt', 'Erika-15-
+200m-Breast.txt', 'Hannah-13-100m-Back.txt', 'Hannah-13-100m-Free.txt', 'Katie-9-100m-Back.txt', 'Katie-9-100m-
+Breast.txt', 'Katie-9-100m-Free.txt', 'Katie-9-50m-Back.txt', 'Katie-9-50m-Breast.txt', 'Katie-9-50m-Fly.txt',
+'Katie-9-50m-Free.txt', 'Lizzie-14-100m-Back.txt', 'Lizzie-14-100m-Free.txt', 'Maria-9-50m-Free.txt', 'Mike-15-
+100m-Back.txt', 'Mike-15-100m-Fly.txt', 'Mike-15-100m-Free.txt', 'Mike-15-200m-Free.txt', 'Mike-15-200m-IM.txt',
+'Owen-15-100m-Free.txt', 'Ruth-13-100m-Back.txt', 'Ruth-13-100m-Free.txt', 'Ruth-13-200m-Back.txt', 'Ruth-13-200m-
+Free.txt', 'Ruth-13-400m-Free.txt', 'Tasmin-15-100m-Back.txt', 'Tasmin-15-100m-Breast.txt', 'Tasmin-15-100m-Free.txt',
+'Tasmin-15-200m-Breast.txt']
+```
+
+Aquí ya podemos ver la lista de archivos ordenados alfabeticamente, observamos que el primero de ellos **`'.DS_Store'`** no tiene el mismo formato de nombre que el resto de los demas, por lo que es el archivo que se ha colado. Como el archivo **`swimdata.zip`** se creó inicialmente en una Mac, el archivo **`.DS_Store`** se agregó automáticamente al archivo ZIP. Este tipo de problema específico del sistema operativo suele ser motivo de preocupación.
+
+Antes de continuar, es importante eliminar ese nombre de archivo no deseado de la lista **`swim_files`**. Anteriormente habíamos visto los métodos de la lista.
+
+```py
+print(dir(swim_files))
+```
+
+```sh
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__',
+'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+'__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',
+'__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear',
+'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+Tenemos el método **`remove`** que nos puede servir, vamos a ver que nos indica la ayuda sobre este método.
+
+```py
+help(swim_files.remove)
+```
+
+<img width="1126" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4b7bd14d-bd38-4da3-aff5-53e97196d387">
+
+Vamos a eliminar de la lista el archivo **`.DS_Store`**.
+
+```py
+swim_files.remove('.DS_Store')
+
+len(swim_files)
+```
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e7fd14d0-eea6-480b-9cd8-d6a163ea4c24">
+
+El nombre del archivo a sido eliminado de la lista, pero el archivo sigue existiendo en el SO.
+
+### Procesar todos loa archivos
+
+Vamos a hacer un bucle para que recorra todos los archivos y por cada uno de ellos invocar al método **`read_swin_data`** para que sea procesado.
+
+El código que vamos a usar es el siguiente:
+
+```py
+for s in swim_files:
+    print("Processing:", s)
+    swimclub.read_swim_data(s)
+```
+
+<img width="1122" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/dd4dfda2-59bf-4df6-a6c0-9d7f11fd43f4">
+
+Vemos que al procesar el archivo **`Abi-10-50m-Back.txt`** existe un problema, se nos reporta el error **`ValueError: not enough values to unpack (expected 2, got 1)`** que no es muy exclarecedor del problema existente. El problema puede estar en el código o puede estar en los datos. Dado que si se han procesado algunos archivos el problema puede estar en los datos del archivo.
+
+Vamos a ver el contenido del archivo **`Abi-10-50m-Back.txt`**:
+
+<img width="684" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fbb79311-a3d2-4f7d-92c0-7f644d77ff36">
+
+El error que se nos indica es:
+
+<img width="555" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2b023a35-dbb1-4103-8533-3f44f5ba30b3">
+
+Su código, tal como está escrito, supone que cada tiempo de natación se ajusta al formato mins:secs.centésimos , pero este claramente no es el caso con los tiempos de natación de 50 m de Abi, y es por eso que obtiene **ValueError**.
+
+Ahora que sabes cuál es el problema, ¿cuál es la solución?
+
+**Podemos usar una declaración if para tomar una decisión en función de si el tiempo de natación que se está procesando actualmente tiene o no un valor de minutos.**
+
+Temos que hacer una pequeña modificación en el módulo **`swimclub`**. Actualmente la función que tenemos es:
+
+<img width="1121" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4c53d48f-38de-4616-a462-d2c52874c3ab">
+
+El cambio es el siguiente:
+
+<img width="1131" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/74ee9298-ba59-4982-a9b6-3eb84dd776f0">
+
+Estamos validando que existan minutos en el tiempo eso lo logramos preguntando si el string contiene el caracter **`:`** si es así recuperamos el valor de los minutos de lo contrario los minutos son 0.
+
+Una vez que hemos guardado el modulo vamos a ejecutar nuevamente nuestro notebook **`Files.ipynb`**, debemos pulsar los siguientes botones:
+
+1. Clear Outputs of All Cells
+2. Restart
+3. Run All.
+
+<img width="1114" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/eb1903c2-ee0d-4e54-a299-119a4b8c9dcc">
+
+<img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ee64a2a8-46e7-4f6d-a0d5-157530a1de4b">
+
+
+
+
+
+
+
+
+
+
+```py
+
+```
+
+```py
+
+```
 
 
 
