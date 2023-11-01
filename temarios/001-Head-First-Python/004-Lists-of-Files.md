@@ -94,13 +94,13 @@ Pero el código que necesita se encuentra actualmente en su notebook **`Times.ip
 
 Cuando se trata de experimentar y crear código desde cero, nada mejor que usar un notebook Jupyter. Sin embargo, cuando se trata de reutilizar y compartir el código existente, los notebook pueden no ser la mejor opción (y, para ser justos, los notebook no se diseñaron teniendo en cuenta esta actividad).
 
-Puede darle a cualquiera una *copia* de su computadora portátil para que la ejecute dentro de su propio entorno Jupyter, y ese es un excelente caso de uso. Pero imagina que estás creando una aplicación que necesita usar parte del código que reside actualmente en tu notebook...
+Puede darle a cualquiera una *copia* de su notebook para que la ejecute dentro de su propio entorno Jupyter, y ese es un excelente caso de uso. Pero imagina que estás creando una aplicación que necesita usar parte del código que reside actualmente en tu notebook...
 
 <hr>
 
 **NOTA**
 
-En el Apéndice A, analizamos una extensión de Jupyter que puede ayudar con este requisito, pero, desde el principio, compartir el código de su computadora portátil puede ser complicado.
+En el Apéndice A, analizamos una extensión de Jupyter que puede ayudar con este requisito, pero, desde el principio, compartir el código de su notebook puede ser complicado.
 
 <hr>
 
@@ -146,7 +146,7 @@ Continúe y agregue la *signature-firma* para la función **`read_swim_data`** e
 
 ### Agrega el código que deseas compartir a la función.
 
-Con la firma de la función escrita, la siguiente tarea es tomar el código que desea compartir de su computadora portátil y copiar el código en **`swimclub.py`**. El código que necesita se encuentra en el notebook **`Times.ipynb`** del capítulo anterior.
+Con la firma de la función escrita, la siguiente tarea es tomar el código que desea compartir de su notebook y copiar el código en **`swimclub.py`**. El código que necesita se encuentra en el notebook **`Times.ipynb`** del capítulo anterior.
 
 <img width="918" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/11932504-0815-4508-b2ce-f57bfbf68e95">
 
@@ -806,7 +806,7 @@ Su código **`swimclub.py`** debe ser el mismo que el de la página siguiente.
 
 <img width="928" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7f865d72-ca15-4b81-8459-a52cb218823e">
 
-Para utilizar la última versión del módulo **`swimclub`**, debe reiniciar su sesión de notebook. La forma más sencilla de hacer esto es borrar todas las celdas de su computadora portátil, reiniciarla y luego ejecutar cada celda. En la parte superior de VS Code, observe las siguientes opciones, en las que debe hacer clic en el orden que se muestran (1, luego 2 y luego 3):
+Para utilizar la última versión del módulo **`swimclub`**, debe reiniciar su sesión de notebook. La forma más sencilla de hacer esto es borrar todas las celdas de su notebook, reiniciarla y luego ejecutar cada celda. En la parte superior de VS Code, observe las siguientes opciones, en las que debe hacer clic en el orden que se muestran (1, luego 2 y luego 3):
 
 <img width="930" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ac02654e-ebb9-4df8-ad75-34d9848e2b80">
 
@@ -826,7 +826,7 @@ Para hacerlo, usemos otro BIF creado para este mismo propósito llamado **enumer
 
 **P: ¿Por qué tuvimos que reiniciar de nuevo? ¿Seguramente escribir `import swimclub` en una celda vacía recarga el código más nuevo del módulo previamente importado?**
 
-**R**: (Esperamos que estés sentado…) No, no es así. Recuerde de nuestra discusión anterior que el intérprete de Python implementa un esquema de almacenamiento en caché agresivo para los módulos importados que, para todos los efectos, prohíbe efectivamente la reimportación de un módulo ya importado incluso si el código del módulo ha cambiado mientras tanto. Aunque existen algunas técnicas para anular este comportamiento predeterminado de almacenamiento en caché del módulo, según nuestra experiencia, lo más seguro es reiniciar siempre una computadora portátil después de un cambio en el código de un módulo. De esta manera, tiene la garantía de ejecutar el código que cree que está ejecutando.
+**R**: (Esperamos que estés sentado…) No, no es así. Recuerde de nuestra discusión anterior que el intérprete de Python implementa un esquema de almacenamiento en caché agresivo para los módulos importados que, para todos los efectos, prohíbe efectivamente la reimportación de un módulo ya importado incluso si el código del módulo ha cambiado mientras tanto. Aunque existen algunas técnicas para anular este comportamiento predeterminado de almacenamiento en caché del módulo, según nuestra experiencia, lo más seguro es reiniciar siempre una notebook después de un cambio en el código de un módulo. De esta manera, tiene la garantía de ejecutar el código que cree que está ejecutando.
 
 
 ## El código del Entrenador va tomando forma…
