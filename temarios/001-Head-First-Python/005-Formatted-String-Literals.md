@@ -840,3 +840,113 @@ Las respuestas a las pistas se encuentran en las páginas de este capítulo y la
 <img width="836" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7ae519b6-53e8-4677-8171-c155dc7b4a43">
 
 <img width="1055" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a15a0599-9a56-4bad-9075-0e0d24ae0d50">
+
+
+## 💻 Práctica.
+
+### Cree gráficos de barras simples con HTML y SVG
+
+Vamos a crear el archivo **`bar.html`** que contiene HTML y SVG, y que dibuja un gráfico de barras cuando se ve en un navegador web. 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            A simple bar chart
+        </title>
+    </head>
+    <body>
+        <h3>A simple bar chart</h3>
+        <svg height="30" width="400">
+            <rect height="30" width="300" style="fill:rgb(0,0,255);" />
+        </svg>Label 1<br />
+        <svg height="30" width="400">
+            <rect height="30" width="250" style="fill:rgb(0,0,255);" />
+        </svg>Label 2<br />
+        <svg height="30" width="400">
+            <rect height="30" width="350" style="fill:rgb(0,0,255);" />
+        </svg>Label 3<br />
+        <p>It's simple, but it works!</p>
+    </body>
+</html>
+```
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/11cc8396-dccf-4bee-be4e-9d44c258f6e6">
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4c488081-f015-42fb-a9c9-d551bc666d73">
+
+### Pasar de un gráfico simple a un gráfico de Coach
+
+Podemos escribir código Python para generar HTML y SVG sobre la marcha.
+
+Vamos a crear un nuevo notebook **`Charts.ipynb`** con el siguiente código:
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c1939ee4-c2f1-46c9-a337-f682300d81ae">
+
+```py
+import swimclub
+
+fn = "Darius-13-100m-Fly.txt"
+
+(swimmer, age, distance, stroke, *_) = swimclub.read_swim_data(fn)
+
+title = swimmer + " (Under " + age + ") " + distance + " " + stroke
+
+
+title
+```
+
+Este código nos permite obtener un string que representa el title que se puede poner en el archivo HTML.
+
+Ahora vamos a crear una variable **`html`** que va a contener los tags que representan al documento HTML.
+
+```py
+html = "<!DOCTYPE html><html><head><title>" + title
+html = html + "</title></head><body><h3>" + title + "</h3>"
+
+html
+```
+
+```sh
+'<!DOCTYPE html><html><head><title>Darius (Under 13) 100m Fly</title></head><body><h3>Darius (Under 13) 100m Fly</h3>'
+```
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a711dde7-0a7d-4631-b7fd-fe819a7edd95">
+
+Estamos usando la concatenación de cadenas usando **`+`**, pero podemos hacerlo usando **f-string** o los **tiple-quoted string**.
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9f08de87-6cf6-4ca7-8f0e-00f5797e1a62">
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/010a8c09-604a-40df-bbfb-0b5e6c820f90">
+
+
+```py
+title = f"{swimmer} (Under {age}) {distance} {stroke}"
+
+title
+
+html = f"""<!DOCTYPE html>
+<html>
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        <h3>{title}</h3>
+"""
+
+html
+```
+
+Podemos imprimir el valor de **`html`**.
+
+<img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f9d4b90d-1d26-459b-8c77-7c3642cf6ddf">
+
+
+
+
+
+
+
+
+
