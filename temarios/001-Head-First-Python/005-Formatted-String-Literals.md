@@ -1020,6 +1020,8 @@ for n in converts:
 
 <img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6f17fefd-f41f-4c0d-adbb-b87cfd44b86f">
 
+Después de todo esto tomemos un tiempo para crear el código necesario para generar las etiquetas SVG para cada uno de los tiempos de natación del nadador actual.
+
 
 
 
