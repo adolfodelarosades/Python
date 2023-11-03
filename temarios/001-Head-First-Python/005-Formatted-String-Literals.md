@@ -7,7 +7,6 @@
 En este capítulo, finalmente comenzará a producir gráficos de barras para el Coach. Harás esto usando nada más que **strings**. Ya sabes que los strings de Python vienen repletas de bondades incorporadas, y las **formatted string literals** de Python, también conocidas como ***f-strings***, mejoran lo que es posible de maneras bastante interesantes. Puede parecer extraño que estemos proponiendo crear gráficos de barras con texto pero, como estás a punto de descubrir, no es tan absurdo como parece. En el camino, utilizará Python para crear archivos e iniciar un navegador web con solo unas pocas líneas de código. Finalmente, el entrenador cumple su deseo: la generación automática de gráficos a partir de sus datos de tiempos de natación. ¡Hagámoslo!
 
 <img width="948" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b0c26011-8925-47ff-b47b-df9a3fbe4272">
-xxx
 
 **Es fantástico escucharlo, ya que tenemos todos los datos que necesitamos.**
 
@@ -941,6 +940,44 @@ html
 Podemos imprimir el valor de **`html`**.
 
 <img width="1127" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f9d4b90d-1d26-459b-8c77-7c3642cf6ddf">
+
+En nuestro módulo **`swimdata.py`** actualmente tenemos una cadena que se forma con concatenación.
+
+<img width="995" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/550d5055-2d17-4a10-b603-87545f3b86c5">
+
+La vamos a cambiar para que use **f-string**.
+
+<img width="1133" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/398f0bd6-2138-4c69-ae89-6a059595377b">
+
+```py
+# average = str(minutes) + ":" + str(seconds) + "." + hundredths
+average = f"{minutes}:{seconds}.{hundredths}"
+```
+
+### ¡Generar SVG es fácil con f-strings!
+
+Para utilizar Python para generar mediante programación los gráficos de barras del entrenador, necesitarás crear tantas tags **`<svg>`** como veces haya en los datos de tu nadador. 
+
+Actualmente la función **`read_swim_data`** del modulo **`swimdata.py`** nos retorna los datos así:
+
+<img width="1120" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fb86867a-a2cd-4b5f-9503-1484cfadb3c4">
+
+Los tiempos son una lista de strings y con las barras del gráfico los tiempos deben ser númericos, por lo que necesitamos retornar una lista de números, si usamos la lista **`converts`** que son los equivalentes numéricos de los tiempos de natación. Actualmente esta lista **`converts`** no se esta devolviendo, solo se usa para calcular el **`average`**, vamos a incluir **`converts`** para devolverla.
+
+<img width="1025" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/50e6c606-3665-4119-9421-736991f4094b">
+
+Si ejecutamos esta nueva versión de la función **`read_swim_data`** del modulo **`swimdata.py`**.
+
+<img width="1134" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d486547e-18fc-40d0-8ec2-8aee077064f4">
+
+
+
+
+
+
+
+
+
 
 
 
