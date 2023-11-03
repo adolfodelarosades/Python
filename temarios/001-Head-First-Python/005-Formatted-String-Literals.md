@@ -970,6 +970,57 @@ Si ejecutamos esta nueva versión de la función **`read_swim_data`** del modulo
 
 <img width="1134" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d486547e-18fc-40d0-8ec2-8aee077064f4">
 
+Aunque los datos devueltos parecen correctos, los números son un poco grandes y este es el segundo problema. Específicamente, el fragmento SVG anterior tiene un valor de ancho máximo de **`400`**:
+
+<img width="1048" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/1e6d82d1-e6a8-46e0-915e-6ba9e8b686cb">
+
+Obviamente, ninguno de esos seis números mayores que 8000 es menor que 400. Y si usara esos números tal como están, sus rectángulos SVG probablemente se desplazarían hacia el lado derecho de la pantalla por un margen considerable.
+
+Lo que se necesita aquí es alguna forma de reducir los números más grandes a un valor que se ajuste dentro del rango de 0 a 400, lo que parece que podría necesitar algunos cálculos complicados. ¡Ay!
+
+Quiso la suerte que ***Head First Coders*** acaba de enviar un pequeño módulo de Python (llamado **`hfpy_utils`**), junto con un notebook (llamado **`HowTo.ipynb`** ) que le muestra cómo convertir cualquier número a su equivalente dentro de algún otro rango. Copie ambos archivos en su carpeta de **Learning**.
+
+<img width="341" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/333b5c1d-2fc6-474f-80da-3825de4f50ef">
+
+```py
+def convert2range(v, f_min, f_max, t_min, t_max):
+    """Given a value (v) in the range f_min-f_max, convert the value
+    to its equivalent value in the range t_min-t_max.
+
+    Based on the technique described here:
+        http://james-ramsden.com/map-a-value-from-one-number-scale-to-another-formula-and-c-code/
+    """
+    return round(t_min + (t_max - t_min) * ((v - f_min) / (f_max - f_min)), 2)
+
+```
+
+<img width="1112" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cc70e794-7665-4419-8a83-1e743f142ffd">
+
+```py
+import swimclub
+
+fn = "Darius-13-100m-Fly.txt"
+
+*_, converts = swimclub.read_swim_data(fn)
+
+
+converts
+
+
+_
+
+
+import hfpy_utils
+
+for n in converts:
+    print(n, "->", hfpy_utils.convert2range(n, 0, max(converts), 0, 400))
+```
+
+<img width="1129" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/2dac5a96-da21-41a1-8057-9aac11ad04af">
+
+<img width="1124" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6f17fefd-f41f-4c0d-adbb-b87cfd44b86f">
+
+
 
 
 
