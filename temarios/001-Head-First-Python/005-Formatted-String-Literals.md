@@ -7,7 +7,7 @@
 En este capítulo, finalmente comenzará a producir gráficos de barras para el Coach. Harás esto usando nada más que **strings**. Ya sabes que los strings de Python vienen repletas de bondades incorporadas, y las **formatted string literals** de Python, también conocidas como ***f-strings***, mejoran lo que es posible de maneras bastante interesantes. Puede parecer extraño que estemos proponiendo crear gráficos de barras con texto pero, como estás a punto de descubrir, no es tan absurdo como parece. En el camino, utilizará Python para crear archivos e iniciar un navegador web con solo unas pocas líneas de código. Finalmente, el entrenador cumple su deseo: la generación automática de gráficos a partir de sus datos de tiempos de natación. ¡Hagámoslo!
 
 <img width="948" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/b0c26011-8925-47ff-b47b-df9a3fbe4272">
-
+xxx
 
 **Es fantástico escucharlo, ya que tenemos todos los datos que necesitamos.**
 
