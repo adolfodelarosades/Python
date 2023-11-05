@@ -1022,14 +1022,206 @@ for n in converts:
 
 Después de todo esto tomemos un tiempo para crear el código necesario para generar las etiquetas SVG para cada uno de los tiempos de natación del nadador actual.
 
+Comience escribiendo una línea de código que cree tres variables a partir de los datos del nadador llamando a la función **`read_swim_data`**, creando la lista **`times`**, la variable **`average`** y la lista **`converts`**:
+
+__________________________________________________________________
+
+<img width="1068" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/3763ff55-3479-4ad2-8e8f-62daeb9e5db5">
 
 
+Crea otra variable llamada **`from_max`**, asignándole el valor máximo de la lista **`converts`**:
+
+__________________________________________________________________
+
+<img width="1064" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/f1356331-74e2-44e6-af69-3a5ecd3f3127">
 
 
+Importe el módulo **`hfpy_utils`**, luego cree una nueva variable llamada **`svgs`**,inicializándolo en una cadena vacía:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="1051" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/61baef91-ba3e-4df8-9ccb-265a00bb5937">
 
 
+Supongamos que existe un valor llamado **`n`** que contiene un valor de espacio que se indexa en su lista **`converts`**. Proporcione una línea de código que cree una variable llamada **`bar_width`** y la establezca en un valor que **`n`** escala de **`0-from_max`** a **`0-400`**:
+
+__________________________________________________________________
+
+<img width="1035" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/44dbbd47-6079-4e28-a61d-38bf680078ea">
 
 
+Escriba la primera línea de un bucle **`for`** que itera sobre una lista enumerada **`times`**, creando dos nuevas variables de bucle llamadas **`n`** y **`t`**:
+
+__________________________________________________________________
+
+<img width="1046" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e49e6900-ddf0-4d33-9f08-3045a6998830">
+
+
+Aquí está el fragmento de SVG tomado del archivo **`bar.html`**:
+
+<img width="1025" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/fe54d531-b7be-4d78-93e6-228618d24305">
+
+Cree una triple-quoted multiline f-string que utilice las variables **`bar_width`** y **`t`** de la última página para crear un tag SVG para el tiempo de natación actual:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="1072" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/c1c76047-6023-414f-976f-1d2ea9ccb9f7">
+
+
+Con su f-string lista, muestre el código que la agrega al final de la variable **`svgs`** creada en la última página:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="1067" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e349b55c-e5cf-44d9-be01-9d74c04a0e1d">
+
+Con sólo unos pocos ajustes menores, el código que creó durante el *ejercicio* que acaba de completar se puede combinar en una sola celda de código en su notebook, así:
+
+<img width="1034" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/adce8834-7f8f-4ed9-ba97-5144e674a767">
+
+Al presionar **Shift+Enter** en esta celda se ejecuta el código, pero no se muestra nada. En la siguiente celda, use el BIF **print** para ver su obra:
+
+<img width="1035" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/0270e19c-f137-4acc-a328-f3751baac062">
+
+<img width="1033" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/65291c6c-45b6-4e24-b146-5abc9a168d24">
+
+<img width="1199" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/d57201c5-f50e-49b3-a564-38df20983eff">
+
+<img width="1193" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/df6d5bdb-bd81-452a-98cf-16dc8acfd30d">
+
+Lo único que queda es el final de tu página web. Recuerde que el final del archivo **`bar.html`** tiene este marcado:
+
+<img width="1073" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/4f92bb41-3424-42c1-87d1-f27029c2aaf0">
+
+Como estás en camino de convertirte en un ninja de f-string, solo te daremos el código para este bit:
+
+<img width="1085" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/e666e96f-b0a6-423f-ba38-1e8023658f56">
+
+Crear la página completa de marcado HTML no es difícil:
+
+<img width="560" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/7463e17d-7db9-4601-88fb-642df6e0a9c5">
+
+<img width="1184" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/919c15a4-0f72-4f97-827d-94853795e8cb">
+
+```html
+'<!DOCTYPE html>\n
+<html>\n
+    <head>\n
+        <title>Darius (Under 13) 100m Fly</title>\n
+    </head>\n
+    <body>\n
+        <h3>Darius (Under 13) 100m Fly</h3>\n\n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="386.76" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:27.95<br />\n
+                    \n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="356.51" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:21.07<br />\n
+                    \n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="400.0" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:30.96<br />\n
+                    \n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="365.96" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:23.22<br />\n
+                    \n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="386.76" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:27.95<br />\n
+                    \n
+                        <svg height="30" width="400">\n
+                            <rect height="30" width="388.3" style"fill:rgb(0,0,255);" />\n
+                        </svg>1:28.30<br />\n
+                    \n
+        <p>Average time: 1:26.58</p>\n
+    </body>\n</html>\n'
+```
+
+El PSL incluye un módulo llamado **`webbrowser`**, que puede utilizar para mostrar HTML en su navegador web. Desafortunadamente, no puede enviar al módulo una gran cadena de HTML para mostrar. El HTML debe estar disponible en la web o guardarse primero en un archivo.
+
+### Escribir en archivos
+
+Recuerde este código que utilizó para leer los tiempos de natación de un archivo en una nueva lista llamada **`data`**:
+
+<img width="1042" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/915a8c60-61c0-4668-904b-24e843a10123">
+
+El BIF **open**, de forma predeterminada, abre un archivo para *lectura*, pero también es posible abrir un archivo en modo de escritura(write) proporcionando un segundo argumento para **open**:
+
+<img width="1032" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/07248c8d-027b-428f-bbfa-bfc715c01698">
+
+Si ejecuta este código en una nueva celda de código, crea **`test.txt`** si no existe, luego almacena el mensaje en el archivo, antes de cerrar el archivo automáticamente gracias a **`with`**.
+
+Si **`test.txt`** ya existe, este código sobrescribe (!!!) el contenido antiguo del archivo con el mensaje. Si desea conservar el contenido existente del archivo, el modo ***append mode*** puede hacerlo por usted, suponiendo que reemplace el argumento "**`w`**" del BIF **open** con "**`a`**".
+
+<img width="1190" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/a7358f96-0ba7-428f-939e-604f678ac20c">
+
+<img width="727" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/ecd89fba-8490-46d6-880d-d9a93a5b6f3a">
+
+**Sabiendo todo esto, usemos un código similar al que se muestra arriba para guardar la página web generada en un archivo.**
+
+Cree una subcarpeta en su carpeta ***Learning*** y llámela ***charts***.
+
+En lugar de utilizar un nombre genérico para el archivo de su página web, generemos uno a partir del nombre ya almacenado en la variable **`fn`**. Específicamente, creemos una cadena **`f`** que convierta un nombre de archivo que se ajuste a este patrón:
+
+<img width="1104" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/9724ce0e-ac67-4b1b-a20a-f802af4abd3a">
+
+en uno que se ajuste a este patrón:
+
+<img width="1035" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/93c785e8-4962-4b86-ab35-0a3c308bd658">
+
+Cuando hayas calculado la f-string que logra esto (pista: puedes poner código Python entre las llaves de una f-string, no solo nombres de variables), toma tu lápiz y escribe en la f-string que deseas utilizar en el espacio siguiente. Asigne la f-string a una variable llamada **`save_to`**:
+
+__________________________________________________________________
+
+<img width="1044" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/90dc9a92-823f-4906-904e-021b47e89fdb">
+
+
+Proporcione el código que usaría para guardar su HTML (actualmente en la variable **`page`**) en el archivo cuyo nombre está en la variable **`save_to`**:
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+__________________________________________________________________
+
+<img width="1056" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/cdcf2d9e-47e5-46d5-8957-41d82123eb5e">
+
+### Es hora de mostrar tu obra
+
+Con su HTML y SVG guardados en un archivo en la carpeta **charts**, pedirle al módulo de PSL **`webbrowser`** que muestre el gráfico es sencillo:
+
+<img width="1075" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/743f0794-d9ac-49d1-b843-7fb0ef00bdd8">
 
 
 
