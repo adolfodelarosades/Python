@@ -1223,6 +1223,10 @@ Con su HTML y SVG guardados en un archivo en la carpeta **charts**, pedirle al m
 
 <img width="1075" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/743f0794-d9ac-49d1-b843-7fb0ef00bdd8">
 
+<img width="1187" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/6145f173-ebf4-41f6-9a40-ad44cc7c12bc">
+
+<img width="1512" alt="image" src="https://github.com/adolfodelarosades/Python/assets/23094588/922acb20-1b3d-4c24-af98-4c72347233a2">
+
 
 
 
