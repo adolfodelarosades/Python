@@ -54,83 +54,105 @@ Puede reordenar las vistas arrastrándolas y soltándolas en la barra de activid
 La barra lateral, ubicada a la derecha de la barra de actividades, muestra la vista activa. Si no se selecciona ninguna vista, la barra lateral se contrae. Puede cambiar el tamaño de la barra lateral haciendo clic y arrastrando el borde que comparte con el editor. Las vistas predeterminadas para la barra lateral son Explorer, Search, Source Control, Run y Extensions (consulte las Figuras 1.2 a 1.6 , respectivamente).
 
 Explorer, Search, Source Control, Run, and Extensions
+
 **Figura 1.2 :Vista del explorador.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/622062b3-e61e-4ec7-a509-b7bbe40ebdd4)
+
 **Figura 1.3 : Vista de búsqueda.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/1f3ab21f-cad8-4e18-8fdc-818ade9f1552)
+
 **Figura 1.4 : Vista de control de código fuente.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/28e5b81c-53b5-439a-81b9-d18c682c6181)
 **Figura 1.5 : Vista de ejecución.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/a94e52f4-29d5-4ced-a025-b4929f036629)
+
 **Figura 1.6 :Vista de extensiones.**
 
 ### Editor
 
 El editor, que ocupa la mayor parte de la pantalla, es donde editas archivos. Puedes cambiar el tamaño del editor haciendo clic y arrastrando los bordes que comparte con la barra lateral y los paneles.
 
-La región del editor superior puede cambiar según el tipo de archivo que esté activo en el editor. Por ejemplo, si edita un archivo Markdown, aparece un icono de Vista previa, lo que habilita la Vista previa de Markdown de Visual Studio Code (consulte la Figura 1.7 ).
+La región del editor superior puede cambiar según el tipo de archivo que esté activo en el editor. Por ejemplo, si edita un archivo **Markdown**, aparece un icono de Vista previa, lo que habilita la Vista previa de Markdown de Visual Studio Code (consulte la Figura 1.7 ).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/3aa47bff-5b5c-4082-a077-59d895d2ac8b)
 
-Figura 1.7 :En la imagen superior, el ícono de Vista previa aparece en la región del editor superior desde que se abre un archivo Markdown. Al hacer clic en el icono se muestra una vista previa del archivo Markdown, como se muestra en la imagen inferior.
+**Figura 1.7 :En la imagen superior, el ícono de Vista previa aparece en la región del editor superior desde que se abre un archivo Markdown. Al hacer clic en el icono se muestra una vista previa del archivo Markdown, como se muestra en la imagen inferior.**
 
 Cuando abres un archivo Python, ves un ícono Ejecutar archivo Python en la terminal (que se muestra como un botón Reproducir) en la región superior del editor. (El ícono Ejecutar archivo Python en la terminal es una forma rápida de ejecutar un programa Python). Cuando se selecciona, se abre una terminal y se ejecuta el archivo Python (consulte la Figura 1.8 ).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/5789ae62-c269-42b5-bcbe-77b4781beff5)
 
-Figura 1.8 :El ícono Ejecutar archivo Python en la terminal aparece en la parte superior de la región del editor. Al hacer clic en el icono se ejecuta el archivo Python.
+**Figura 1.8 :El ícono Ejecutar archivo Python en la terminal aparece en la parte superior de la región del editor. Al hacer clic en el icono se ejecuta el archivo Python.**
 
-Para la mayoría de los tipos de archivos, la región superior del editor también incluye un ícono Abrir cambios para ver los cambios en el archivo desde la última confirmación del control de fuente (consulte la Figura 1.9 ). Al seleccionar el icono se abre el editor de diferencias (consulte la Figura 1.10 ). El editor de diferencias se abre en una nueva pestaña con una vista de lado a lado de las diferencias. También puede acceder al editor de diferencias seleccionando el archivo en la vista Control de código fuente.
+Para la mayoría de los tipos de archivos, la región superior del editor también incluye un ícono Open Changes para ver los cambios en el archivo desde el último commit en el source control (consulte la Figura 1.9 ). Al seleccionar el icono se abre el editor de diferencias (consulte la Figura 1.10 ). El editor de diferencias se abre en una nueva pestaña con una vista de lado a lado de las diferencias. También puede acceder al editor de diferencias seleccionando el archivo en la vista Source Control view.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/b77e0283-89f2-4cd5-8130-6c2cf97392a7)
 
-Figura 1.9 :Cuando se hace clic en el icono Abrir cambios, se abre una nueva pestaña que muestra las diferencias del archivo.
+**Figura 1.9 :Cuando se hace clic en el icono Open Changes, se abre una nueva pestaña que muestra las diferencias del archivo.**
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/24ae9728-55da-4a1c-ac07-db8cfb256b82)
 
-Figura 1.10 :El editor de diferencias muestra los cambios realizados en el archivo desde la última confirmación.
+**Figura 1.10 :El editor de diferencias muestra los cambios realizados en el archivo desde el último commit.**
 
-La región también contiene un icono Dividir editor hacia la derecha para dividir el editor (consulte la Figura 1.11 ). Cuando se selecciona, se abre un nuevo grupo de editores a la derecha del editor inicial. Puede abrir y modificar archivos en cualquiera de las ventanas del editor.
+La región también contiene un icono  Split Editor Right para dividir el editor (consulte la Figura 1.11 ). Cuando se selecciona, se abre un nuevo grupo de editores a la derecha del editor inicial. Puede abrir y modificar archivos en cualquiera de las ventanas del editor.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/a3dae1a6-db0e-4dc2-986f-879e185f17be)
 
-Figura 1.11 :Cuando se hace clic en el icono Dividir editor derecho, se abre un nuevo grupo de editores a la derecha.
+**Figura 1.11 :Cuando se hace clic en el icono Dividir editor derecho, se abre un nuevo grupo de editores a la derecha.**
 
 Un archivo abierto y activo muestra el código fuente en el medio del editor, y un minimapa se encuentra en la parte superior derecha (consulte la Figura 1.12 ). El Minimapa proporciona una vista en miniatura condensada de todo el archivo y es excelente para una navegación rápida y saber visualmente dónde se encuentra en el contexto de todo el archivo.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/edcce9c2-68de-460e-8ed1-cdea82729c81)
 
-Figura 1.12 :Aparece un minimapa a la derecha delbankaccount.pyarchivo. Puede hacer clic en cualquier parte del Minimapa para navegar rápidamente hasta el código en esa ubicación.
+**Figura 1.12 :Aparece un minimapa a la derecha del archivo `bankaccount.py`. Puede hacer clic en cualquier parte del Minimapa para navegar rápidamente hasta el código en esa ubicación.**
 
-Puedes abrir tantos archivos como quieras en el editor. Cada archivo abierto se distingue por un encabezado con pestañas. El archivo activo es el archivo en el que aparece el cursor. Puede arrastrar pestañas para reordenarlas y también fijar pestañas (Cmd+K Shift+Enter/Ctrl+K Shift+Enter 1 ) para mantener sus archivos más utilizados a su alcance. Se muestra una pestaña fijada con el ícono de idioma para el archivo respectivo (consulte la Figura 1.13 ).
+Puedes abrir tantos archivos como quieras en el editor. Cada archivo abierto se distingue por un encabezado con pestañas. El archivo activo es el archivo en el que aparece el cursor. Puede arrastrar pestañas para reordenarlas y también fijar pestañas (**`Cmd+K Shift+Enter/Ctrl+K Shift+Enter`**) para mantener sus archivos más utilizados a su alcance. Se muestra una pestaña fijada con el ícono language para el archivo respectivo (consulte la Figura 1.13 ).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/1b5aab4a-bb57-4c4e-a101-c47deb6ff3da)
 
-Figura 1.13 :Elhelloworld.pyarchivo es una pestaña fijada. Un ícono de alfiler al lado del nombre del archivo en la pestaña indica que el archivo está anclado.
+**Figura 1.13 :El archivo `helloworld.py` es una pestaña fijada. Un ícono pin al lado del nombre del archivo en la pestaña indica que el archivo está anclado.
 
 Por motivos de organización, puede agrupar los archivos abiertos en grupos de editores separados (consulte la Figura 1.14 ) dentro de la ventana dividida.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/ef93cf9a-347b-414e-b444-561408202707)
 
-Figura 1.14 :Los grupos de editores se utilizan para editar el código fuente de un programa Python que crea cuentas bancarias.
+**Figura 1.14 :Los grupos de editores se utilizan para editar el código fuente de un programa Python que crea cuentas bancarias.**
 
 Los nuevos editores se pueden abrir de varias maneras:
 
-En la vista del Explorador, presione Ctrl+clic/Alt+clic y haga clic en un archivo.
-En la vista del Explorador, seleccione un archivo y presione Ctrl+Entrar/Ctrl+\ para abrir un archivo a la derecha de un grupo de editores existente.
-Haga clic en el icono Editor dividido en la región del editor superior.
-Arrastre y suelte un archivo en cualquier lado de la región del editor.
-En la lista Apertura rápida (Cmd+P/Ctrl+P), resalte un archivo y presione Cmd+Entrar/Ctrl+Entrar.
+* En la vista del Explorador, presione **`Ctrl+clic/Alt+clic`** y haga clic en un archivo.
+* En la vista del Explorador, seleccione un archivo y presione **`Ctrl+Enter/Ctrl+\`** para abrir un archivo a la derecha de un grupo de editores existente.
+* Haga clic en el icono Editor dividido en la región del editor superior.
+* Arrastre y suelte un archivo en cualquier lado de la región del editor.
+* En la lista Apertura rápida (**`Cmd+P/Ctrl+P`**), resalte un archivo y presione **`Cmd+Enter/Ctrl+Enter`**.
 
-NOTA Para abrir un archivo en un grupo de editores específico, el grupo de editores debe estar activo.
+<hr>
+
+**NOTA** Para abrir un archivo en un grupo de editores específico, el grupo de editores debe estar activo.
+
+<hr>
 
 De forma predeterminada, los archivos y los grupos de editores se muestran verticalmente adyacentes a la derecha uno del otro (consulte la Figura 1.15 ). Sin embargo, puede arrastrar y soltar el área de título del editor para reordenar y cambiar el tamaño de los editores.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/b002cb94-edb8-420b-9f53-6a6e97ff8785)
 
-Figura 1.15 :Se utilizan tres ventanas de grupo de editores dentro del editor para mostrar el contenido de cada archivo. Dos ventanas de grupo de editores se muestran verticalmente y una se muestra horizontalmente en la parte inferior del editor.
+**Figura 1.15 :Se utilizan tres ventanas de grupo de editores dentro del editor para mostrar el contenido de cada archivo. Dos ventanas de grupo de editores se muestran verticalmente y una se muestra horizontalmente en la parte inferior del editor.**
 
-NOTA Cuando tiene más de un editor abierto, puede cambiar entre ellos rápidamente manteniendo presionado Cmd/Ctrl y presionando 1, 2 o 3.
+<hr>
 
-Paneles
+**NOTA** Cuando tiene más de un editor abierto, puede cambiar entre ellos rápidamente manteniendo presionado **`Cmd/Ctrl`** y presionando **`1`**, **`2`** o **`3`**.
+
+<hr>
+
+### Paneles
+
 Los paneles debajo del editor contienen una o más áreas para la salida del programa, información de depuración, errores y advertencias, etc. También puede arrastrar algunas de las vistas desde la barra de actividades (como Buscar) al área de Paneles.
 
-También puedes abrir el terminal integrado en el área de Paneles. El terminal integrado proporciona una interfaz de línea de comandos para su sistema operativo. El diseño predeterminado de Visual Studio Code incluye una terminal integrada que está abierta a la raíz de su proyecto. También puede abrir una terminal REPL para su intérprete de Python dentro de Visual Studio Code. La terminal integrada se activa cada vez que ejecuta un programa Python. Puede iniciar manualmente una terminal con el método abreviado de teclado Ctrl+~/Ctrl+Shift+`. En el Capítulo 2 , "Hola mundo para Python", se proporciona información adicional sobre cómo ejecutar programas Python .
+También puedes abrir el terminal integrado en el área de Paneles. El terminal integrado proporciona una interfaz de línea de comandos para su sistema operativo. El diseño predeterminado de Visual Studio Code incluye una terminal integrada que está abierta a la raíz de su proyecto. También puede abrir una terminal REPL para su intérprete de Python dentro de Visual Studio Code. La terminal integrada se activa cada vez que ejecuta un programa Python. Puede iniciar manualmente una terminal con el método abreviado de teclado **`Ctrl+~/Ctrl+Shift+``**. En el Capítulo 2 , "Hola mundo para Python", se proporciona información adicional sobre cómo ejecutar programas Python .
 
 Barra de estado
 La barra de estado, ubicada en la parte inferior de la ventana de VS Code, contiene información sobre el proyecto abierto y los archivos que edita. Algunas de las características básicas de la barra de estado incluyen las siguientes:
