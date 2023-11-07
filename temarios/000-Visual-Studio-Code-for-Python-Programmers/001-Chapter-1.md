@@ -53,7 +53,7 @@ Puede reordenar las vistas arrastrándolas y soltándolas en la barra de activid
 
 La barra lateral, ubicada a la derecha de la barra de actividades, muestra la vista activa. Si no se selecciona ninguna vista, la barra lateral se contrae. Puede cambiar el tamaño de la barra lateral haciendo clic y arrastrando el borde que comparte con el editor. Las vistas predeterminadas para la barra lateral son Explorer, Search, Source Control, Run y Extensions (consulte las Figuras 1.2 a 1.6 , respectivamente).
 
-Explorer, Search, Source Control, Run, and Extensions
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/c2ae4c77-8c95-4f3c-a47f-b4c743a621aa)
 
 **Figura 1.2 :Vista del explorador.**
 
