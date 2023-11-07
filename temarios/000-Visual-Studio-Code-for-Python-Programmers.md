@@ -59,7 +59,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 * Workflow Recap
 * Summary
   
-### [CHAPTER 3: Editing Code]((https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/003-Chapter-3.md))
+### [CHAPTER 3: Editing Code](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/003-Chapter-3.md)
 * Quick Fixes
 * Code Completion, Definitions, and Declarations
 * Formatting
@@ -70,7 +70,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 
 ### Part II: Additional Visual Studio Code Features
 
-### CHAPTER 4: Managing Projects and Collaboration
+### [CHAPTER 4: Managing Projects and Collaboration](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/004-Chapter-4.md)
 * Files and Folders
 * Environments
 * Source Control
