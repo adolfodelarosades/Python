@@ -114,7 +114,7 @@ Puedes abrir tantos archivos como quieras en el editor. Cada archivo abierto se 
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/1b5aab4a-bb57-4c4e-a101-c47deb6ff3da)
 
-**Figura 1.13 :El archivo `helloworld.py` es una pestaña fijada. Un ícono pin al lado del nombre del archivo en la pestaña indica que el archivo está anclado.
+**Figura 1.13: El archivo `helloworld.py` es una pestaña fijada. Un ícono pin al lado del nombre del archivo en la pestaña indica que el archivo está anclado.**
 
 Por motivos de organización, puede agrupar los archivos abiertos en grupos de editores separados (consulte la Figura 1.14 ) dentro de la ventana dividida.
 
@@ -273,36 +273,42 @@ A diferencia del editor de configuración, debe guardar (Cmd+S/Ctrl+S) el archiv
 <hr>
 
 ### Temas e íconos de colores
-La estética realmente puede mejorar la experiencia al proporcionar combinaciones de colores e iconografía para satisfacer las necesidades y preferencias visuales. Los temas de color le permiten cambiar el color tanto de la interfaz de usuario del editor como del resaltado de sintaxis de su código. El selector de tema de color (Cmd+K, Cmd+T/Ctrl+K, Ctrl+T proporciona acceso a los temas de color disponibles. Puede instalar temas de color adicionales desde Visual Studio Code Marketplace o crear su propio tema de color personalizado.
 
-Los temas de íconos de archivos le permiten cambiar los íconos de archivos que se muestran en el Explorador de archivos y en los encabezados de pestañas. El selector de Tema de ícono de archivo (Preferencias ➪ Tema de ícono de archivo) brinda acceso a los temas de íconos de archivo disponibles. Al igual que con los temas de color, puede instalar temas adicionales desde Visual Studio Code Marketplace o crear su propio tema de ícono de archivo personalizado.
+La estética realmente puede mejorar la experiencia al proporcionar combinaciones de colores e iconografía para satisfacer las necesidades y preferencias visuales. Los temas de color le permiten cambiar el color tanto de la interfaz de usuario del editor como del resaltado de sintaxis de su código. El selector de tema de color (**`Cmd+K`**, **`Cmd+T/Ctrl+K`**, **`Ctrl+T`** proporciona acceso a los temas de color disponibles. Puede instalar temas de color adicionales desde Visual Studio Code Marketplace o crear su propio tema de color personalizado.
 
-Atajos de teclado
-Una vez que tenga experiencia con Visual Studio Code, probablemente querrá mejorar su eficiencia aprendiendo atajos de teclado para los comandos más comunes. Las combinaciones de teclas le brindan la posibilidad de ejecutar la mayoría de los comandos de Visual Studio Code con la ayuda de atajos de teclado. Aunque algunas combinaciones de teclas están preestablecidas de forma predeterminada, puede administrar todas las combinaciones de teclas usted mismo en el editor de métodos abreviados de teclado (Cmd+K, Cmd+S/Ctrl+K, Ctrl+S). El editor de atajos de teclado enumera todos los comandos disponibles con y sin combinaciones de teclas.
+Los temas de íconos de archivos le permiten cambiar los íconos de archivos que se muestran en el Explorador de archivos y en los encabezados de pestañas. El selector de Tema de ícono de archivo (Preferences ➪ File Icon Theme) brinda acceso a los temas de íconos de archivo disponibles. Al igual que con los temas de color, puede instalar temas adicionales desde Visual Studio Code Marketplace o crear su propio tema de ícono de archivo personalizado.
 
-Para cambiar una combinación de teclas en el editor de atajos de teclado, seleccione el comando y use el atajo de teclado Cmd+K, Cmd+K/Ctrl+K, Ctrl+K. En la ventana que aparece, ingrese la combinación de teclas que desee y presione Entrar. Si hay un conflicto de combinación de teclas, aparece una alerta en la parte inferior de la ventana que le indica cuántos comandos existentes tienen la combinación de teclas. Al seleccionar la alerta se muestra una lista de todos los comandos que tienen la combinación de teclas asignada.
+### Atajos de teclado
 
-¿Prefieres utilizar los atajos de teclado de otro entorno de desarrollo? ¡Ningún problema! Las extensiones de mapa de teclas (Cmd+K, Cmd+M/Ctrl+K, Ctrl+M) están disponibles en Extensions Marketplace para Vim, Sublime y Atom, por nombrar algunas. Estas extensiones trasladan las combinaciones de teclas de otros editores a Visual Studio Code.
+Una vez que tenga experiencia con Visual Studio Code, probablemente querrá mejorar su eficiencia aprendiendo atajos de teclado para los comandos más comunes. Las combinaciones de teclas le brindan la posibilidad de ejecutar la mayoría de los comandos de Visual Studio Code con la ayuda de atajos de teclado. Aunque algunas combinaciones de teclas están preestablecidas de forma predeterminada, puede administrar todas las combinaciones de teclas usted mismo en el editor de métodos abreviados de teclado (**`Cmd+K`**, **`Cmd+S/Ctrl+K`**, **`Ctrl+S`**). El editor de atajos de teclado enumera todos los comandos disponibles con y sin combinaciones de teclas.
 
-Idioma de la pantalla
-El idioma de visualización predeterminado para Visual Studio Code es el inglés. Puede modificar esta configuración con las extensiones del paquete de idioma. Cuando abre Visual Studio Code por primera vez, el editor detecta automáticamente el idioma de la interfaz de usuario del sistema operativo. Si el idioma no es el inglés, Visual Studio Code le solicita que instale el paquete de idioma apropiado (si está disponible). Una vez instalado el paquete de idioma, reinicie Visual Studio Code para aplicar los cambios.
+Para cambiar una combinación de teclas en el editor de atajos de teclado, seleccione el comando y use el atajo de teclado **`Cmd+K`**, **`Cmd+K/Ctrl+K`**, **`Ctrl+K`**. En la ventana que aparece, ingrese la combinación de teclas que desee y presione Entrar. Si hay un conflicto de combinación de teclas, aparece una alerta en la parte inferior de la ventana que le indica cuántos comandos existentes tienen la combinación de teclas. Al seleccionar la alerta se muestra una lista de todos los comandos que tienen la combinación de teclas asignada.
 
-Si prefiere anular el idioma predeterminado de la interfaz de usuario, utilice el comando Configurar idioma de visualización y seleccione uno de los idiomas disponibles.
+¿Prefieres utilizar los atajos de teclado de otro entorno de desarrollo? ¡Ningún problema! Las extensiones de mapa de teclas (**`Cmd+K`**, **`Cmd+M/Ctrl+K`**, **`Ctrl+M`**) están disponibles en Extensions Marketplace para Vim, Sublime y Atom, por nombrar algunas. Estas extensiones trasladan las combinaciones de teclas de otros editores a Visual Studio Code.
 
-Resumen
+### Display Language
+
+El idioma de visualización predeterminado para Visual Studio Code es el inglés. Puede modificar esta configuración con las extensiones del paquete de idioma. Cuando abre Visual Studio Code por primera vez, el editor detecta automáticamente el idioma de la interfaz de usuario del sistema operativo. Si el idioma no es el inglés, Visual Studio Code le solicita que instale el paquete de idioma apropiado (si está disponible). Una vez instalado el Language Pack, reinicie Visual Studio Code para aplicar los cambios.
+
+Si prefiere anular el idioma predeterminado de la interfaz de usuario, utilice el comando Configure Display Language y seleccione uno de los idiomas disponibles.
+
+## Resumen
+
 En este capítulo, aprendió cómo hacer lo siguiente:
 
-Descargue e instale Visual Studio Code desdecode.visualstudio.com/#downloads
-Navegar por la interfaz de Visual Studio Code
-Reordenar vistas en la barra de actividades
-Cree un grupo de editores y abra un nuevo editor
-Acceder a la paleta de comandos
-Buscar e instalar extensiones en la vista Extensiones
-Administre la configuración tanto globalmente como por espacio de trabajo
-Cambiar temas de color
-Crear combinaciones de teclas personalizadas
-Cambiar el idioma de visualización
+* Descargue e instale Visual Studio Code desdecode.visualstudio.com/#downloads
+* Navegar por la interfaz de Visual Studio Code
+* Reordenar vistas en la barra de actividades
+* Cree un grupo de editores y abra un nuevo editor
+* Acceder a la paleta de comandos
+* Buscar e instalar extensiones en la vista Extensiones
+* Administre la configuración tanto globalmente como por espacio de trabajo
+* Cambiar temas de color
+* Crear combinaciones de teclas personalizadas
+* Cambiar el idioma de visualización
+
 Con el tiempo, podrá determinar mejor qué extensiones, personalizaciones y configuraciones adicionales pueden ayudarlo a fomentar un flujo de trabajo eficiente y productivo. Si alguna vez necesita información adicional sobre las características de Visual Studio Code, consulte la documentación en code.visualstudio.com/docs.
 
-Nota
-1    Las pulsaciones de teclas presentadas en este libro se proporcionan primero para macOS y luego para Windows/Linux.
+### Nota
+
+1. Las pulsaciones de teclas presentadas en este libro se proporcionan primero para macOS y luego para Windows/Linux.
