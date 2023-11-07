@@ -32,7 +32,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 
 ### Cover
 ### Title Page
-### Introduction
+### [Introduction](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/000-Introduction.md)
    * Who Will Benefit Most from This Book
    * Special Features
    * How to Contact Wiley
