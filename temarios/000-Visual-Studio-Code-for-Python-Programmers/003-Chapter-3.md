@@ -22,74 +22,101 @@ Estas funciones de edición integradas ahorran tiempo al reducir la cantidad de 
 
 La extensión de Python amplía la funcionalidad de las funciones de edición de código al proporcionar soporte específico de Python. Con la extensión Python, importar bibliotecas requiere un esfuerzo mínimo, ya que la extensión puede sugerir paquetes instalados para importar a un programa. Más a menudo, después de unos pocos caracteres escritos, el editor puede autocompletar líneas de código, proporcionar definiciones e incluso localizar declaraciones.
 
-Ya sea que prefiera autopep8, Black o YAPF, puede configurar el formateador que desee y personalizar la configuración para asegurarse de que el código fuente tenga el formato que desee. A medida que ejecuta su código Python, linting analiza cómo se ejecuta el código y genera errores en el panel Problemas. Si encuentra la necesidad de refactorizar un programa Python, hay comandos disponibles para extraer variables, métodos y ordenar importaciones. Además, puede ahorrar tiempo utilizando fragmentos de código para evitar ingresar manualmente patrones de código repetidos.
+Ya sea que prefiera **autopep8**, **Black** o **YAPF**, puede configurar el formateador que desee y personalizar la configuración para asegurarse de que el código fuente tenga el formato que desee. A medida que ejecuta su código Python, linting analiza cómo se ejecuta el código y genera errores en el panel Problems. Si encuentra la necesidad de refactorizar un programa Python, hay comandos disponibles para extraer variables, métodos y ordenar importaciones. Además, puede ahorrar tiempo utilizando fragmentos de código para evitar ingresar manualmente patrones de código repetidos.
 
-En este capítulo, cada función de edición se explora en un script llamado circle_area.pyque utiliza el mathmódulo para calcular el área de un círculo. Antes de probar los ejemplos de este capítulo, cree un nuevo archivo Python llamado circle_area.pyen una carpeta de proyecto adecuada.
+En este capítulo, cada función de edición se explora en un script llamado **`circle_area.py`** que utiliza el módulo **`math`** para calcular el área de un círculo. Antes de probar los ejemplos de este capítulo, cree un nuevo archivo Python llamado **`circle_area.py`** en una carpeta de proyecto adecuada.
 
-Arreglos rápidos
+## Quick Fixes - Arreglos rápidos
+
 Las soluciones rápidas ayudan a solucionar problemas identificados mediante advertencias o errores. Si hay una posible solución disponible, Visual Studio Code muestra una línea ondulada azul debajo del código fuente y un ícono de bombilla en el margen izquierdo del editor. Al hacer clic en la bombilla se muestra la opción Solución rápida o se realiza la acción.
 
-Además de las correcciones rápidas que están disponibles de forma predeterminada con Visual Studio Code, las extensiones instaladas desde Marketplace también pueden incluir su propio conjunto de correcciones rápidas. La extensión Python, por ejemplo, tiene una solución rápida para agregar importaciones que completa rápidamente importlas declaraciones. Cuando comience a escribir el nombre de un paquete en el editor, notará que aparece una solución rápida para completar automáticamente la importdeclaración. Al seleccionar el icono de la bombilla se muestra una lista de sugerencias de importación. importLas declaraciones para paquetes se enumeran primero, seguidas de declaraciones para módulos y/o miembros adicionales (clases, objetos, etc.) de paquetes específicos.
+Además de las correcciones rápidas que están disponibles de forma predeterminada con Visual Studio Code, las extensiones instaladas desde Marketplace también pueden incluir su propio conjunto de correcciones rápidas. La extensión Python, por ejemplo, tiene una solución rápida para agregar importaciones que completa rápidamente importlas declaraciones. Cuando comience a escribir el nombre de un paquete en el editor, notará que aparece una solución rápida para completar automáticamente la sentencia **`import`**. Al seleccionar el icono de la bombilla se muestra una lista de sugerencias de importación. Las sentencias **`import`** para paquetes se enumeran primero, seguidas de declaraciones para módulos y/o miembros adicionales (clases, objetos, etc.) de paquetes específicos.
 
-NOTA Esta funcionalidad requiere el uso de Microsoft Python Language Server. Para habilitar el servidor de idiomas, configúrelo "python.jediEnabled ": falseen su settings.jsonarchivo.
+<hr>
 
-NOTA La solución rápida para agregar importaciones requiere que el módulo que desea importar ya esté instalado en el entorno.
+**NOTA** Esta funcionalidad requiere el uso de Microsoft Python Language Server. **Para habilitar el servidor de idiomas, configúrelo `"python.jediEnabled ": false` en su archivo `settings.json`**.
 
-Pruébelo: en el editor, escriba mathpara invocar la solución rápida para agregar importaciones. Seleccione la acción del código (por ejemplo, la bombilla). Sugiere Visual Studio Code import math as m(consulte la Figura 3.1 ). Seleccione para agregar la importdeclaración al código.
+<hr>
 
+**NOTA** La solución rápida para agregar importaciones requiere que el módulo que desea importar ya esté instalado en el entorno.
 
-Figura 3.1 :Sugiere la acción de código Agregar importacionesimport math as m.
+<hr>
 
-Una vez que se agrega la importdeclaración, Visual Studio Code la elimina mathdel código y la reemplaza con la declaración de importación.
+**Pruébelo**: en el editor, escriba **`math`** para invocar la solución rápida para agregar importaciones. Seleccione la acción del código (por ejemplo, la bombilla). Visual Studio Code sugiere  **`import math as m`**(consulte la Figura 3.1 ). Seleccione para agregar la sentencia **`import`** al código.
 
-La acción de código agregar importaciones también reconoce otras abreviaturas comunes para los siguientes paquetes de Python: NumPy as np, TensorFlow as tf, pandas as pd, matplotlib.pyplot as plt, matplotlib as mpl, SciPi as spioy SciPy as sp.
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/d693d92f-15cc-4741-8eee-9d505b7b6810)
 
-Finalización de códigos, definiciones y declaraciones
-IntelliSense es el nombre que utiliza Microsoft para identificar una variedad de herramientas útiles para ayudar con la programación, como la finalización de código, la definición de objetos y la ubicación de declaraciones de objetos o variables. Estas funciones se activan presionando Ctrl+barra espaciadora o escribiendo un carácter activador (como el carácter de punto en Python).
+**Figura 3.1: Sugiere la acción de código Agregar importaciones `import math as m`**.
+
+Una vez que se agrega la sentencia **`import`**, Visual Studio Code la elimina **`math`** del código y la reemplaza con la sentencia **`import`**.
+
+La acción de código agregar importaciones también reconoce otras abreviaturas comunes para los siguientes paquetes de Python: NumPy as **`np`**, TensorFlow as **`tf`**, pandas as **`pd`**, matplotlib.pyplot as **`plt`**, matplotlib as **`mpl`**, SciPi as **`spioy`** SciPy as **`sp`**.
+
+### Finalización de códigos, definiciones y declaraciones
+
+IntelliSense es el nombre que utiliza Microsoft para identificar una variedad de herramientas útiles para ayudar con la programación, como la finalización de código, la definición de objetos y la ubicación de declaraciones de objetos o variables. Estas funciones se activan presionando **`Ctrl+spacebar`** o escribiendo un carácter activador (como el carácter de punto en Python).
 
 A medida que escribe, la extensión de Python proporciona finalización de código inteligente basada en la semántica de Python y un análisis del código fuente. Si se conoce una posible finalización, Visual Studio Code proporciona sugerencias.
 
-Pruébelo: en circle_area.py, utilice la finalización de código para ver los métodos de Python sugeridos.
+**Pruébelo**: en **`circle_area.py`**, utilice la finalización de código para ver los métodos de Python sugeridos.
 
-En una nueva línea, cree una variable radius. Esta variable contiene la entrada para el radio que se utilizará en el cálculo.
-Para la radiusasignación de variables, escriba f. Observe que Visual Studio Code sugiere métodos a medida que escribe (consulte la Figura 3.2 ). Utilice las teclas de flecha seguidas de la tecla Tab para seleccionar el método flotante.
+1. En una nueva línea, cree una variable **`radius`**. Esta variable contiene la entrada para el radio que se utilizará en el cálculo.
+2. Para la **`radius`** asignación de variables, escriba **`f`**. Observe que Visual Studio Code sugiere métodos a medida que escribe (consulte la Figura 3.2 ). Utilice las teclas de flecha seguidas de la tecla Tab para seleccionar el método float.
 
-Figura 3.2 :Visual Studio Code sugiere elfloatmétodo.
 
-Dentro del método float, escriba i. En la lista de sugerencias, seleccione el método de entrada.
-Complete la asignación de variables con lo siguiente:
-radius = float(input('Radius: '))
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/f9721dbc-94a7-4bc1-9cd8-35bbb92f47fa)
+
+   **Figura 3.2: Visual Studio Code sugiere el método float.**
+
+3. Dentro del método float, escriba **`i`**. En la lista de sugerencias, seleccione el método input.
+4. Complete la asignación de variables con lo siguiente:
+
+   ```py
+   radius = float(input('Radius: '))
+   ```
  
 En un ejemplo sencillo como este ejercicio, los beneficios de la finalización automática son mínimos. Sin embargo, el autocompletado es valioso cuando el código se vuelve más complicado y se utilizan objetos, métodos y propiedades que tienen varios niveles de profundidad. En definitiva, estas indicaciones le liberan de tener que consultar la documentación de referencia para conocer cada detalle. En cambio, Visual Studio Code le ofrece la referencia.
 
 Las definiciones traen documentación de referencia externa para bibliotecas importadas al contexto de su código fuente. Como se mencionó, el carácter de punto activa la finalización del código junto con una lista de funciones del módulo.
 
-Pruébelo: en circle_area.py, use definiciones para ver una lista de constantes y funciones dentro del mathmódulo.
+**Pruébelo**: en **`circle_area.py`**, use definiciones para ver una lista de constantes y funciones dentro del módulo **`math`**.
 
-En una nueva línea, cree una area =variable. La variable cumple la petición de la ecuación para calcular el área de un círculo (A = π r 2 ).
-El valor de π necesario en la ecuación está disponible en la mathbiblioteca como math.pi. Después area =, comience a escribir m.y observe que VS Code proporciona una lista de constantes y funciones en el mathmódulo (consulte la Figura 3.3 ).
+1. En una nueva línea, cree una variable **`area =`**. La variable cumple la petición de la ecuación para calcular el área de un círculo (A = π r 2 ).
+2. El valor de π necesario en la ecuación está disponible en la biblioteca **`math`** como **`math.pi`**. Después **`area =`**, comience a escribir **`m.`** y observe que VS Code proporciona una lista de constantes y funciones en el módulo **`math`** (consulte la Figura 3.3 ).
 
-Figura 3.3 :Definiciones proporciona una lista de constantes y funciones dentro delmathmódulo.
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/74e46e7c-39fc-4295-bf4d-9afdd01c994d)
 
-Utilice las teclas de flecha para desplazarse por la lista y localizar pi. Una vez encontrado, haga clic en la flecha derecha para ver el tipo de objeto (consulte la Figura 3.4 ). Después de ver el tipo de objeto, seleccione pi.
-Continúe la ecuación del área con un cálculo para r 2 . En el editor, ingrese m.py use las teclas de flecha para ubicar la powfunción. Una vez encontrada, seleccione la función.
+   **Figura 3.3: Definiciones proporciona una lista de constantes y funciones dentro del módulo `math`**.
 
-Figura 3.4 :El tipo de objetopies flotante.
+3. Utilice las teclas de flecha para desplazarse por la lista y localizar **`pi`**. Una vez encontrado, haga clic en la flecha derecha para ver el tipo de objeto (consulte la Figura 3.4 ). Después de ver el tipo de objeto, seleccione **`pi`**.
+4. Continúe la ecuación del área con un cálculo para r 2 . En el editor, ingrese **`m.py`** use las teclas de flecha para ubicar la función **`pow`**. Una vez encontrada, seleccione la función.
 
-El editor proporciona más orientación para usar la función una vez que se agrega un par de paréntesis (consulte la Figura 3.5 ). Escriba (para agregar un par de paréntesis a la powfunción para ver más instrucciones proporcionadas por Visual Studio Code.
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/b4c8f322-4b48-4273-8470-06c2e9c3f358)
 
-Figura 3.5 :Visual Studio Code proporciona una descripción de lapowfunción además de una guía de parámetros.
+   **Figura 3.4: El tipo de objeto para `pi` es float.**
 
-Complete la asignación de variables, agregue una printdeclaración para imprimir areay ejecute el código.
-import math as m
+
+
+5. El editor proporciona más orientación para usar la función una vez que se agrega un par de paréntesis (consulte la Figura 3.5 ). Escriba **`(`** para agregar un par de paréntesis a la función **`pow`** para ver más instrucciones proporcionadas por Visual Studio Code.
+
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/d6919b9b-b139-409d-a2fd-6aa42eda9bf4)
+
+   **Figura 3.5: Visual Studio Code proporciona una descripción de la función `pow` además de una guía de parámetros.**
+
+6. Complete la asignación de variables, agregue una sentencia **`print`** para imprimir **`area`** y ejecute el código.
+
+   ```py
+   import math as m
  
-radius = float(input('Radius: '))
-area = ma.pi * (m.pow(radius, 2))
-print(area)
+   radius = float(input('Radius: '))
+   area = ma.pi * (m.pow(radius, 2))
+   print(area)
+   ```
  
 A medida que los programas Python se vuelven más complejos, puede convertirse en un desafío realizar un seguimiento de dónde se declaran los objetos o variables en el código fuente. Las declaraciones le ayudan a localizar dónde se declara un objeto o variable: simplemente coloque el cursor de edición en un objeto o variable y Visual Studio Code resaltará cada referencia a ese objeto o variable, hasta su declaración.
 
-Pruébelo: ubique dónde arease declara en el código colocando el cursor en la areavariable en la printdeclaración. Observe que cada instancia de la areavariable ahora está resaltada en el editor (consulte la Figura 3.6 ).
+**Pruébelo**: ubique dónde se declara **`area`** en el código colocando el cursor en la variable **`area`** en la sentencia **`print`**. Observe que cada instancia de la variable **`area`** ahora está resaltada en el editor (consulte la Figura 3.6 ).
+
 
 
 Figura 3.6 :Laareavariable se resalta dos veces en el editor hasta su declaración.
