@@ -236,28 +236,36 @@ El comando Run abre la terminal integrada, activa el intérprete de Python que e
 **Pruébelo**: pruebe cada método para ejecutar un archivo Python en la terminal integrada. Cada vez que pruebe un nuevo método, modifique la cadena en la sentencia **`print`** y ejecute el método sin guardar explícitamente el archivo.
 
 ## Resumen del Workflow
-AQUIIIIIII
+
 Después de seleccionar un intérprete de Python para el editor, en su forma más simple, el flujo de trabajo para crear y ejecutar archivos de Python requiere lo siguiente:
 
-Cree un nuevo archivo en Visual Studio Code y asígnele un nombre con la extensión Python (consulte la Figura 2.14 ).
+1. Cree un nuevo archivo en Visual Studio Code y asígnele un nombre con la extensión Python (consulte la Figura 2.14 ).
 
-Figura 2.14 :Seleccione el icono Nuevo archivo en la vista del Explorador y asigne un nombre con la.pyextensión.
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/15696a92-5cc5-4946-88cd-38ad065d6260)
 
-Ingrese el código en el editor para el archivo y guárdelo (consulte la Figura 2.15 ). Si hay algún error, asegúrese de corregirlo.
+   **Figura 2.14: Seleccione el icono New File en la vista del Explorador y asigne un nombre con la extensión `.py`.**
 
-Figura 2.15 :En el editor, ingrese el código en el archivo.
+2. Ingrese el código en el editor para el archivo y guárdelo (consulte la Figura 2.15 ). Si hay algún error, asegúrese de corregirlo.
 
-Ejecute el archivo Python (consulte la Figura 2.16 ).
+    ![image](https://github.com/adolfodelarosades/Python/assets/23094588/6fc723c9-fd73-4e20-a842-41bbdbda7aae)
 
-Figura 2.16 :Haga clic en el botón Reproducir en la región del editor superior para abrir el terminal integrado y ejecutar el archivo.
+    **Figura 2.15: En el editor, ingrese el código en el archivo.**
 
-Resumen
+3. Ejecute el archivo Python (consulte la Figura 2.16 ).
+
+   ![image](https://github.com/adolfodelarosades/Python/assets/23094588/fbaff196-49a7-4734-a3c0-473abf91bb50)
+
+   **Figura 2.16: Haga clic en el botón Play en la región del editor superior para abrir el terminal integrado y ejecutar el archivo.**
+
+## Resumen
+
 En este capítulo, aprendió cómo hacer lo siguiente:
 
-Para editar y ejecutar código Python en Visual Studio Code, debe instalar la extensión Python y un intérprete de Python adecuado versión 3.6+.
-Visual Studio Code indica visualmente los archivos no guardados de tres maneras: el ícono del Explorador, la etiqueta No guardado y un ícono de punto al lado del nombre del archivo. Alternativamente, también puede seleccionar el elemento de menú Cerrar guardado en la región del editor superior.
-Para configurar un intérprete predeterminado, seleccione el intérprete en el editor de configuración o ingrese la ruta python: pythonPathen settings.json.
-Aunque Pylint es el linter predeterminado, puede ejecutar el comando Python: seleccione Linter para seleccionar un linter diferente.
-Guarde archivos usando el menú Archivo o los atajos de teclado.
-Hay varias formas de ejecutar un archivo Python, como el botón Reproducir y el comando Python: ejecutar archivo Python en la terminal.
+* Para editar y ejecutar código Python en Visual Studio Code, debe instalar la extensión Python y un intérprete de Python adecuado versión 3.6+.
+* Visual Studio Code indica visualmente los archivos no guardados de tres maneras: el ícono del Explorador, la etiqueta No guardado y un ícono de punto al lado del nombre del archivo. Alternativamente, también puede seleccionar el elemento de menú Close Saved en la región del editor superior.
+* Para configurar un intérprete predeterminado, seleccione el intérprete en el editor de configuración o ingrese la ruta **`python: pythonPath`** en **`settings.json`**.
+* Aunque Pylint es el linter predeterminado, puede ejecutar el comando Python: Select Linter para seleccionar un linter diferente.
+* Guarde archivos usando el menú File o los atajos de teclado.
+* Hay varias formas de ejecutar un archivo Python, como el botón Play y el comando Python: Run Python File In Terminal.
+
 En esta etapa, su entorno está configurado y listo para el desarrollo de Python. El Capítulo 4 explora más formas en las que puede administrar sus programas y proyectos Python. Asegúrese de familiarizarse con el flujo de trabajo básico de creación, guardado y ejecución de programas antes de continuar con los siguientes ejemplos en capítulos posteriores.
