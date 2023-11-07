@@ -59,7 +59,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 * Workflow Recap
 * Summary
   
-### CHAPTER 3: Editing Code
+### [CHAPTER 3: Editing Code]((https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/003-Chapter-3.md))
 * Quick Fixes
 * Code Completion, Definitions, and Declarations
 * Formatting
