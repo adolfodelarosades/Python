@@ -66,6 +66,7 @@ Explorer, Search, Source Control, Run, and Extensions
 **Figura 1.4 : Vista de control de código fuente.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/28e5b81c-53b5-439a-81b9-d18c682c6181)
+
 **Figura 1.5 : Vista de ejecución.**
 
 ![image](https://github.com/adolfodelarosades/Python/assets/23094588/a94e52f4-29d5-4ced-a025-b4929f036629)
@@ -84,7 +85,7 @@ La región del editor superior puede cambiar según el tipo de archivo que esté
 
 Cuando abres un archivo Python, ves un ícono Ejecutar archivo Python en la terminal (que se muestra como un botón Reproducir) en la región superior del editor. (El ícono Ejecutar archivo Python en la terminal es una forma rápida de ejecutar un programa Python). Cuando se selecciona, se abre una terminal y se ejecuta el archivo Python (consulte la Figura 1.8 ).
 
-![image](https://github.com/adolfodelarosades/Python/assets/23094588/5789ae62-c269-42b5-bcbe-77b4781beff5)
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/5963514d-6291-4f33-97b2-28aed1b26e9f)
 
 **Figura 1.8 :El ícono Ejecutar archivo Python en la terminal aparece en la parte superior de la región del editor. Al hacer clic en el icono se ejecuta el archivo Python.**
 
