@@ -150,98 +150,129 @@ De forma predeterminada, los archivos y los grupos de editores se muestran verti
 
 ### Paneles
 
-Los paneles debajo del editor contienen una o más áreas para la salida del programa, información de depuración, errores y advertencias, etc. También puede arrastrar algunas de las vistas desde la barra de actividades (como Buscar) al área de Paneles.
+Los paneles debajo del editor contienen una o más áreas para la salida del programa, información de debug , errors y warnings, etc. También puede arrastrar algunas de las vistas desde la barra de actividades (como Buscar) al área de Paneles.
 
-También puedes abrir el terminal integrado en el área de Paneles. El terminal integrado proporciona una interfaz de línea de comandos para su sistema operativo. El diseño predeterminado de Visual Studio Code incluye una terminal integrada que está abierta a la raíz de su proyecto. También puede abrir una terminal REPL para su intérprete de Python dentro de Visual Studio Code. La terminal integrada se activa cada vez que ejecuta un programa Python. Puede iniciar manualmente una terminal con el método abreviado de teclado **`Ctrl+~/Ctrl+Shift+``**. En el Capítulo 2 , "Hola mundo para Python", se proporciona información adicional sobre cómo ejecutar programas Python .
+También puedes abrir el terminal integrado en el área de Paneles. El terminal integrado proporciona una interfaz de línea de comandos para su sistema operativo. El diseño predeterminado de Visual Studio Code incluye una terminal integrada que está abierta a la raíz de su proyecto. También puede abrir una **terminal REPL** para su intérprete de Python dentro de Visual Studio Code. La terminal integrada se activa cada vez que ejecuta un programa Python. Puede iniciar manualmente una terminal con el método abreviado de teclado **`Ctrl+~/Ctrl+Shift+'`**. En el Capítulo 2, "Hola mundo para Python", se proporciona información adicional sobre cómo ejecutar programas Python .
 
-Barra de estado
+### Status Bar
+
 La barra de estado, ubicada en la parte inferior de la ventana de VS Code, contiene información sobre el proyecto abierto y los archivos que edita. Algunas de las características básicas de la barra de estado incluyen las siguientes:
 
-Gestión de control de código fuente con Git
-Número total de problemas para los programas abiertos (por ejemplo, variables no definidas)
-Línea/columna
-Configuración de sangría para espacios o tabulaciones
-Configuración de codificación
-Configuración de secuencia de fin de línea
-Modo de idioma
-Mecanismo de retroalimentación de Visual Studio Code
-Notificaciones
+* Gestión de control de código fuente con Git
+* Número total de problemas para los programas abiertos (por ejemplo, variables no definidas)
+* Línea/columna
+* Configuración de sangría para espacios o tabulaciones
+* Configuración de codificación
+* Configuración de secuencia de fin de línea
+* Modo de lenguaje
+* Mecanismo de retroalimentación de Visual Studio Code
+* Notificaciones
+
 Al hacer clic en un elemento de la barra de estado, se ejecuta un comando o se abre una ventana para modificar la configuración respectiva. Para el desarrollo de Python, aparece una etiqueta adicional en la barra de estado para el intérprete de Python seleccionado.
 
-Las extensiones que instale desde Extension Marketplace pueden agregar etiquetas adicionales a la barra de estado para proporcionar acceso rápido para activar comandos de extensión. Por ejemplo, con la extensión GitHub Pull Requests and Issues, puedes publicar tu código fuente en GitHub desde la barra de estado.
+Las extensiones que instale desde Extension Marketplace pueden agregar etiquetas adicionales a la barra de estado para proporcionar acceso rápido para activar comandos de extensión. Por ejemplo, con la extensión **GitHub Pull Requests and Issues**, puedes publicar tu código fuente en GitHub desde la barra de estado.
 
-Paleta de comandos
-Visual Studio Code brinda acceso a todos los comandos disponibles a través de la paleta de comandos, y muchos de estos comandos no están disponibles a través de menús u otros elementos de la interfaz de usuario. Dentro de la paleta de comandos, puede ejecutar comandos para ejecutar tareas del editor además de comandos de extensión (consulte la Figura 1.16 ). Puede acceder a la paleta de comandos con el método abreviado de teclado Cmd+Shift+P/Ctrl+Shift+P. Acostúmbrate a esta pulsación de tecla; ¡Lo usarás mucho con Visual Studio Code!
+### Command Palette
 
-Una vez que la paleta de comandos esté abierta, puede buscar comandos de extensión escribiendo algunos caracteres del nombre de la extensión. En la lista que aparece, desplácese por los resultados para encontrar el comando que necesita; luego presione Entrar. La figura 1.17 muestra un ejemplo.
+Visual Studio Code brinda acceso a todos los comandos disponibles a través de la paleta de comandos, y muchos de estos comandos no están disponibles a través de menús u otros elementos de la interfaz de usuario. Dentro de la paleta de comandos, puede ejecutar comandos para ejecutar tareas del editor además de comandos de extensión (consulte la Figura 1.16 ). Puede acceder a la paleta de comandos con el método abreviado de teclado **`Cmd+Shift+P/Ctrl+Shift+P`**. Acostúmbrate a esta pulsación de tecla; ¡Lo usarás mucho con Visual Studio Code!
 
+Una vez que la paleta de comandos esté abierta, puede buscar comandos de extensión escribiendo algunos caracteres del nombre de la extensión. En la lista que aparece, desplácese por los resultados para encontrar el comando que necesita; luego presione Enter. La figura 1.17 muestra un ejemplo.
 
-Figura 1.16 :La paleta de comandos se muestra en la parte superior del editor.
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/688ee8be-88e2-40ec-8b70-c4c5119ff476)
 
+**Figura 1.16: La paleta de comandos se muestra en la parte superior del editor.**
 
-Figura 1.17 :Al ingresara Python, se muestra una lista de comandos para la extensión de Python en la paleta de comandos.
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/acbec9d5-d497-4db4-ab3f-61bd9112b2c5)
 
-Desplácese por la paleta de comandos para ver una lista completa de comandos. La mayoría de los comandos siguen una convención de nomenclatura de Función/Extensión: Acción (por ejemplo, Python: Seleccionar intérprete). Si hay una combinación de teclas configurada para el comando, el método abreviado de teclado se muestra a la derecha del comando. A medida que utiliza un comando repetidamente, el comando aparece en la parte superior de la paleta de comandos como un comando usado recientemente. Esto proporciona acceso rápido a los comandos utilizados con más frecuencia.
+**Figura 1.17: Al ingresara Python, se muestra una lista de comandos para la extensión de Python en la paleta de comandos.**
 
-NOTA ¿No estás seguro de qué acciones puedes realizar desde cualquier lugar del código fuente? En la paleta de comandos, escriba? para obtener una lista de comandos disponibles que puede ejecutar.
+Desplácese por la paleta de comandos para ver una lista completa de comandos. La mayoría de los comandos siguen una convención de nomenclatura de *Function/Extension: Action* (por ejemplo, Python: Select Interpreter). Si hay una combinación de teclas configurada para el comando, el método abreviado de teclado se muestra a la derecha del comando. A medida que utiliza un comando repetidamente, el comando aparece en la parte superior de la paleta de comandos como un comando usado recientemente. Esto proporciona acceso rápido a los comandos utilizados con más frecuencia.
 
-NOTA En este libro, se le solicita que ejecute comandos desde la Paleta de comandos cada vez que aparece la convención de nomenclatura Función/Extensión: Acción .
+<hr>
 
+**NOTA** ¿No estás seguro de qué acciones puedes realizar desde cualquier lugar del código fuente? En la paleta de comandos, escriba? para obtener una lista de comandos disponibles que puede ejecutar.
 
-Extensiones
-Puede ampliar la funcionalidad de Visual Studio Code instalando extensiones desde Visual Studio Code Marketplace. Visual Studio Code Marketplace contiene más de 1500 extensiones creadas tanto por Microsoft como por la comunidad de desarrolladores. Estas extensiones agregan más funciones, temas, herramientas y compatibilidad con idiomas para su flujo de trabajo de desarrollo. Puede buscar extensiones en Marketplace dentro de la vista Extensiones (consulte la Figura 1.18 ).
+<hr>
 
+**NOTA** En este libro, se le solicita que ejecute comandos desde la Paleta de comandos cada vez que aparece la convención de nomenclatura *Function/Extension: Action*.
 
-Figura 1.18 :Se accede al Mercado de extensiones a través de la vista Extensiones en la barra de actividades.
+<hr>
 
-NOTA También se puede acceder a Visual Studio Code Marketplace a través del navegador en marketplace.visualstudio.com/VSCode. Si elige instalar una extensión del navegador, se le solicitará que abra Visual Studio Code para completar la instalación.
+## Extensions
+
+Puede ampliar la funcionalidad de Visual Studio Code instalando extensiones desde Visual Studio Code Marketplace. **Visual Studio Code Marketplace** contiene más de 1500 extensiones creadas tanto por Microsoft como por la comunidad de desarrolladores. Estas extensiones agregan más funciones, temas, herramientas y compatibilidad con lenguajes para su flujo de trabajo de desarrollo. Puede buscar extensiones en Marketplace dentro de la vista Extensiones (consulte la Figura 1.18 ).
+
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/362fde00-44a4-4134-b80d-84609e27aed0)
+
+**Figura 1.18 :Se accede al Extension Marketplace a través de la vista Extensiones en la barra de actividades.**
+
+<hr>
+
+**NOTA** También se puede acceder a Visual Studio Code Marketplace a través del navegador en marketplace.visualstudio.com/VSCode. **Si elige instalar una extensión del navegador, se le solicitará que abra Visual Studio Code para completar la instalación.**
+
+<hr>
 
 En la vista Extensiones, puede escribir directamente en la barra de búsqueda para buscar una extensión. Los resultados de la búsqueda muestran el nombre de la extensión, la versión de la extensión, una breve descripción de la extensión y el nombre del editor. Cuando selecciona una extensión de los resultados de la búsqueda, el editor muestra la página de detalles de la extensión (consulte la Figura 1.19 ).
 
 Para instalar una extensión, haga clic en el botón Instalar en la página de detalles de la extensión. ¿Cambiaste de opinión y descubres que ya no necesitas una extensión? Puede desinstalar una extensión desde la página de detalles de la extensión haciendo clic en Desinstalar (consulte la Figura 1.20 ).
 
-El menú Más acciones (es decir, el ícono de tres puntos ubicado en la parte superior derecha de la vista Extensiones) brinda acceso para ver todas las extensiones instaladas, recomendadas, habilitadas y deshabilitadas. Si está buscando una nueva extensión para respaldar su flujo de trabajo de desarrollo, consulte las extensiones recomendadas. La vista Extensiones proporciona recomendaciones de extensiones basadas en archivos abiertos recientemente, así como en otras extensiones instaladas.
+El menú More Actions (es decir, el ícono de tres puntos ubicado en la parte superior derecha de la vista Extensiones) brinda acceso para ver todas las extensiones instaladas, recomendadas, habilitadas y deshabilitadas. Si está buscando una nueva extensión para respaldar su flujo de trabajo de desarrollo, consulte las extensiones recomendadas. La vista Extensiones proporciona recomendaciones de extensiones basadas en archivos abiertos recientemente, así como en otras extensiones instaladas.
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/5544cf51-d3dd-465c-9859-0af071afb456)
 
-Figura 1.19 :La página de la extensión Python muestra información útil sobre la extensión.
+**Figura 1.19: La página de la extensión Python muestra información útil sobre la extensión.**
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/cf085ac3-347c-4337-ad6e-66be4440e83d)
 
-Figura 1.20 :El botón Desinstalar aparece solo una vez que se instala una extensión. Al hacer clic en el botón, se elimina la extensión de Visual Studio Code.
+**Figura 1.20: El botón Desinstalar aparece solo una vez que se instala una extensión. Al hacer clic en el botón, se elimina la extensión de Visual Studio Code.**
 
-NOTA Cualquiera puede escribir una extensión para uso personal o publicación en Marketplace. Para obtener más información, consulte la documentación de la interfaz de programación de aplicaciones (API) de extensión en code.visualstudio.com/api.
+<hr>
+  
+**NOTA** Cualquiera puede escribir una extensión para uso personal o publicación en Marketplace. Para obtener más información, consulte la documentación de la interfaz de programación de aplicaciones (API) de extensión en code.visualstudio.com/api.
 
-Personalizaciones
-Básicamente, cada elemento y función de la interfaz de usuario dentro de Visual Studio Code se puede personalizar. Si bien algunas personalizaciones son de naturaleza puramente estética, una cantidad significativa de personalizaciones en Visual Studio Code pueden convertir su entorno de desarrollo en un entorno accesible y productivo. Puede optar por realizar personalizaciones globalmente para el editor o para un espacio de trabajo específico. Una carpeta de proyecto en Visual Studio Code se considera un espacio de trabajo. El espacio de trabajo en sí consta de los archivos y carpetas del proyecto.
+<hr>
 
-Ajustes
-La configuración en Visual Studio Code se puede administrar tanto globalmente como por espacio de trabajo. La configuración global se administra dentro de la configuración del usuario y se aplica a cualquier instancia de Visual Studio Code que abra. La configuración del espacio de trabajo se aplica solo cuando se abre un espacio de trabajo y se puede compartir entre los desarrolladores de un proyecto. La configuración del espacio de trabajo también anula la configuración del usuario.
+## Customizations
 
-Puede administrar la configuración de Usuario y Espacio de trabajo en el editor de Configuración (presione Cmd+,/Ctrl+, o seleccione Preferencias ➪ Abrir Configuración; consulte la Figura 1.21 ). En el editor, las configuraciones se clasifican en sus respectivos grupos. Todas las configuraciones de extensión están agrupadas bajo el encabezado Extensiones. La barra de búsqueda proporciona una forma rápida de encontrar la configuración que necesita.
+Básicamente, cada elemento y función de la interfaz de usuario dentro de Visual Studio Code se puede personalizar. Si bien algunas personalizaciones son de naturaleza puramente estética, una cantidad significativa de personalizaciones en Visual Studio Code pueden convertir su entorno de desarrollo en un entorno accesible y productivo. Puede optar por realizar personalizaciones globalmente para el editor o para un espacio de trabajo específico. Una carpeta de proyecto en Visual Studio Code se considera un workspace. El workspace en sí consta de los archivos y carpetas del proyecto.
 
+### Settings
 
-Figura 1.21 :El editor de configuración enumera todas las configuraciones para Visual Studio Code y las extensiones instaladas.
+La configuración en Visual Studio Code se puede administrar tanto globalmente como por espacio de trabajo. La configuración global se administra dentro de la configuración del usuario y se aplica a cualquier instancia de Visual Studio Code que abra. La configuración del workspace se aplica solo cuando se abre un workspace y se puede compartir entre los desarrolladores de un proyecto. La configuración del workspace también anula la configuración del usuario.
+
+Puede administrar la configuración de Usuario y workspace en el editor de Configuración (presione **`Cmd+,/Ctrl+`**, o seleccione Preferences ➪ Open Settings; consulte la Figura 1.21 ). En el editor, las configuraciones se clasifican en sus respectivos grupos. Todas las configuraciones de extensión están agrupadas bajo el encabezado Extensiones. La barra de búsqueda proporciona una forma rápida de encontrar la configuración que necesita.
+
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/dd6f33cc-b623-4eae-ab2c-7bf210ed79ec)
+
+**Figura 1.21: El editor de configuración enumera todas las configuraciones para Visual Studio Code y las extensiones instaladas.**
 
 Los cambios se guardan automáticamente a medida que realiza selecciones en el editor. Si desea volver al valor predeterminado para una configuración, haga clic en el ícono de ajustes al lado de la configuración y seleccione Restablecer configuración (consulte la Figura 1.22 ).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/580c841f-163a-48a7-b5d0-bcbccb16fb7e)
 
-Figura 1.22 :La opción de menú Restablecer configuración restablece la configuración al valor predeterminado.
+**Figura 1.22: La opción de menú Restablecer configuración restablece la configuración al valor predeterminado.**
 
-Visual Studio Code guarda su configuración en un archivo nombrado settings.jsondentro de una .vscodecarpeta. Puede trabajar con la configuración directamente en este archivo, si lo prefiere, en lugar de con la interfaz de usuario. Si prefiere administrar el settings.jsonarchivo subyacente, haga clic en el icono Abrir configuración (JSON) en la parte superior de la región del editor (consulte la Figura 1.23 ). Alternativamente, puede ejecutar el comando Abrir configuración (JSON).
+Visual Studio Code guarda su configuración en un archivo nombrado **`settings.json`** dentro de una carpeta **`.vscode`**. Puede trabajar con la configuración directamente en este archivo, si lo prefiere, en lugar de con la interfaz de usuario. Si prefiere administrar el archivo **`settings.json`** subyacente, haga clic en el icono Open Settings (JSON) en la parte superior de la región del editor (consulte la Figura 1.23 ). Alternativamente, puede ejecutar el comando Open Settings (JSON).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/1e240dd3-ad89-4892-a43d-b7d428a53b94)
 
-Figura 1.23 :Al hacer clic en el icono Abrir configuración (JSON), se abre elsettings.jsonarchivo en un nuevo editor.
+**Figura 1.23: Al hacer clic en el icono Open Settings (JSON), se abre el archivo `settings.json` en un nuevo editor.**
 
-Aunque puede editar el settings.jsonarchivo manualmente, Visual Studio Code proporciona un acceso directo para modificar algunas de las configuraciones. Si pasa el cursor sobre una configuración y ve un ícono de lápiz a la izquierda de la tecla, puede hacer clic en el ícono de lápiz para ver una lista de valores posibles (consulte la Figura 1.24 ).
+Aunque puede editar el archivo **`settings.json`** manualmente, Visual Studio Code proporciona un acceso directo para modificar algunas de las configuraciones. Si pasa el cursor sobre una configuración y ve un ícono de lápiz a la izquierda de la tecla, puede hacer clic en el ícono de lápiz para ver una lista de valores posibles (consulte la Figura 1.24 ).
 
+![image](https://github.com/adolfodelarosades/Python/assets/23094588/6b3b4e21-1e30-4301-ab27-5b45ff8796b7)
 
-Figura 1.24 :En elsettings.jsonarchivo, al hacer clic en el icono de lápiz junto a una configuración se proporciona una lista de valores posibles para la configuración.
+**Figura 1.24: En el archivo `settings.json`, al hacer clic en el icono de lápiz junto a una configuración se proporciona una lista de valores posibles para la configuración.**
 
-A diferencia del editor de configuración, debe guardar (Cmd+S/Ctrl+S) el settings.jsonarchivo para que los cambios surtan efecto. Si Visual Studio Code detecta algún error de sintaxis en el archivo, aparece un mensaje solicitando que corrija los errores en el archivo. La sintaxis de la configuración sigue el formato (por ejemplo, es la configuración de la ruta del intérprete de Python para la extensión de Python). category/extension: setting python: pythonPath
+A diferencia del editor de configuración, debe guardar (Cmd+S/Ctrl+S) el archivo **`settings.json`** para que los cambios surtan efecto. Si Visual Studio Code detecta algún error de sintaxis en el archivo, aparece un mensaje solicitando que corrija los errores en el archivo. La sintaxis de la configuración sigue el formato **`category/extension: setting`** (por ejemplo, **`python: pythonPath`** es la configuración de la ruta del intérprete de Python para la extensión de Python).
 
-NOTA ¿Necesita restablecer todas sus configuraciones de usuario a la configuración predeterminada? En el settings.jsonarchivo, elimine todo lo que esté entre llaves y guarde el archivo.
+<hr>
 
+**NOTA** ¿Necesita restablecer todas sus configuraciones de usuario a la configuración predeterminada? En el archivo **`settings.json`**, **elimine todo lo que esté entre llaves y guarde el archivo**.
 
-Temas e íconos de colores
+<hr>
+
+### Temas e íconos de colores
 La estética realmente puede mejorar la experiencia al proporcionar combinaciones de colores e iconografía para satisfacer las necesidades y preferencias visuales. Los temas de color le permiten cambiar el color tanto de la interfaz de usuario del editor como del resaltado de sintaxis de su código. El selector de tema de color (Cmd+K, Cmd+T/Ctrl+K, Ctrl+T proporciona acceso a los temas de color disponibles. Puede instalar temas de color adicionales desde Visual Studio Code Marketplace o crear su propio tema de color personalizado.
 
 Los temas de íconos de archivos le permiten cambiar los íconos de archivos que se muestran en el Explorador de archivos y en los encabezados de pestañas. El selector de Tema de ícono de archivo (Preferencias ➪ Tema de ícono de archivo) brinda acceso a los temas de íconos de archivo disponibles. Al igual que con los temas de color, puede instalar temas adicionales desde Visual Studio Code Marketplace o crear su propio tema de ícono de archivo personalizado.
