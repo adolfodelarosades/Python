@@ -48,7 +48,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 * Summary
 * Note
 
-### CHAPTER 2: Hello World for Python
+### [CHAPTER 2: Hello World for Python](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/002-Chapter-2.md)
 * Installing a Python Interpreter
 * Installing the Python Extension for Visual Studio Code
 * Creating a Python File
