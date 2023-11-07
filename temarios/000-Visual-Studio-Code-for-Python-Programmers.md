@@ -39,7 +39,7 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 
 ### [Part I: Welcome to Visual Studio Code](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/Parte-1.md) :+1:
 
-### CHAPTER 1: Getting Started
+### [CHAPTER 1: Getting Started](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/001-Chapter-1.md)
 * Installing Visual Studio Code
 * The Visual Studio Code User Interface
 * Command Palette
