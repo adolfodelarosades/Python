@@ -32,12 +32,12 @@ Una sección final sobre Aplicaciones del mundo real lo guiará a través de var
 
 ### Cover
 ### Title Page
-### [Introduction](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/000-Introduction.md)
+### [Introduction](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/000-Introduction.md) :+1:
    * Who Will Benefit Most from This Book
    * Special Features
    * How to Contact Wiley
 
-### Part I: Welcome to Visual Studio Code
+### [Part I: Welcome to Visual Studio Code](https://github.com/adolfodelarosades/Python/blob/main/temarios/000-Visual-Studio-Code-for-Python-Programmers/Parte-1.md) :+1:
 
 ### CHAPTER 1: Getting Started
 * Installing Visual Studio Code
